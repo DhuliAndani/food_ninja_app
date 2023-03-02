@@ -14,6 +14,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //
       backgroundColor: Colors.black,
       body: ListView(
         scrollDirection: Axis.vertical,
@@ -123,7 +124,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 25, top: 20),
                 child: Row(
-                  children: [
+                  children: const [
                     HomeFood(
                       height: 200,
                       width: 150,
