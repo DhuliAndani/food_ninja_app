@@ -13,6 +13,12 @@ class _ProfileScrollModeScreenState extends State<ProfileScrollModeScreen> {
     return  Scaffold(
       appBar: AppBar(
         title: const Text("Profile Scroll Mode"),
+
+      ),
+      body: Column(
+        children: [
+          Image.asset("assets/images/map.png"),
+        ],
       ),
     );
   }
