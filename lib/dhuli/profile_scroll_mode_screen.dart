@@ -4,16 +4,16 @@ class ProfileScrollModeScreen extends StatefulWidget {
   const ProfileScrollModeScreen({super.key});
 
   @override
-  State<ProfileScrollModeScreen> createState() => _ProfileScrollModeScreenState();
+  State<ProfileScrollModeScreen> createState() =>
+      _ProfileScrollModeScreenState();
 }
 
 class _ProfileScrollModeScreenState extends State<ProfileScrollModeScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Profile Scroll Mode"),
-
       ),
       body: Column(
         children: [
