@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -118,8 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 25, top: 15),
                   child: Row(
-                    children: const [
-                      FoodApp(
+                    children: [
+                      HomeFood(
                         height: 200,
                         width: 150,
                         image: "assets/images/Resturant Image.png",
@@ -128,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20, top: 5),
-                        child: FoodApp(
+                        child: HomeFood(
                           height: 200,
                           width: 150,
                           image: "assets/images/Restaurant Image_2.png",
@@ -138,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20),
-                        child: FoodApp(
+                        child: HomeFood(
                           height: 200,
                           width: 150,
                           image: "assets/images/Restaurant Image_3.png",
@@ -232,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Text(
                         "\$15",
                         style:
-                        TextStyle(color: Color(0xFFFEB536), fontSize: 22),
+                            TextStyle(color: Color(0xFFFEB536), fontSize: 22),
                       )
                     ],
                   ),
