@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'dhuli/splash_screen.dart';
+import 'dhruvit/order_details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const OrderDetailsScreen(),
     );
   }
 }
