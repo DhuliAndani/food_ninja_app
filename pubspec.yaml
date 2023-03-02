@@ -96,6 +96,10 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
+
+    - family: BentonSans
+      fonts:
+        - asset: assets/fonts/BentonSans-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
