@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
+import 'Common/home_search.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -55,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(left: 25, top: 163),
                     child: Row(
                       children: [
-                        const Search(
+                        const HomeSearch(
                           text: "    What do you want to order?",
                           image: "assets/images/Icon Search.png",
                         ),
@@ -119,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 25, top: 15),
                   child: Row(
-                    children: [
+                    children: const [
                       HomeFood(
                         height: 200,
                         width: 150,
