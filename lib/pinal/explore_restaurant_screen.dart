@@ -14,7 +14,6 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //
       backgroundColor: Colors.black,
       body: ListView(
         scrollDirection: Axis.vertical,
