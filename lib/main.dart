@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/Filter_screen.dart';
+import 'dhruvit/payments_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FilterScreen(),
+      home: const PaymentsScreen(),
     );
   }
 }

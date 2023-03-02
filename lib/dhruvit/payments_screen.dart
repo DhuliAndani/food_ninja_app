@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'common/order_details_common.dart';
-import 'common/payment_common.dart';
-
-class OrderDetailsScreen extends StatefulWidget {
-  const OrderDetailsScreen({super.key});
+class PaymentsScreen extends StatefulWidget {
+  const PaymentsScreen({super.key});
 
   @override
-  State<OrderDetailsScreen> createState() => _OrderDetailsScreenState();
+  State<PaymentsScreen> createState() => _PaymentsScreenState();
 }
 
-class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
+class _PaymentsScreenState extends State<PaymentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +38,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 120, left: 20),
                   child: Text(
-                    "Order details",
+                    "Confirm Order",
                     style: TextStyle(
                       fontFamily: "BentonSans",
                       fontSize: 25,
@@ -53,22 +50,25 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               ],
             ),
           ),
-          OrderDetailsCommon(
-            image: Image.asset("assets/images/Menu_Photo.png"),
-          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: OrderDetailsCommon(
-              image: Image.asset("assets/images/Menu_Photo_One.png"),
-            ),
-          ),
-          OrderDetailsCommon(
-            image: Image.asset("assets/images/Menu_Photo_Two.png"),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 60),
-            child: PaymentCommon(),
-          ),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Container(
+        height: 103,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: const Color(0xFF252525),
+        ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text("Deliver To")
+              ],
+            )
+          ],
+        ),
+      ),
+    )
         ],
       ),
     );
