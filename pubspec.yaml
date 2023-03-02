@@ -90,6 +90,10 @@ flutter:
         - asset: assets/fonts/Nunito-Medium.ttf
         - asset: assets/fonts/Nunito-Regular.ttf
         - asset: assets/fonts/Nunito-SemiBold.ttf
+
+    - family: BentonSans
+      fonts:
+        - asset: assets/fonts/BentonSans-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
