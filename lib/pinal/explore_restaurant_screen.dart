@@ -3,14 +3,14 @@ import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
 import 'Common/home_search.dart';
 
-class ExploreRestaurant extends StatefulWidget {
-  const ExploreRestaurant({Key? key}) : super(key: key);
+class ExploreRestaurantScreen extends StatefulWidget {
+  const ExploreRestaurantScreen({Key? key}) : super(key: key);
 
   @override
-  State<ExploreRestaurant> createState() => _ExploreRestaurantState();
+  State<ExploreRestaurantScreen> createState() => _ExploreRestaurantState();
 }
 
-class _ExploreRestaurantState extends State<ExploreRestaurant> {
+class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
