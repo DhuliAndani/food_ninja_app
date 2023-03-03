@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
 import 'Common/explore_menu_common_container.dart';
 import 'Common/home_search.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class ExploreMenuWithFilterScreen extends StatefulWidget {
+  const ExploreMenuWithFilterScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ExploreMenuWithFilterScreen> createState() =>
+      _ExploreMenuWithFilterScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ExploreMenuWithFilterScreenState
+    extends State<ExploreMenuWithFilterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         scrollDirection: Axis.vertical,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                 children: [
@@ -58,9 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(left: 25, top: 163),
                     child: Row(
                       children: [
-                        const HomeSearch(
-                          text: "    What do you want to order?",
+                        HomeSearch(
                           image: "assets/images/Icon Search.png",
+                          text: "    What do you want to order?",
                         ),
                         const SizedBox(
                           width: 15,
@@ -81,116 +83,79 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 25, top: 20, right: 25),
-                child: Image(
-                  image: AssetImage("assets/images/Promo Advertising.png"),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: const [
-                  SizedBox(
-                    width: 25,
+              Padding(
+                padding: const EdgeInsets.only(left: 25, top: 15),
+                child: Container(
+                  height: 44,
+                  width: 92,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Color(0xFF2C2C2E),
                   ),
-                  Text(
-                    "Nearest Restaurant",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontFamily: "Merriweather-Bold",
-                    ),
-                  ),
-                  SizedBox(
-                    width: 110,
-                  ),
-                  Text(
-                    "View More",
-                    style: TextStyle(
-                      color: Color(0xFFFF8E4C),
-                      fontSize: 12,
-                      fontFamily: "Roboto-Regular",
-                    ),
-                  ),
-                ],
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 15),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: const [
-                      HomeFood(
-                        height: 200,
-                        width: 150,
-                        image: "assets/images/Resturant Image.png",
-                        text: "\nVegan Resto",
-                        countText: "12 mins",
+                      SizedBox(
+                        width: 20,
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20, top: 5),
-                        child: HomeFood(
-                          height: 200,
-                          width: 150,
-                          image: "assets/images/Restaurant Image_2.png",
-                          text: "\nHealthy Food",
-                          countText: "8 mins",
-                        ),
+                      Text(
+                        "Soup ",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: "Merriweather-Bold",
+                            fontWeight: FontWeight.bold),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20),
-                        child: HomeFood(
-                          height: 200,
-                          width: 150,
-                          image: "assets/images/Restaurant Image_3.png",
-                          text: "\nGood Food",
-                          countText: "12 mins",
-                        ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Image(
+                        image: AssetImage("assets/images/Icon Close.png"),
                       ),
                     ],
                   ),
                 ),
               ),
               const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: const [
-                  SizedBox(
-                    width: 27,
-                  ),
-                  Text(
-                    "Popular Menu",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontFamily: "Merriweather-Bold",
-                    ),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  Text(
-                    "View More",
-                    style: TextStyle(
-                      color: Color(0xFFFF8E4C),
-                      fontSize: 12,
-                      fontFamily: "Roboto-Regular",
-                    ),
-                  ),
-                ],
+                height: 20,
               ),
               const Padding(
-                padding: EdgeInsets.only(left: 25, top: 20, right: 25),
+                padding: EdgeInsets.only(left: 25),
+                child: Text(
+                  "Popular Menu",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: "Merri weather-Bold",
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                child: ExploreMenuCommonContainer(
+                  image: "assets/images/Menu Photo.png",
+                  text: "Herbal Pancake",
+                  countText: "Warung Herbal",
+                  SecondText: "\$7",
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                child: ExploreMenuCommonContainer(
+                  image: "assets/images/Photo.png",
+                  text: "Fruit Salad",
+                  countText: "Wijie Resto",
+                  SecondText: "      \$5",
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
                 child: ExploreMenuCommonContainer(
                   image: "assets/images/Photo Menu.png",
-                  text: "Good Food",
+                  text: "Green Noddle",
                   countText: "Noodle Home",
-                  SecondText: "\$15",
+                  SecondText: "   \$15",
                 ),
               ),
             ],
@@ -203,7 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 70,
           decoration: BoxDecoration(
             color: const Color(0xFF252525),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -215,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
               const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
+                image: AssetImage("assets/images/Icon Cart_2.png"),
               ),
               Stack(
                 children: const [
@@ -225,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Image(
-                      image: AssetImage("assets/images/Ellipse 164_2.png"),
+                      image: AssetImage("assets/images/Ellipse 164_1.png"),
                     ),
                   ),
                 ],
