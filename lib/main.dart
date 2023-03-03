@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'dhruvit/payments_screen.dart';
+import 'dhruvit/track_order_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PaymentsScreen(),
+      home: const TrackOrderScreen(),
     );
   }
 }
