@@ -190,7 +190,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
               const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
+                image: AssetImage("assets/images/Icon Cart_2.png"),
               ),
               Stack(
                 children: const [
