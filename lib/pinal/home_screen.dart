@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
                           image: AssetImage(
-                            "assets/images/Icon Notifiaction.png",
+                            "assets/images/Icon Notifiaction_3.png",
                           ),
                         ),
                       ),

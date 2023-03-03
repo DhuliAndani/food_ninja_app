@@ -35,7 +35,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
                           image: AssetImage(
-                            "assets/images/Icon Notifiaction.png",
+                            "assets/images/Icon Notifiaction_3.png",
                           ),
                         ),
                       ),
@@ -133,7 +133,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                   image: "assets/images/Photo.png",
                   text: "Fruit Salad",
                   countText: "Wijie Resto",
-                  SecondText: "\$5",
+                  SecondText: "      \$5",
                 ),
               ),
               const Padding(
@@ -142,7 +142,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                   image: "assets/images/Photo Menu.png",
                   text: "Green Noddle",
                   countText: "Noodle Home",
-                  SecondText: "\$15",
+                  SecondText: "   \$15",
                 ),
               ),
             ],
