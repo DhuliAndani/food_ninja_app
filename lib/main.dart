@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'pinal/explore_menu_screen.dart';
-import 'pinal/explore_restaurant_with_filter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExploreRestaurantWithFilterScreen(),
+      home: const ExploreMenuScreen(),
     );
   }
 }

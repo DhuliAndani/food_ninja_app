@@ -167,7 +167,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
               const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
+                image: AssetImage("assets/images/Icon Cart_2.png"),
               ),
               Stack(
                 children: const [
