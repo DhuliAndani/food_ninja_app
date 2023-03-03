@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //import 'dhuli/splash_screen.dart';
-import 'dhruvit/order_details_screen.dart';
+import 'chirag/on_boarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OrderDetailsScreen(),
+      home: const OnBoardingScreen(),
     );
   }
 }
