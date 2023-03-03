@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/on_boarding_screen.dart';
+import 'pinal/chat_details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoardingScreen(),
+      home: const ChatDetailsScreen(),
     );
   }
 }
