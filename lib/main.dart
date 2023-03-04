@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/chat_details_screen.dart';
+//import 'dhuli/splash_screen.dart';
+//import 'profile_scroll_mode_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ChatDetailsScreen(),
+      // home: const HomeScreen(),
     );
   }
 }
