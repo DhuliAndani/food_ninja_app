@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'Common/finish_order_common.dart';
 import 'Common/finish_order_common_container.dart';
 
-class RateFood extends StatelessWidget {
-  const RateFood({Key? key}) : super(key: key);
+class RateFoodScreen extends StatefulWidget {
+  const RateFoodScreen({Key? key}) : super(key: key);
 
+  @override
+  State<RateFoodScreen> createState() => _RateFoodScreenState();
+}
+
+class _RateFoodScreenState extends State<RateFoodScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,16 +19,16 @@ class RateFood extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/green.png"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 190, left: 80),
                 child: Image(
                   image: AssetImage("assets/images/Image_2.png"),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 400, left: 125),
                 child: Text(
                   "Thank You!",
@@ -35,7 +40,7 @@ class RateFood extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 435, left: 100),
                 child: Text(
                   "Enjoy Your Meal",
@@ -47,7 +52,7 @@ class RateFood extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 480, left: 115),
                 child: Text(
                   "Please rate your Food",
@@ -64,30 +69,30 @@ class RateFood extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset("assets/images/Star_1.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_2.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_3.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_4.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_5.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 650),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, top: 650),
                 child: FinishOrderCommonContainer(
                   image: "assets/images/edit Icon.png",
                   text: "Leave feedback",
@@ -96,7 +101,7 @@ class RateFood extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                 child: Row(
-                  children: [
+                  children: const [
                     FinishOrderCommon(
                       height: 57,
                       width: 228,

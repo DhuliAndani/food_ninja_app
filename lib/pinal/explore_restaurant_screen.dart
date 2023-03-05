@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
+import 'Common/home_food.dart';
 import 'Common/home_search.dart';
 
 class ExploreRestaurantScreen extends StatefulWidget {

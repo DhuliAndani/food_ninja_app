@@ -16,16 +16,16 @@ class _CallScreenState extends State<CallScreen> {
         children: [
           Stack(
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/green.png"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 190, left: 100),
                 child: Image(
                   image: AssetImage("assets/images/Image.png"),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 390, left: 100),
                 child: Text(
                   "Courtney Henry",
@@ -37,7 +37,7 @@ class _CallScreenState extends State<CallScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 435, left: 150),
                 child: Text(
                   "15.23 Min",

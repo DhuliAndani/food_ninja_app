@@ -19,16 +19,16 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
         children: [
           Stack(
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/green.png"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 190, left: 80),
                 child: Image(
                   image: AssetImage("assets/images/Image_3.png"),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 400, left: 125),
                 child: Text(
                   "Thank You!",
@@ -40,7 +40,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 435, left: 100),
                 child: Text(
                   "Enjoy Your Meal",
@@ -52,7 +52,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 480, left: 105),
                 child: Text(
                   "Please rate your Restaurant",
@@ -69,30 +69,30 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                 child: Row(
                   children: [
                     Image.asset("assets/images/Star_1.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_2.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_3.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_4.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_5.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 650),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, top: 650),
                 child: FinishOrderCommonContainer(
                   image: "assets/images/edit Icon.png",
                   text: "Leave feedback",
@@ -101,7 +101,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                 child: Row(
-                  children: [
+                  children: const [
                     FinishOrderCommon(
                       height: 57,
                       width: 228,

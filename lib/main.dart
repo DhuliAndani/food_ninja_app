@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/rate_restaurant_screen.dart';
+
+import 'pinal/voucher_promo_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RateRestaurantScreen(),
+      home: const VoucherPromoScreen(),
     );
   }
 }

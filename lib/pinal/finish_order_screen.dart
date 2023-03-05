@@ -19,16 +19,16 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
         children: [
           Stack(
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/green.png"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 190, left: 100),
                 child: Image(
                   image: AssetImage("assets/images/Image_1.png"),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 390, left: 125),
                 child: Text(
                   "Thank You!",
@@ -40,7 +40,7 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 425, left: 90),
                 child: Text(
                   "Order Completed",
@@ -52,7 +52,7 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 470, left: 105),
                 child: Text(
                   "Please rate your last Driver",
@@ -69,30 +69,30 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                 child: Row(
                   children: [
                     Image.asset("assets/images/Star_1.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_2.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_3.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_4.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Image.asset("assets/images/Star_5.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 650),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, top: 650),
                 child: FinishOrderCommonContainer(
                   image: "assets/images/edit Icon.png",
                   text: "Leave feedback",
@@ -101,7 +101,7 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                 child: Row(
-                  children: [
+                  children: const [
                     FinishOrderCommon(
                       height: 57,
                       width: 228,

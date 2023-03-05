@@ -105,8 +105,8 @@ class _PraticeScreenState extends State<PraticeScreen> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 15, right: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, top: 15, right: 25),
                 child: PraticeCommon(
                   image: "assets/images/P_Menu Photo.png",
                   text: "Spacy fresh crab",
@@ -114,8 +114,8 @@ class _PraticeScreenState extends State<PraticeScreen> {
                   SecondText: "\$ 35",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 15, right: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, top: 15, right: 25),
                 child: PraticeCommon(
                   image: "assets/images/Photo Menu.png",
                   text: "Spacy fresh crab",
@@ -123,8 +123,8 @@ class _PraticeScreenState extends State<PraticeScreen> {
                   SecondText: "\$ 35",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 15, right: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, top: 15, right: 25),
                 child: CommonTwo(
                   image: "assets/images/p_Menu Photo_2.png",
                   text: "Spacy fresh crab",
@@ -132,8 +132,8 @@ class _PraticeScreenState extends State<PraticeScreen> {
                   SecondText: "\$ 35",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 20, right: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, top: 20, right: 25),
                 child: CommonTwo(
                   image: "assets/images/p_Menu Photo_3.png",
                   text: "Spacy fresh crab",
@@ -148,13 +148,13 @@ class _PraticeScreenState extends State<PraticeScreen> {
                   height: 57,
                   width: 325,
                   decoration: BoxDecoration(
-                    color: Color(0xFF53E88B),
+                    color: const Color(0xFF53E88B),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Check out",
                         style: TextStyle(
