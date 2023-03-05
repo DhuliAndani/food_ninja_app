@@ -61,6 +61,7 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                   Image(
                     image: AssetImage("assets/images/Speaker Icon.png"),
                   ),
+                  //
                   SizedBox(
                     width: 15,
                   ),
