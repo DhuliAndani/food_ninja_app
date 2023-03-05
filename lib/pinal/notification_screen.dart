@@ -57,13 +57,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       width: 347,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Color(0x1AF4F4F4),
+                        color: const Color(0x1AF4F4F4),
                       ),
                       child: Row(
                         children: [
-                          SizedBox(width: 15),
+                          const SizedBox(width: 15),
                           Image.asset("assets/images/Success Icon.png"),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Column(
@@ -120,13 +120,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   width: 347,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Color(0x1AF4F4F4),
+                    color: const Color(0x1AF4F4F4),
                   ),
                   child: Row(
                     children: [
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Image.asset("assets/images/Top Up Icon.png"),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Column(
@@ -169,13 +169,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   width: 347,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Color(0x1AF4F4F4),
+                    color: const Color(0x1AF4F4F4),
                   ),
                   child: Row(
                     children: [
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Image.asset("assets/images/Cancel Icon.png"),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Column(
