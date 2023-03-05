@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CallRingingScreen extends StatefulWidget {
-  const CallRingingScreen({Key? key}) : super(key: key);
+class CallScreen extends StatefulWidget {
+  const CallScreen({Key? key}) : super(key: key);
 
   @override
-  State<CallRingingScreen> createState() => _CallRingingScreenState();
+  State<CallScreen> createState() => _CallScreenState();
 }
 
-class _CallRingingScreenState extends State<CallRingingScreen> {
+class _CallScreenState extends State<CallScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,7 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 435, left: 150),
                 child: Text(
-                  "Ringing . . .",
+                  "15.23 Min",
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: "Nunito-Regular",
@@ -56,7 +56,7 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Image(
-                      image: AssetImage("assets/images/Speaker Icon.png"),
+                      image: AssetImage("assets/images/Mute Icon.png"),
                     ),
                     SizedBox(
                       width: 15,
