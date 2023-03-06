@@ -13,11 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: const [
-           Text("Splash Screen"),
-          ],
-        ),
+        child: Text("Splash Screen"),
       ),
     );
   }
