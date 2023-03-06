@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       HomeFood(
                         height: 200,
                         width: 150,
-                        image: "assets/images/Resturant Image.png",
+                        image: "assets/images/Resturant_Image.png",
                         text: "\nVegan Resto",
                         countText: "12 mins",
                       ),

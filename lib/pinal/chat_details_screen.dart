@@ -186,61 +186,91 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25, top: 410),
+                    child: Container(
+                      height: 41,
+                      width: 185,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color(0x1AFFFFFF),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(
+                            "    Okay, wait a minute 👍",
+                            style: TextStyle(
+                              color: Color(0x4DFFFFFF),
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 160, top: 480, right: 25),
+                    child: Container(
+                      height: 40,
+                      width: 175,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color(0xFF53E88B),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(
+                            "    Okay I'm waiting  👍",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 60),
-                child: Container(
-                  height: 41,
-                  width: 129,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: const Color(0x1AFFFFFF),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        "    Just to order",
-                        style: TextStyle(
-                          color: Color(0x4DFFFFFF),
-                          fontSize: 14,
-                          fontFamily: "Nunito-Regular",
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 70, top: 340, right: 25),
-                child: Container(
-                  height: 41,
-                  width: 265,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: const Color(0xFF53E88B),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        "    Okay, for what level of spiciness?",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontFamily: "Nunito-Regular",
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ),
             ],
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 74,
+          width: 355,
+          decoration: BoxDecoration(
+            color: const Color(0xFF252525),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const [
+              Text(
+                "       Okay I'm waiting  👍",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Color(0xCCFFFFFF),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "Rubik-Regular",
+                ),
+              ),
+              SizedBox(width: 150),
+              Image(
+                image: AssetImage("assets/images/Icon Send.png"),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
