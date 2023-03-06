@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'dhuli/profile_screen.dart';
+import 'chirag/sign_up_screen.dart';
 
 //import 'dhuli/splash_screen.dart';
-//import 'profile_scroll_mode_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const HomeScreen(),
-      home: const ProfileScreen(),
+      home: SignUpScreen(),
     );
   }
 }
