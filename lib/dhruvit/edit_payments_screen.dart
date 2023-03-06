@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'common/payment_common.dart';
-
-class PaymentsScreen extends StatefulWidget {
-  const PaymentsScreen({super.key});
+class EditPaymentsScreen extends StatefulWidget {
+  const EditPaymentsScreen({super.key});
 
   @override
-  State<PaymentsScreen> createState() => _PaymentsScreenState();
+  State<EditPaymentsScreen> createState() => _EditPaymentsScreenState();
 }
 
-class _PaymentsScreenState extends State<PaymentsScreen> {
+class _EditPaymentsScreenState extends State<EditPaymentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +38,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 120, left: 20),
                   child: Text(
-                    "Confirm Order",
+                    "Payment",
                     style: TextStyle(
                       fontFamily: "BentonSans",
                       fontSize: 25,
@@ -55,7 +53,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
-              height: 103,
+              height: 73,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: const Color(0xFF252525),
@@ -63,88 +61,6 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
-                      Text(
-                        "Deliver To",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color.fromARGB(255, 225, 225, 225),
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      SizedBox(width: 170),
-                      Text(
-                        "Edit",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color(0xFF53E88B),
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
-                      Image(
-                        image: AssetImage("assets/images/Icon_Location.png"),
-                        height: 33,
-                        width: 33,
-                      ),
-                      Text(
-                        "4517 Washington Ave. Manchester,\n\nKentucky 39495",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 15,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
-            child: Container(
-              height: 103,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: const Color(0xFF252525),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
-                      Text(
-                        "Payment Method",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color.fromARGB(255, 225, 225, 225),
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      SizedBox(width: 110),
-                      Text(
-                        "Edit",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color(0xFF53E88B),
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
@@ -152,6 +68,41 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                         image: AssetImage("assets/images/paypal_Logo.png"),
                         height: 23,
                         width: 86,
+                      ),
+                      SizedBox(width: 25),
+                      Text(
+                        "2121 6352 8465 ****",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            child: Container(
+              height: 73,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: const Color(0xFF252525),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Image(
+                        image: AssetImage("assets/images/Visa_Logo.png"),
+                        height: 16,
+                        width: 50,
                       ),
                       SizedBox(width: 40),
                       Text(
@@ -164,14 +115,47 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 160),
-            child: PaymentCommon(),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
+            ),
+            child: Container(
+              height: 73,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: const Color(0xFF252525),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Image(
+                        image: AssetImage("assets/images/Payoneer_Logo.png"),
+                        height: 32,
+                        width: 83,
+                      ),
+                      SizedBox(width: 25),
+                      Text(
+                        "2121 6352 8465 ****",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
