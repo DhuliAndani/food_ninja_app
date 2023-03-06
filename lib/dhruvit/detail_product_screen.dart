@@ -34,6 +34,11 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
               ),
             ),
           ),
+          Container(
+            height: 10,
+            width: 20,
+            color: Colors.pink,
+          ),
         ],
       ),
     );
