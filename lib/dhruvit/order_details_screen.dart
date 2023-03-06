@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'common/order_details_common.dart';
-import 'common/payment_common.dart';
+import '../common/order_details_common.dart';
+import '../common/payment_common.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
   const OrderDetailsScreen({super.key});

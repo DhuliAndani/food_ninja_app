@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'common/payment_common.dart';
+import '../common/payment_common.dart';
 
 class PaymentsScreen extends StatefulWidget {
   const PaymentsScreen({super.key});
