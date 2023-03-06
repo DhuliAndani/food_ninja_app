@@ -100,6 +100,9 @@ flutter:
     - family: BentonSans
       fonts:
         - asset: assets/fonts/BentonSans-Bold.ttf
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
