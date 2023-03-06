@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
+import 'Common/home_food.dart';
 import 'Common/home_search.dart';
 
-class ExploreRestaurantScreen extends StatefulWidget {
-  const ExploreRestaurantScreen({Key? key}) : super(key: key);
+class ExploreRestaurantWithFilterScreen extends StatefulWidget {
+  const ExploreRestaurantWithFilterScreen({Key? key}) : super(key: key);
 
   @override
-  State<ExploreRestaurantScreen> createState() => _ExploreRestaurantState();
+  State<ExploreRestaurantWithFilterScreen> createState() =>
+      _ExploreRestaurantWithFilterScreenState();
 }
 
-class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
+class _ExploreRestaurantWithFilterScreenState
+    extends State<ExploreRestaurantWithFilterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,6 +79,76 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25, top: 20),
+                    child: Container(
+                      height: 44,
+                      width: 112,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color(0xFF2C2C2E),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            ">10 Km ",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontFamily: "Merriweather-Bold",
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Image(
+                            image: AssetImage("assets/images/Icon Close.png"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15, top: 20),
+                    child: Container(
+                      height: 44,
+                      width: 92,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color(0xFF2C2C2E),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "Soup ",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontFamily: "Merriweather-Bold",
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Image(
+                            image: AssetImage("assets/images/Icon Close.png"),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -190,7 +262,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
               const Image(
-                image: AssetImage("assets/images/Icon Cart_2.png"),
+                image: AssetImage("assets/images/Icon Cart_1.png"),
               ),
               Stack(
                 children: const [

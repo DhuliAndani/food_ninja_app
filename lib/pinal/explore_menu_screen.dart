@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
-import 'Common/home_search.dart';
+import 'Common/explore_menu_common_container.dart';
 
-class ExploreRestaurantScreen extends StatefulWidget {
-  const ExploreRestaurantScreen({Key? key}) : super(key: key);
+class ExploreMenuScreen extends StatefulWidget {
+  const ExploreMenuScreen({Key? key}) : super(key: key);
 
   @override
-  State<ExploreRestaurantScreen> createState() => _ExploreRestaurantState();
+  State<ExploreMenuScreen> createState() => _ExploreMenuScreenState();
 }
 
-class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
+class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,9 +57,32 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                     padding: const EdgeInsets.only(left: 25, top: 163),
                     child: Row(
                       children: [
-                        const HomeSearch(
-                          image: "assets/images/Icon Search.png",
-                          text: "    What do you want to order?",
+                        Container(
+                          height: 40,
+                          width: 260,
+                          decoration: BoxDecoration(
+                            color: const Color(0x33F9A84D),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Row(
+                            children: const [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/images/Icon Search.png"),
+                              ),
+                              Text(
+                                "    What do you want to order?",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 13,
+                                  fontFamily: "Roboto-Regular",
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         const SizedBox(
                           width: 15,
@@ -69,7 +91,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2C2C2E),
+                            color: const Color(0x33F9A84D),
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
                               image: AssetImage("assets/images/Filter.png"),
@@ -87,7 +109,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
               const Padding(
                 padding: EdgeInsets.only(left: 25),
                 child: Text(
-                  "Popular Restaurant",
+                  "Popular Menu",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -96,76 +118,31 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 20),
-                child: Row(
-                  children: const [
-                    HomeFood(
-                      height: 200,
-                      width: 150,
-                      image: "assets/images/Resturant Image.png",
-                      text: "\nVegan Resto",
-                      countText: "12 Mins",
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: HomeFood(
-                        height: 200,
-                        width: 150,
-                        image: "assets/images/Restaurant Image_2.png",
-                        text: "\n\nHealthy Food",
-                        countText: "8 Mins",
-                      ),
-                    ),
-                  ],
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                child: ExploreMenuCommonContainer(
+                  image: "assets/images/Menu Photo.png",
+                  text: "Herbal Pancake",
+                  countText: "Warung Herbal",
+                  SecondText: "\$7",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 20),
-                child: Row(
-                  children: const [
-                    HomeFood(
-                      height: 200,
-                      width: 150,
-                      image: "assets/images/Restaurant.png",
-                      text: "\n\nGood Food",
-                      countText: "12 Mins",
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: HomeFood(
-                        countText: "8 Mins",
-                        width: 150,
-                        height: 200,
-                        image: "assets/images/Restaurant Image_4.png",
-                        text: "\n\nSmart Resto",
-                      ),
-                    ),
-                  ],
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                child: ExploreMenuCommonContainer(
+                  image: "assets/images/Photo.png",
+                  text: "Fruit Salad",
+                  countText: "Wijie Resto",
+                  SecondText: "      \$5",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25, top: 20),
-                child: Row(
-                  children: const [
-                    HomeFood(
-                      height: 200,
-                      width: 150,
-                      image: "assets/images/Restaurant Image_5.png",
-                      text: "\nVegan Resto",
-                      countText: "12 Mins",
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: HomeFood(
-                        height: 200,
-                        width: 150,
-                        countText: "8 Mins",
-                        image: "assets/images/Restaurant Image_6.png",
-                        text: "\nHealthy Food",
-                      ),
-                    ),
-                  ],
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                child: ExploreMenuCommonContainer(
+                  image: "assets/images/Photo Menu.png",
+                  text: "Green Noddle",
+                  countText: "Noodle Home",
+                  SecondText: "   \$15",
                 ),
               ),
             ],
