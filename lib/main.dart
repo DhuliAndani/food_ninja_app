@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dhuli/profile_screen.dart';
+
 //import 'dhuli/splash_screen.dart';
 //import 'profile_scroll_mode_screen.dart';
 
@@ -19,6 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const HomeScreen(),
+      home: const ProfileScreen(),
     );
   }
 }
