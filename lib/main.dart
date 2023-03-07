@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'dhuli/profile_screen.dart';
-
-//import 'dhuli/splash_screen.dart';
-//import 'profile_scroll_mode_screen.dart';
+import 'pinal/explore_restaurant_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: const HomeScreen(),
-      home: const ProfileScreen(),
+      home: ExploreRestaurantScreen(),
+      // home: const SuccessNotificationScreen(),
     );
   }
 }
