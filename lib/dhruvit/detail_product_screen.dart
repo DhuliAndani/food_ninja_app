@@ -32,12 +32,22 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                   topRight: Radius.circular(45),
                 ),
               ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 5,
+                      width: 58,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: const Color(0xFFFEF6ED),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-          Container(
-            height: 10,
-            width: 20,
-            color: Colors.pink,
           ),
         ],
       ),
