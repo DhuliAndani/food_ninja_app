@@ -24,11 +24,6 @@ class OrderDetailsCommon extends StatelessWidget {
                 width: 62,
                 child: image,
               ),
-              SizedBox(
-                height: 62,
-                width: 62,
-                child: image,
-              ),
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Column(
