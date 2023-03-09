@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/sign_up_screen.dart';
+//import 'chirag/sign_up_screen.dart';
+//import 'dhruvit/detail_product_screen.dart';
+import 'dhuli/profile_screen.dart';
 
 //import 'dhuli/splash_screen.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignUpScreen(),
+      home: const ProfileScreen(),
     );
   }
 }
