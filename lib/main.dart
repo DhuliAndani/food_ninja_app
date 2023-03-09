@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/explore_restaurant_screen.dart';
+import 'pinal/voucher_promo_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ExploreRestaurantScreen(),
-      // home: const SuccessNotificationScreen(),
+      home: VoucherPromoScreen(),
     );
   }
 }
