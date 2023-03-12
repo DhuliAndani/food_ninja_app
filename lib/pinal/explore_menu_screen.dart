@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'Common/explore_menu_common_container.dart';
 import 'Common/home_common.dart';
-import 'Common/home_common_nevigation.dart';
 
 class ExploreMenuScreen extends StatefulWidget {
   const ExploreMenuScreen({Key? key}) : super(key: key);
@@ -24,14 +23,17 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
         ),
       ),
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
+            BackButton(
+              color: Colors.black,
+            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const HomeCommon(
+              children: const [
+                HomeCommon(
                   //  image: "assets/images/Pattern.png",
                   Secondimage: "assets/images/Icon Notifiaction_3.png",
                   text: "Find Your\nFavorite Food",
@@ -41,10 +43,10 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                   color: Color(0x33F9A84D),
                   SecondColor: Color(0x33F9A84D),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 25),
                   child: Text(
                     "Popular Menu",
@@ -56,7 +58,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                     ),
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 25, right: 25, top: 15),
                   child: ExploreMenuCommonContainer(
                     image: "assets/images/Menu Photo.png",
@@ -65,7 +67,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                     SecondText: "\$7",
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 25, right: 25, top: 15),
                   child: ExploreMenuCommonContainer(
                     image: "assets/images/Photo.png",
@@ -74,7 +76,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                     SecondText: "      \$5",
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 25, right: 25, top: 15),
                   child: ExploreMenuCommonContainer(
                     image: "assets/images/Photo Menu.png",
@@ -86,16 +88,6 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
               ],
             ),
           ],
-        ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: HomeCommonNevigation(
-            image: "assets/images/Icon Home Active.png",
-            Secondimage: "assets/images/Icon Profile.png",
-            thirdimage: "assets/images/Icon Cart_2.png",
-            forthimage: "assets/images/Chat.png",
-            fiveimage: "assets/images/Ellipse 164_1.png",
-          ),
         ),
       ),
     );

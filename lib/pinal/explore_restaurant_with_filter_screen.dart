@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'Common/home_common.dart';
-import 'Common/home_common_nevigation.dart';
 import 'Common/home_food.dart';
 
 class ExploreRestaurantWithFilterScreen extends StatefulWidget {
@@ -26,15 +25,15 @@ class _ExploreRestaurantWithFilterScreenState
         ),
       ),
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
+            BackButton(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const HomeCommon(
-                  //  image: "assets/images/Pattern.png",
                   Secondimage: "assets/images/Icon Notifiaction_3.png",
                   text: "Find Your\nFavorite Food",
                   thirdimage: "assets/images/Icon Search.png",
@@ -203,16 +202,6 @@ class _ExploreRestaurantWithFilterScreenState
               ],
             ),
           ],
-        ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: HomeCommonNevigation(
-            image: "assets/images/Icon Home Active.png",
-            Secondimage: "assets/images/Icon Profile.png",
-            thirdimage: "assets/images/Icon Cart_2.png",
-            forthimage: "assets/images/Chat.png",
-            fiveimage: "assets/images/Ellipse 164_1.png",
-          ),
         ),
       ),
     );

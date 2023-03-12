@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'Common/message_common_container.dart';
+import 'chat_details_screen.dart';
+import 'home_screen.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);
@@ -33,15 +35,24 @@ class _MessageScreenState extends State<MessageScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF252525),
-                          borderRadius: BorderRadius.circular(15),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/Vector_arrow.png",
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pop(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomeScreen(),
+                              ));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF252525),
+                            borderRadius: BorderRadius.circular(15),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/images/Vector_arrow.png",
+                              ),
                             ),
                           ),
                         ),
@@ -102,7 +113,7 @@ class _MessageScreenState extends State<MessageScreen> {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 Image(
                   image: AssetImage("assets/images/Home_1.png"),
                 ),
@@ -112,8 +123,17 @@ class _MessageScreenState extends State<MessageScreen> {
                 Image(
                   image: AssetImage("assets/images/Icon Cart_2.png"),
                 ),
-                Image(
-                  image: AssetImage("assets/images/Icon Chat Active_1.png"),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatDetailsScreen(),
+                        ));
+                  },
+                  child: Image(
+                    image: AssetImage("assets/images/Icon Chat Active_1.png"),
+                  ),
                 ),
               ],
             ),

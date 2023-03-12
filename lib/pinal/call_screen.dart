@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'finish_order_screen.dart';
+
 class CallScreen extends StatefulWidget {
   const CallScreen({Key? key}) : super(key: key);
 
@@ -25,6 +27,10 @@ class _CallScreenState extends State<CallScreen> {
           children: [
             Stack(
               children: [
+                SizedBox(
+                  height: 100,
+                ),
+                BackButton(),
                 const Padding(
                   padding: EdgeInsets.only(top: 190, left: 100),
                   child: Image(
@@ -60,15 +66,23 @@ class _CallScreenState extends State<CallScreen> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Image(
                         image: AssetImage("assets/images/Mute Icon.png"),
                       ),
                       SizedBox(
                         width: 15,
                       ),
-                      Image(
-                        image: AssetImage("assets/images/Close Icon_1.png"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FinishOrderScreen()));
+                        },
+                        child: Image(
+                          image: AssetImage("assets/images/Close Icon_1.png"),
+                        ),
                       ),
                     ],
                   ),

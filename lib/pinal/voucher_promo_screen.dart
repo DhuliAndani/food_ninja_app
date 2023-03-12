@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'notification_screen.dart';
 
 class VoucherPromoScreen extends StatefulWidget {
   const VoucherPromoScreen({Key? key}) : super(key: key);
@@ -32,15 +35,20 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                     // Image.asset("assets/images/Pattern.png"),
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color(0x1AF9A84D),
-                          borderRadius: BorderRadius.circular(15),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/Vector_arrow.png",
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0x1AF9A84D),
+                            borderRadius: BorderRadius.circular(15),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/images/Vector_arrow.png",
+                              ),
                             ),
                           ),
                         ),
@@ -188,28 +196,34 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 285, right: 25),
-                  child: Container(
-                    height: 57,
-                    width: 325,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: const Color(0xFF53E88B),
+                  padding: const EdgeInsets.only(left: 25, top: 290, right: 25),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => NotificationScreen()),
+                      );
+                    },
+                    style: ButtonStyle(
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                        color: Color(0xFFFEFEFF),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Merriweather-Bold",
+                      )),
+                      shape:
+                          MaterialStateProperty.all(ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                      )),
+                      overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
+                      backgroundColor:
+                          MaterialStatePropertyAll(Color(0xFF53E88B)),
+                      fixedSize: MaterialStateProperty.all(
+                        Size(325, 57),
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text(
-                          "Check out",
-                          style: TextStyle(
-                            color: Color(0xFFFEFEFF),
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Merriweather-Bold",
-                          ),
-                        )
-                      ],
-                    ),
+                    child: Text("Check out"),
                   ),
                 ),
               ],

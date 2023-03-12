@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'call_ringing_screen.dart';
+import 'message_screen.dart';
+
 class ChatDetailsScreen extends StatefulWidget {
   const ChatDetailsScreen({Key? key}) : super(key: key);
 
@@ -14,7 +17,7 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
       decoration: const BoxDecoration(
         color: Colors.black,
         image: DecorationImage(
-          image: AssetImage("assets/images/Pattern.png"),
+          image: AssetImage("assets/images/green.png"),
           scale: 1,
           alignment: Alignment.topRight,
         ),
@@ -29,20 +32,26 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
               children: [
                 Stack(
                   children: [
-                    const Image(
-                      image: AssetImage("assets/images/green.png"),
-                    ),
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color(0x99252525),
-                          borderRadius: BorderRadius.circular(15),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/Vector_arrow.png",
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pop(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MessageScreen(),
+                              ));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0x99252525),
+                            borderRadius: BorderRadius.circular(15),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/images/Vector_arrow.png",
+                              ),
                             ),
                           ),
                         ),
@@ -122,18 +131,27 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                             ),
                             Stack(
                               children: [
-                                Container(
-                                  height: 40,
-                                  width: 40,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                CallRingingScreen()));
+                                  },
                                   child: Container(
                                     height: 40,
                                     width: 40,
-                                    decoration: BoxDecoration(
-                                      color: const Color(0x1AF6F6F6),
-                                      borderRadius: BorderRadius.circular(30),
-                                      image: const DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/Call logo.png"),
+                                    child: Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0x1AF6F6F6),
+                                        borderRadius: BorderRadius.circular(30),
+                                        image: const DecorationImage(
+                                          image: AssetImage(
+                                              "assets/images/Call logo.png"),
+                                        ),
                                       ),
                                     ),
                                   ),

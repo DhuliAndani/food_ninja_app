@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Common/finish_order_common.dart';
 import 'Common/finish_order_common_container.dart';
+import 'rate_food_screen.dart';
 
 class FinishOrderScreen extends StatefulWidget {
   const FinishOrderScreen({Key? key}) : super(key: key);
@@ -110,23 +111,54 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                   child: Row(
-                    children: const [
-                      FinishOrderCommon(
-                        height: 57,
-                        width: 228,
-                        color: Color(0xFF53E88B),
-                        text: "Submit",
-                        SecondColor: Color(0xFFFEFEFF),
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          textStyle: MaterialStateProperty.all(TextStyle(
+                            color: Color(0xFFFEFEFF),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Merriweather-Bold",
+                          )),
+                          shape: MaterialStateProperty.all(
+                              ContinuousRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          )),
+                          overlayColor:
+                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                          backgroundColor:
+                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                          fixedSize: MaterialStateProperty.all(
+                            Size(228, 57),
+                          ),
+                        ),
+                        child: Text("Submit"),
                       ),
+                      // FinishOrderCommon(
+                      //   height: 57,
+                      //   width: 228,
+                      //   color: Color(0xFF53E88B),
+                      //   text: "Submit",
+                      //   SecondColor: Color(0xFFFEFEFF),
+                      // ),
                       SizedBox(
                         width: 10,
                       ),
-                      FinishOrderCommon(
-                        height: 57,
-                        width: 82,
-                        color: Color(0xFF252525),
-                        text: "Skip",
-                        SecondColor: Color(0xFF53E88B),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RateFoodScreen()));
+                        },
+                        child: FinishOrderCommon(
+                          height: 57,
+                          width: 82,
+                          color: Color(0xFF252525),
+                          text: "Skip",
+                          SecondColor: Color(0xFF53E88B),
+                        ),
                       ),
                     ],
                   ),
