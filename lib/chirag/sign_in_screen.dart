@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../common/button_common.dart';
-
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignInScreenState extends State<SignInScreen> {
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +52,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ],
             ),
             Text(
-              'Login To Your Account',
-              style: TextStyle(fontSize: 20, color: Colors.blue),
+              'Sign Up For Free ',
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             SizedBox(
               height: 20,
@@ -71,6 +70,32 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 alignment: Alignment.centerLeft,
                 child: TextField(
                   decoration: InputDecoration(
+                    icon: Icon(Icons.person, color: Color(0xff53E88B)),
+                    hintText: 'Anamwp . . |',
+                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 57,
+              width: 325,
+              decoration: BoxDecoration(
+                color: Color(0xff605d5d),
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(),
+              ),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: TextField(
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.email, color: Color(0xff53E88B)),
                     hintText: 'Email',
                     hintStyle: TextStyle(color: Color(0xffF4F4F4)),
                     border: OutlineInputBorder(
@@ -95,89 +120,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 alignment: Alignment.centerLeft,
                 child: TextField(
                   decoration: InputDecoration(
+                    icon: Icon(Icons.lock, color: Color(0xff53E88B)),
                     hintText: 'Password',
                     hintStyle: TextStyle(color: Color(0xffF4F4F4)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
+                    suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                      child: Icon(_obscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                    ),
                   ),
+                  obscureText: _obscureText,
                 ),
               ),
             ),
             SizedBox(
               height: 10,
             ),
-            Text(
-              'Or Continue With',
-              style: TextStyle(color: Colors.white),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Container(
-                    height: 57,
-                    width: 152,
-                    decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Image.asset(
-                          'assets/images/facebook-3 1.png',
-                          height: 25,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          'Facebook',
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 57,
-                  width: 152,
-                  decoration: BoxDecoration(
-                    color: Color(0xff605d5d),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Image.asset(
-                        'assets/images/google-icon 1 (1).png',
-                        height: 25,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        'Google',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Text(
-              'Forgot Your Password?',
-              style: TextStyle(color: Color(0xff53E88B)),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ButtinCommon(),
           ],
         ),
       ),
