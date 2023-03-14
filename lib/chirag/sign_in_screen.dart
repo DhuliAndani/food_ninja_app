@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common/button_common.dart';
+
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -8,6 +10,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  bool radioData = true;
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -142,8 +145,48 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Radio<bool>(
+                  activeColor: Color(0xff53E88B),
+                  groupValue: radioData,
+                  value: true,
+                  onChanged: (newValue) {
+                    debugPrint("value  --> $newValue");
+                    radioData = newValue!;
+                    setState(() {});
+                  },
+                ),
+                Text('Keep Me Signed In',
+                    style: TextStyle(color: Colors.white)),
+              ],
+            ),
+            Row(
+              children: [
+                Radio<bool>(
+                  activeColor: Color(0xff53E88B),
+                  groupValue: radioData,
+                  value: true,
+                  onChanged: (newValue) {
+                    debugPrint("value  --> $newValue");
+                    radioData = newValue!;
+                    setState(() {});
+                  },
+                ),
+                Text('Email Me About Special Pricing',
+                    style: TextStyle(color: Colors.white)),
+              ],
+            ),
+            ButtinCommon(),
+            SizedBox(
               height: 10,
             ),
+            Text(
+              'already have an account?',
+              style: TextStyle(color: Color(0xff53E88B)),
+            )
           ],
         ),
       ),
