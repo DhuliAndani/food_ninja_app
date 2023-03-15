@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import '../common/common_two.dart';
+import '../common/pratice_common.dart';
+import 'order_details_screen.dart';
 
-import 'Common/common_two.dart';
-import 'Common/pratice_common.dart';
-
-class PraticeScreen extends StatefulWidget {
-  const PraticeScreen({Key? key}) : super(key: key);
+class YourOrdersScreen extends StatefulWidget {
+  const YourOrdersScreen({Key? key}) : super(key: key);
 
   @override
-  State<PraticeScreen> createState() => _PraticeScreenState();
+  State<YourOrdersScreen> createState() => _YourOrdersScreenState();
 }
 
-class _PraticeScreenState extends State<PraticeScreen> {
+class _YourOrdersScreenState extends State<YourOrdersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -143,7 +143,7 @@ class _PraticeScreenState extends State<PraticeScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 25, right: 25, top: 15, bottom: 20),
+                    left: 40, right: 40, top: 15, bottom: 20),
                 child: Container(
                   height: 57,
                   width: 325,
@@ -151,20 +151,30 @@ class _PraticeScreenState extends State<PraticeScreen> {
                     color: const Color(0xFF53E88B),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        "Check out",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            fontFamily: "Merriweather-Bold"),
-                      ),
-                    ],
+                  child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF53E88B),
+                ),
+                child: const Center(
+                  child: Text(
+                    "Place My Order",
+                    style: TextStyle(
+                      fontFamily: "BentonSans",
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OrderDetailsScreen(),
+                    ),
+                  );
+                },
+              ),
                 ),
               ),
             ],
