@@ -33,13 +33,13 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(15),
                     child: Container(
                       height: 5,
                       width: 58,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: const Color.fromARGB(103, 254, 246, 237),
+                        color: const Color(0xFF252525),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
@@ -398,7 +398,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                        const  SizedBox(
                             height: 30,
                           )
                         ],
