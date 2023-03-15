@@ -103,7 +103,7 @@ class _DetailMenuScreenState extends State<DetailMenuScreen> {
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsets.only(right: 150,top: 10),
+                            padding: EdgeInsets.only(right: 150, top: 10),
                             child: Text(
                               "Sugarless",
                               style: TextStyle(
@@ -175,163 +175,92 @@ class _DetailMenuScreenState extends State<DetailMenuScreen> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(15),
+                            padding: const EdgeInsets.only(top: 40, left: 20),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: const [
-                                Text(
-                                  "Popular Menu",
-                                  style: TextStyle(
-                                    fontFamily: "BentonSans",
-                                    fontSize: 15,
+                              children: [
+                                Container(
+                                  height: 5,
+                                  width: 5,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 150,
-                                ),
-                                Text(
-                                  "View All",
+                                const SizedBox(width: 8),
+                                const Text(
+                                  "Stroberry",
                                   style: TextStyle(
                                     fontFamily: "BentonSans",
                                     fontSize: 12,
-                                    color: Color(0xFFFF7C32),
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            physics: const BouncingScrollPhysics(),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 20),
                             child: Row(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15),
-                                  child: Container(
-                                    height: 171,
-                                    width: 147,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: const Color(0xFF252525),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Image.asset(
-                                          "assets/images/Pizza_Cut.png",
-                                          width: 71,
-                                          height: 71,
-                                        ),
-                                        const Text(
-                                          "Spacy fresh crab",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 15,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                        const Text(
-                                          "12 \$",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 13,
-                                            color: Color.fromARGB(
-                                                85, 255, 255, 255),
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                Container(
+                                  height: 5,
+                                  width: 5,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15),
-                                  child: Container(
-                                    height: 171,
-                                    width: 147,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: const Color(0xFF252525),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Image.asset(
-                                          "assets/images/Dog_Haddi.png",
-                                          width: 71,
-                                          height: 71,
-                                        ),
-                                        const Text(
-                                          "Spacy fresh crab",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 15,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                        const Text(
-                                          "16 \$",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 13,
-                                            color: Color.fromARGB(
-                                                85, 255, 255, 255),
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15),
-                                  child: Container(
-                                    height: 171,
-                                    width: 147,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: const Color(0xFF252525),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Image.asset(
-                                          "assets/images/Pizza_Cut.png",
-                                          width: 71,
-                                          height: 71,
-                                        ),
-                                        const Text(
-                                          "Spacy fresh crab",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 15,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                        const Text(
-                                          "12 \$",
-                                          style: TextStyle(
-                                            fontFamily: "BentonSans",
-                                            fontSize: 13,
-                                            color: Color.fromARGB(
-                                                85, 255, 255, 255),
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                const SizedBox(width: 8),
+                                const Text(
+                                  "Cream",
+                                  style: TextStyle(
+                                    fontFamily: "BentonSans",
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 20),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 5,
+                                  width: 5,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                const Text(
+                                  "Wheat",
+                                  style: TextStyle(
+                                    fontFamily: "BentonSans",
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 25, horizontal: 20),
+                            child: Text(
+                              "Nulla occaecat velit laborum exercitation ullamco. Elit\n\nlabore eu aute elit nostrud culpa velit excepteur\n\ndeserunt sunt.",
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                fontFamily: "BentonSans",
+                                fontSize: 12,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                           const Padding(
@@ -491,6 +420,23 @@ class _DetailMenuScreenState extends State<DetailMenuScreen> {
             ),
           ),
         ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color.fromARGB(255, 76, 175, 79),
+          fixedSize: const Size(300, 55),
+        ),
+        onPressed: () {},
+        child: const Text(
+          "Add To Chart",
+          style: TextStyle(
+            fontFamily: "BentonSans",
+            fontSize: 14,
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
       ),
     );
   }
