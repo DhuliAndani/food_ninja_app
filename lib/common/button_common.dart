@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ButtinCommon extends StatelessWidget {
-  const ButtinCommon({Key? key}) : super(key: key);
+  final String? text;
+  final double? width;
+  const ButtinCommon({Key? key, this.text, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 57,
-      width: 157,
+      width: width ?? 120,
       decoration: BoxDecoration(
           color: Color(0xff53E88B), borderRadius: BorderRadius.circular(10)),
       child: Center(
           child: Text(
-        'Next',
+        text ?? 'Next',
         style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
       )),
     );

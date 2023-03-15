@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/upload_photo.dart';
+import 'chirag/signup_success_notification.dart';
 
 //import 'dhuli/splash_screen.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Upload_Photo(),
+      home: const Signup_Success_Notification(),
     );
   }
 }

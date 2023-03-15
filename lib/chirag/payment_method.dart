@@ -23,13 +23,8 @@ class _Payment_MethodState extends State<Payment_Method> {
               children: [
                 const Back_Button(
                   text: 'Payment Method',
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: Text(
-                    'This data will be displayed in your account \nprofile for security',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  textTwo:
+                      'This data will be displayed in your account \nprofile for security',
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20),
@@ -89,7 +84,7 @@ class _Payment_MethodState extends State<Payment_Method> {
                   ),
                 ),
                 SizedBox(
-                  height: 130,
+                  height: 160,
                 ),
                 Center(child: ButtinCommon()),
               ],

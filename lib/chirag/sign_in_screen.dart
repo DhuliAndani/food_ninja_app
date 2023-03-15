@@ -69,16 +69,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.person, color: Color(0xff53E88B)),
-                    hintText: 'Anamwp . . |',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.person, color: Color(0xff53E88B)),
+                  hintText: 'Anamwp . . |',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
@@ -94,16 +91,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.email, color: Color(0xff53E88B)),
-                    hintText: 'Email',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email, color: Color(0xff53E88B)),
+                  hintText: 'Email',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
@@ -119,29 +113,25 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.lock, color: Color(0xff53E88B)),
-                    hintText: 'Password',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    suffixIcon: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _obscureText = !_obscureText;
-                        });
-                      },
-                      child: Icon(_obscureText
-                          ? Icons.visibility
-                          : Icons.visibility_off),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock, color: Color(0xff53E88B)),
+                  hintText: 'Password',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  obscureText: _obscureText,
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                    child: Icon(
+                        _obscureText ? Icons.visibility_off : Icons.visibility),
+                  ),
                 ),
+                obscureText: _obscureText,
               ),
             ),
             SizedBox(
@@ -153,6 +143,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   activeColor: Color(0xff53E88B),
                   groupValue: radioData,
                   value: true,
+                  toggleable: true,
                   onChanged: (newValue) {
                     debugPrint("value  --> $newValue");
                     radioData = newValue!;
