@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/finish_order_common.dart';
+import 'package:food_ninja_app/common/finish_order_common_container.dart';
 import 'package:food_ninja_app/pinal/voucher_promo_screen.dart';
-
-import 'Common/finish_order_common.dart';
-import 'Common/finish_order_common_container.dart';
 
 class RateRestaurantScreen extends StatefulWidget {
   const RateRestaurantScreen({Key? key}) : super(key: key);
@@ -112,7 +111,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                          textStyle: MaterialStateProperty.all(TextStyle(
+                          textStyle: MaterialStateProperty.all(const TextStyle(
                             color: Color(0xFFFEFEFF),
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -123,16 +122,16 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                             borderRadius: BorderRadius.circular(30),
                           )),
                           overlayColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           backgroundColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           fixedSize: MaterialStateProperty.all(
-                            Size(228, 57),
+                            const Size(228, 57),
                           ),
                         ),
-                        child: Text("Submit"),
+                        child: const Text("Submit"),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       GestureDetector(
@@ -144,7 +143,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                             ),
                           );
                         },
-                        child: FinishOrderCommon(
+                        child: const FinishOrderCommon(
                           height: 57,
                           width: 82,
                           color: Color(0xFF252525),

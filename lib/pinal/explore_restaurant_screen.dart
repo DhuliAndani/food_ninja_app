@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'Common/home_common.dart';
-import 'Common/home_food.dart';
+import 'package:food_ninja_app/common/home_common.dart';
+import 'package:food_ninja_app/common/home_food.dart';
 
 class ExploreRestaurantScreen extends StatefulWidget {
   const ExploreRestaurantScreen({Key? key}) : super(key: key);
