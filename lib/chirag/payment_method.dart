@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../common/back_button.dart';
 import '../common/button_common.dart';
 
-class Signup_Process extends StatefulWidget {
-  const Signup_Process({Key? key}) : super(key: key);
+class Payment_Method extends StatefulWidget {
+  const Payment_Method({Key? key}) : super(key: key);
 
   @override
-  State<Signup_Process> createState() => _Signup_ProcessState();
+  State<Payment_Method> createState() => _Payment_MethodState();
 }
 
-class _Signup_ProcessState extends State<Signup_Process> {
+class _Payment_MethodState extends State<Payment_Method> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Back_Button(
-                  text: 'Fill in your bio to get started',
+                  text: 'Payment Method',
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25),
@@ -34,23 +34,18 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: Container(
-                    height: 61,
-                    width: 347,
+                    height: 73,
+                    width: 335,
                     decoration: BoxDecoration(
                       color: Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'First Name',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
+                      alignment: Alignment.center,
+                      child: Image(
+                        height: 23,
+                        image: AssetImage("assets/images/paypal.png"),
                       ),
                     ),
                   ),
@@ -58,23 +53,18 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
-                    height: 61,
-                    width: 347,
+                    height: 73,
+                    width: 335,
                     decoration: BoxDecoration(
                       color: Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Last Name',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
+                      alignment: Alignment.center,
+                      child: Image(
+                        height: 23,
+                        image: AssetImage("assets/images/Group.png"),
                       ),
                     ),
                   ),
@@ -82,29 +72,24 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
                   child: Container(
-                    height: 61,
-                    width: 347,
+                    height: 73,
+                    width: 335,
                     decoration: BoxDecoration(
                       color: Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Mobile Number',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                        ),
+                      alignment: Alignment.center,
+                      child: Image(
+                        height: 32,
+                        image: AssetImage("assets/images/layer.png"),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 170,
+                  height: 130,
                 ),
                 Center(child: ButtinCommon()),
               ],
