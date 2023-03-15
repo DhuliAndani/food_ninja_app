@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'dhruvit/detail_menu_Screen.dart';
+import 'dhruvit/order_details_screen.dart';
+import 'dhruvit/your_orders_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DetailMenuScreen(),
+      home: const YourOrdersScreen(),
     );
   }
 }
