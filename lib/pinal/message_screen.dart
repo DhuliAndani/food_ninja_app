@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/message_common_container.dart';
 import 'package:food_ninja_app/pinal/chat_details_screen.dart';
-
-import 'Common/message_common_container.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);
@@ -61,7 +60,8 @@ class _MessageScreenState extends State<MessageScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 25, top: 150, right: 25),
+                      padding:
+                          const EdgeInsets.only(left: 25, top: 150, right: 25),
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -71,7 +71,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                           );
                         },
-                        child: MessageCommonContainer(
+                        child: const MessageCommonContainer(
                           image: "assets/images/Photo Profile.png",
                           text: "Anamwp",
                           countText: "Your Order Just Arrived!",
@@ -113,7 +113,7 @@ class _MessageScreenState extends State<MessageScreen> {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                 Image(
                   image: AssetImage("assets/images/Home_1.png"),
                 ),

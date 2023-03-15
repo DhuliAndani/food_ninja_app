@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/finish_order_common.dart';
+import 'package:food_ninja_app/common/finish_order_common_container.dart';
 import 'package:food_ninja_app/pinal/rate_food_screen.dart';
-
-import 'Common/finish_order_common.dart';
-import 'Common/finish_order_common_container.dart';
 
 class FinishOrderScreen extends StatefulWidget {
   const FinishOrderScreen({Key? key}) : super(key: key);
@@ -115,7 +114,7 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                          textStyle: MaterialStateProperty.all(TextStyle(
+                          textStyle: MaterialStateProperty.all(const TextStyle(
                             color: Color(0xFFFEFEFF),
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -126,16 +125,16 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                             borderRadius: BorderRadius.circular(30),
                           )),
                           overlayColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           backgroundColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           fixedSize: MaterialStateProperty.all(
-                            Size(228, 57),
+                            const Size(228, 57),
                           ),
                         ),
-                        child: Text("Submit"),
+                        child: const Text("Submit"),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       GestureDetector(
@@ -147,7 +146,7 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                             ),
                           );
                         },
-                        child: FinishOrderCommon(
+                        child: const FinishOrderCommon(
                           height: 57,
                           width: 82,
                           color: Color(0xFF252525),

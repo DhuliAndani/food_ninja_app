@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/pinal_screen.dart';
+import 'pinal/rate_restaurant_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: PinalScreen(),
+      home: RateRestaurantScreen(),
     );
   }
 }

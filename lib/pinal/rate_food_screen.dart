@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/finish_order_common.dart';
+import 'package:food_ninja_app/common/finish_order_common_container.dart';
 
-import 'Common/finish_order_common.dart';
-import 'Common/finish_order_common_container.dart';
 import 'rate_restaurant_screen.dart';
 
 class RateFoodScreen extends StatefulWidget {
@@ -112,7 +112,7 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                          textStyle: MaterialStateProperty.all(TextStyle(
+                          textStyle: MaterialStateProperty.all(const TextStyle(
                             color: Color(0xFFFEFEFF),
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -123,16 +123,16 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                             borderRadius: BorderRadius.circular(30),
                           )),
                           overlayColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           backgroundColor:
-                              MaterialStatePropertyAll(Color(0xFF53E88B)),
+                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
                           fixedSize: MaterialStateProperty.all(
-                            Size(228, 57),
+                            const Size(228, 57),
                           ),
                         ),
-                        child: Text("Submit"),
+                        child: const Text("Submit"),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       GestureDetector(
@@ -141,7 +141,7 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      RateRestaurantScreen()));
+                                      const RateRestaurantScreen()));
                         },
                         child: GestureDetector(
                           onTap: () {
@@ -153,7 +153,7 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                               ),
                             );
                           },
-                          child: FinishOrderCommon(
+                          child: const FinishOrderCommon(
                             height: 57,
                             width: 82,
                             color: Color(0xFF252525),
