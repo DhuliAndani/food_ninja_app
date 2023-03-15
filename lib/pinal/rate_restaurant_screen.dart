@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/voucher_promo_screen.dart';
 
 import 'Common/finish_order_common.dart';
 import 'Common/finish_order_common_container.dart';
-import 'home_screen.dart';
 
 class RateRestaurantScreen extends StatefulWidget {
   const RateRestaurantScreen({Key? key}) : super(key: key);
@@ -138,9 +138,11 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const VoucherPromoScreen(),
+                            ),
+                          );
                         },
                         child: FinishOrderCommon(
                           height: 57,

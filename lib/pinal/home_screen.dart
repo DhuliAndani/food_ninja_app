@@ -3,11 +3,6 @@ import 'package:food_ninja_app/pinal/Common/home_food.dart';
 
 import 'Common/explore_menu_common_container.dart';
 import 'Common/home_common.dart';
-import 'Filter_screen.dart';
-import 'explore_menu_screen.dart';
-import 'explore_restaurant_screen.dart';
-import 'message_screen.dart';
-import 'voucher_promo_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -44,18 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Color(0xFF2C2C2E),
                   SecondColor: Color(0xFF2C2C2E),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => VoucherPromoScreen()));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(left: 25, top: 20, right: 25),
-                    child: Image(
-                      image: AssetImage("assets/images/Promo Advertising.png"),
-                    ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25, top: 20, right: 25),
+                  child: Image(
+                    image: AssetImage("assets/images/Promo Advertising.png"),
                   ),
                 ),
                 const SizedBox(
@@ -78,21 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       width: 110,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    ExploreRestaurantScreen()));
-                      },
-                      child: Text(
-                        "View More",
-                        style: TextStyle(
-                          color: Color(0xFFFF8E4C),
-                          fontSize: 12,
-                          fontFamily: "Roboto-Regular",
-                        ),
+                    Text(
+                      "View More",
+                      style: TextStyle(
+                        color: Color(0xFFFF8E4C),
+                        fontSize: 12,
+                        fontFamily: "Roboto-Regular",
                       ),
                     ),
                   ],
@@ -154,20 +132,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       width: 130,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ExploreMenuScreen()));
-                      },
-                      child: Text(
-                        "View More",
-                        style: TextStyle(
-                          color: Color(0xFFFF8E4C),
-                          fontSize: 12,
-                          fontFamily: "Roboto-Regular",
-                        ),
+                    Text(
+                      "View More",
+                      style: TextStyle(
+                        color: Color(0xFFFF8E4C),
+                        fontSize: 12,
+                        fontFamily: "Roboto-Regular",
                       ),
                     ),
                   ],
@@ -197,36 +167,24 @@ class _HomeScreenState extends State<HomeScreen> {
               Image(
                 image: AssetImage("assets/images/Icon Home Active.png"),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FilterScreen()));
-                },
-                child: Image(
-                  image: AssetImage("assets/images/Icon Profile.png"),
-                ),
+              Image(
+                image: AssetImage("assets/images/Icon Profile.png"),
               ),
               Image(
                 image: AssetImage("assets/images/Icon Cart_1.png"),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MessageScreen()));
-                },
-                child: Stack(
-                  children: [
-                    Image(
-                      image: AssetImage("assets/images/Chat.png"),
+              Stack(
+                children: [
+                  Image(
+                    image: AssetImage("assets/images/Chat.png"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Image(
+                      image: AssetImage("assets/images/Ellipse 164_2.png"),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15),
-                      child: Image(
-                        image: AssetImage("assets/images/Ellipse 164_2.png"),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

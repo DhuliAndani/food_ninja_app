@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'finish_order_screen.dart';
+import 'package:food_ninja_app/pinal/finish_order_screen.dart';
 
 class CallScreen extends StatefulWidget {
   const CallScreen({Key? key}) : super(key: key);
@@ -30,7 +29,6 @@ class _CallScreenState extends State<CallScreen> {
                 SizedBox(
                   height: 100,
                 ),
-                BackButton(),
                 const Padding(
                   padding: EdgeInsets.only(top: 190, left: 100),
                   child: Image(
@@ -76,9 +74,11 @@ class _CallScreenState extends State<CallScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => FinishOrderScreen()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const FinishOrderScreen(),
+                            ),
+                          );
                         },
                         child: Image(
                           image: AssetImage("assets/images/Close Icon_1.png"),

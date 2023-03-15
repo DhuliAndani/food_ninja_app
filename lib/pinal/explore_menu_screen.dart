@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Common/explore_menu_common_container.dart';
 import 'Common/home_common.dart';
+import 'message_screen.dart';
 
 class ExploreMenuScreen extends StatefulWidget {
   const ExploreMenuScreen({Key? key}) : super(key: key);
@@ -27,12 +28,9 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            BackButton(
-              color: Colors.black,
-            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 HomeCommon(
                   //  image: "assets/images/Pattern.png",
                   Secondimage: "assets/images/Icon Notifiaction_3.png",
@@ -88,6 +86,50 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
               ],
             ),
           ],
+        ),
+        bottomNavigationBar: Container(
+          height: 70,
+          decoration: BoxDecoration(
+            color: const Color(0xFF252525),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image(
+                image: AssetImage("assets/images/Icon Home Active.png"),
+              ),
+              Image(
+                image: AssetImage("assets/images/Icon Profile.png"),
+              ),
+              Image(
+                image: AssetImage("assets/images/Icon Cart_2.png"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MessageScreen(),
+                    ),
+                  );
+                },
+                child: Stack(
+                  children: [
+                    Image(
+                      image: AssetImage("assets/images/Chat.png"),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15),
+                      child: Image(
+                        image: AssetImage("assets/images/Ellipse 164_1.png"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

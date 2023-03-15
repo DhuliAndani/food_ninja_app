@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/explore_menu_screen.dart';
+import 'package:food_ninja_app/pinal/explore_restaurant_with_filter_screen.dart';
 
 import 'Common/filter_common_container.dart';
-import 'explore_menu_with_filter_screen.dart';
-import 'explore_restaurant_with_filter_screen.dart';
 
 class FilterScreen extends StatefulWidget {
   const FilterScreen({Key? key}) : super(key: key);
@@ -27,7 +27,6 @@ class _FilterScreenState extends State<FilterScreen> {
         backgroundColor: Colors.black,
         body: ListView(
           children: [
-            BackButton(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -116,7 +115,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 20),
                   child: Row(
-                    children: const [
+                    children: [
                       FilterCommonContainer(
                         height: 44,
                         width: 108,
@@ -133,56 +132,58 @@ class _FilterScreenState extends State<FilterScreen> {
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 30, top: 20),
-                  child: Text(
-                    "Location",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontFamily: "Merri weather-Bold",
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const ExploreRestaurantWithFilterScreen(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Location",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: "Merri weather-Bold",
+                      ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 15),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  ExploreRestaurantWithFilterScreen()));
-                    },
-                    child: Row(
-                      children: const [
-                        FilterCommonContainer(
+                  child: Row(
+                    children: const [
+                      FilterCommonContainer(
+                        height: 44,
+                        width: 70,
+                        text: "1 Km",
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: FilterCommonContainer(
                           height: 44,
-                          width: 70,
-                          text: "1 Km",
+                          width: 86,
+                          text: ">10 Km",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: FilterCommonContainer(
-                            height: 44,
-                            width: 86,
-                            text: ">10 Km",
-                          ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: FilterCommonContainer(
+                          height: 44,
+                          width: 86,
+                          text: "<10 Km",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: FilterCommonContainer(
-                            height: 44,
-                            width: 86,
-                            text: "<10 Km",
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 30, top: 20),
                   child: Text(
                     "Food",
@@ -196,39 +197,30 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 15),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  ExploreMenuWithFilterScreen()));
-                    },
-                    child: Row(
-                      children: const [
-                        FilterCommonContainer(
+                  child: Row(
+                    children: const [
+                      FilterCommonContainer(
+                        height: 44,
+                        width: 70,
+                        text: "Cake",
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: FilterCommonContainer(
                           height: 44,
-                          width: 70,
-                          text: "Cake",
+                          width: 71,
+                          text: "Soup",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: FilterCommonContainer(
-                            height: 44,
-                            width: 71,
-                            text: "Soup",
-                          ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: FilterCommonContainer(
+                          height: 44,
+                          width: 120,
+                          text: "Main Course",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: FilterCommonContainer(
-                            height: 44,
-                            width: 120,
-                            text: "Main Course",
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -253,30 +245,34 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 125, right: 25),
-                  child: ClipRRect(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        textStyle: MaterialStateProperty.all(TextStyle(
-                          color: Color(0xFFFEFEFF),
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Merriweather-Bold",
-                        )),
-                        shape:
-                            MaterialStateProperty.all(ContinuousRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        )),
-                        overlayColor:
-                            MaterialStatePropertyAll(Color(0xFF53E88B)),
-                        backgroundColor:
-                            MaterialStatePropertyAll(Color(0xFF53E88B)),
-                        fixedSize: MaterialStateProperty.all(
-                          Size(325, 57),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ExploreMenuScreen(),
                         ),
+                      );
+                    },
+                    style: ButtonStyle(
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                        color: Color(0xFFFEFEFF),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Merriweather-Bold",
+                      )),
+                      shape:
+                          MaterialStateProperty.all(ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      )),
+                      overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
+                      backgroundColor:
+                          MaterialStatePropertyAll(Color(0xFF53E88B)),
+                      fixedSize: MaterialStateProperty.all(
+                        Size(325, 57),
                       ),
-                      child: Text("search"),
                     ),
+                    child: Text("search"),
                   ),
                 ),
               ],

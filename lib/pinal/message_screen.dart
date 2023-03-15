@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/chat_details_screen.dart';
 
 import 'Common/message_common_container.dart';
-import 'chat_details_screen.dart';
-import 'home_screen.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);
@@ -35,24 +34,15 @@ class _MessageScreenState extends State<MessageScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomeScreen(),
-                              ));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF252525),
-                            borderRadius: BorderRadius.circular(15),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/images/Vector_arrow.png",
-                              ),
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF252525),
+                          borderRadius: BorderRadius.circular(15),
+                          image: const DecorationImage(
+                            image: AssetImage(
+                              "assets/images/Vector_arrow.png",
                             ),
                           ),
                         ),
@@ -70,13 +60,23 @@ class _MessageScreenState extends State<MessageScreen> {
                         ),
                       ),
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(left: 25, top: 150, right: 25),
-                      child: MessageCommonContainer(
-                        image: "assets/images/Photo Profile.png",
-                        text: "Anamwp",
-                        countText: "Your Order Just Arrived!",
-                        secondText: "                20:00",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ChatDetailsScreen(),
+                            ),
+                          );
+                        },
+                        child: MessageCommonContainer(
+                          image: "assets/images/Photo Profile.png",
+                          text: "Anamwp",
+                          countText: "Your Order Just Arrived!",
+                          secondText: "                20:00",
+                        ),
                       ),
                     ),
                   ],
@@ -123,17 +123,8 @@ class _MessageScreenState extends State<MessageScreen> {
                 Image(
                   image: AssetImage("assets/images/Icon Cart_2.png"),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ChatDetailsScreen(),
-                        ));
-                  },
-                  child: Image(
-                    image: AssetImage("assets/images/Icon Chat Active_1.png"),
-                  ),
+                Image(
+                  image: AssetImage("assets/images/Icon Chat Active_1.png"),
                 ),
               ],
             ),

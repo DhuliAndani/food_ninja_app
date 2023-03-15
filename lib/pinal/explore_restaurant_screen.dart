@@ -27,9 +27,6 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            BackButton(
-              color: Colors.black,
-            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

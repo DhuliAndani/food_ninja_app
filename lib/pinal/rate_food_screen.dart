@@ -143,12 +143,23 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                                   builder: (context) =>
                                       RateRestaurantScreen()));
                         },
-                        child: FinishOrderCommon(
-                          height: 57,
-                          width: 82,
-                          color: Color(0xFF252525),
-                          text: "Skip",
-                          SecondColor: Color(0xFF53E88B),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const RateRestaurantScreen(),
+                              ),
+                            );
+                          },
+                          child: FinishOrderCommon(
+                            height: 57,
+                            width: 82,
+                            color: Color(0xFF252525),
+                            text: "Skip",
+                            SecondColor: Color(0xFF53E88B),
+                          ),
                         ),
                       ),
                     ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/home_screen.dart';
+import 'pinal/success_notification_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: HomeScreen(),
+      home: SuccessNotificationScreen(),
     );
   }
 }

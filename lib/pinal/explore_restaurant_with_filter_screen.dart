@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/explore_menu_with_filter_screen.dart';
 
 import 'Common/home_common.dart';
 import 'Common/home_food.dart';
@@ -29,18 +30,22 @@ class _ExploreRestaurantWithFilterScreenState
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            BackButton(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const HomeCommon(
-                  Secondimage: "assets/images/Icon Notifiaction_3.png",
-                  text: "Find Your\nFavorite Food",
-                  thirdimage: "assets/images/Icon Search.png",
-                  SecondText: "    What do you want to order?",
-                  forthimage: "assets/images/Filter.png",
-                  color: Color(0xFF2C2C2E),
-                  SecondColor: Color(0xFF2C2C2E),
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const HomeCommon(
+                    Secondimage: "assets/images/Icon Notifiaction_3.png",
+                    text: "Find Your\nFavorite Food",
+                    thirdimage: "assets/images/Icon Search.png",
+                    SecondText: "    What do you want to order?",
+                    forthimage: "assets/images/Filter.png",
+                    color: Color(0xFF2C2C2E),
+                    SecondColor: Color(0xFF2C2C2E),
+                  ),
                 ),
                 Row(
                   children: [
@@ -86,27 +91,39 @@ class _ExploreRestaurantWithFilterScreenState
                           borderRadius: BorderRadius.circular(15),
                           color: Color(0xFF2C2C2E),
                         ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Text(
-                              "Soup ",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontFamily: "Merriweather-Bold",
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Image(
-                              image: AssetImage("assets/images/Icon Close.png"),
-                            ),
-                          ],
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ExploreMenuWithFilterScreen(),
+                              ),
+                            );
+                          },
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: const [
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                "Soup ",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontFamily: "Merriweather-Bold",
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/images/Icon Close.png"),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

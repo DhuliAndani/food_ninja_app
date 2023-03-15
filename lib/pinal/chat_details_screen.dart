@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'call_ringing_screen.dart';
-import 'message_screen.dart';
+import 'package:food_ninja_app/pinal/call_ringing_screen.dart';
 
 class ChatDetailsScreen extends StatefulWidget {
   const ChatDetailsScreen({Key? key}) : super(key: key);
@@ -34,24 +32,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MessageScreen(),
-                              ));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: const Color(0x99252525),
-                            borderRadius: BorderRadius.circular(15),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/images/Vector_arrow.png",
-                              ),
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          color: const Color(0x99252525),
+                          borderRadius: BorderRadius.circular(15),
+                          image: const DecorationImage(
+                            image: AssetImage(
+                              "assets/images/Vector_arrow.png",
                             ),
                           ),
                         ),
@@ -134,10 +123,12 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                CallRingingScreen()));
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const CallRingingScreen(),
+                                      ),
+                                    );
                                   },
                                   child: Container(
                                     height: 40,

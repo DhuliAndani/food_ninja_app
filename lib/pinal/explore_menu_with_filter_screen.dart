@@ -29,19 +29,23 @@ class _ExploreMenuWithFilterScreenState
           body: ListView(
             scrollDirection: Axis.vertical,
             children: [
-              BackButton(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const HomeCommon(
-                    //  image: "assets/images/Pattern.png",
-                    Secondimage: "assets/images/Icon Notifiaction_3.png",
-                    text: "Find Your\nFavorite Food",
-                    thirdimage: "assets/images/Icon Search.png",
-                    SecondText: "    What do you want to order?",
-                    forthimage: "assets/images/Filter.png",
-                    color: Color(0xFF2C2C2E),
-                    SecondColor: Color(0xFF2C2C2E),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const HomeCommon(
+                      //  image: "assets/images/Pattern.png",
+                      Secondimage: "assets/images/Icon Notifiaction_3.png",
+                      text: "Find Your\nFavorite Food",
+                      thirdimage: "assets/images/Icon Search.png",
+                      SecondText: "    What do you want to order?",
+                      forthimage: "assets/images/Filter.png",
+                      color: Color(0xFF2C2C2E),
+                      SecondColor: Color(0xFF2C2C2E),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, top: 15),

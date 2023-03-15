@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/rate_food_screen.dart';
 
 import 'Common/finish_order_common.dart';
 import 'Common/finish_order_common_container.dart';
-import 'rate_food_screen.dart';
 
 class FinishOrderScreen extends StatefulWidget {
   const FinishOrderScreen({Key? key}) : super(key: key);
@@ -135,22 +135,17 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                         ),
                         child: Text("Submit"),
                       ),
-                      // FinishOrderCommon(
-                      //   height: 57,
-                      //   width: 228,
-                      //   color: Color(0xFF53E88B),
-                      //   text: "Submit",
-                      //   SecondColor: Color(0xFFFEFEFF),
-                      // ),
                       SizedBox(
                         width: 10,
                       ),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RateFoodScreen()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const RateFoodScreen(),
+                            ),
+                          );
                         },
                         child: FinishOrderCommon(
                           height: 57,

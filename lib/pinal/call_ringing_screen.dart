@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'call_screen.dart';
+import 'package:food_ninja_app/pinal/call_screen.dart';
 
 class CallRingingScreen extends StatefulWidget {
   const CallRingingScreen({Key? key}) : super(key: key);
@@ -27,7 +26,6 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
           children: [
             Stack(
               children: [
-                BackButton(),
                 Padding(
                   padding: EdgeInsets.only(top: 190, left: 100),
                   child: Image(
@@ -64,22 +62,24 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CallScreen()));
-                        },
-                        child: Image(
-                          image: AssetImage("assets/images/Speaker Icon.png"),
-                        ),
+                      Image(
+                        image: AssetImage("assets/images/Speaker Icon.png"),
                       ),
                       SizedBox(
                         width: 15,
                       ),
-                      Image(
-                        image: AssetImage("assets/images/Close Icon_1.png"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CallScreen(),
+                            ),
+                          );
+                        },
+                        child: Image(
+                          image: AssetImage("assets/images/Close Icon_1.png"),
+                        ),
                       ),
                     ],
                   ),
