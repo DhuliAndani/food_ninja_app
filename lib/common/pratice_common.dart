@@ -13,7 +13,7 @@ class PraticeCommon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 103,
-      width: 347,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Color(0xFF2C2C2E),
         borderRadius: BorderRadius.circular(15),
