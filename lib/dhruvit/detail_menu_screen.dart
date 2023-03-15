@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class DetailProductScreen extends StatefulWidget {
-  const DetailProductScreen({super.key});
+class DetailMenuScreen extends StatefulWidget {
+  const DetailMenuScreen({super.key});
 
   @override
-  State<DetailProductScreen> createState() => _DetailProductScreenState();
+  State<DetailMenuScreen> createState() => _DetailMenuScreenState();
 }
 
-class _DetailProductScreenState extends State<DetailProductScreen> {
+class _DetailMenuScreenState extends State<DetailMenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/Photo_Restaurant.png",
+            "assets/images/Photo_Menu_two.png",
             fit: BoxFit.cover,
             width: double.infinity,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 295),
+            padding: const EdgeInsets.only(top: 345),
             child: Container(
               height: double.infinity,
               width: double.infinity,
@@ -93,7 +93,19 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                           const Padding(
                             padding: EdgeInsets.only(top: 25, right: 35),
                             child: Text(
-                              "Wijie Bar and Resto",
+                              "Rainbow Sanswich",
+                              style: TextStyle(
+                                fontFamily: "BentonSans",
+                                fontSize: 27,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(right: 150,top: 10),
+                            child: Text(
+                              "Sugarless",
                               style: TextStyle(
                                 fontFamily: "BentonSans",
                                 fontSize: 27,
@@ -152,7 +164,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 20),
                             child: Text(
-                              "Most whole Alaskan Red King Crabs get broken down\n\ninto legs, claws, and lump meat. We offer all of these\n\noptions as well in our online shop, but there is nothing\n\nlike getting the whole....",
+                              "Nulla occaecat velit laborum exercitation ullamco. Elit \n\nlabore eu aute elit nostrud culpa velit excepteur\n\ndeserunt sunt. Velit non est cillum consequat\n\ncupidatat ex Lorem laboris labore aliqua ad duis eu\n\nlaborum.",
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontFamily: "BentonSans",
