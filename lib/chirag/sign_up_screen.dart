@@ -51,18 +51,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            Text(
+            const Text(
               'Login To Your Account',
               style: TextStyle(fontSize: 20, color: Colors.blue),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               height: 57,
               width: 325,
               decoration: BoxDecoration(
-                color: Color(0xff605d5d),
+                color: const Color(0xff605d5d),
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Email',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                    hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -79,14 +79,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 57,
               width: 325,
               decoration: BoxDecoration(
-                color: Color(0xff605d5d),
+                color: const Color(0xff605d5d),
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
@@ -95,7 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                    hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -103,10 +103,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Or Continue With',
               style: TextStyle(color: Colors.white),
             ),
@@ -119,22 +119,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 57,
                     width: 152,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Image.asset(
                           'assets/images/facebook-3 1.png',
                           height: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text(
+                        const Text(
                           'Facebook',
                           style: TextStyle(color: Colors.white),
                         )
@@ -146,22 +146,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 57,
                   width: 152,
                   decoration: BoxDecoration(
-                    color: Color(0xff605d5d),
+                    color: const Color(0xff605d5d),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 30,
                       ),
                       Image.asset(
                         'assets/images/google-icon 1 (1).png',
                         height: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         'Google',
                         style: TextStyle(color: Colors.white),
                       )
@@ -170,16 +170,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            Text(
+            const Text(
               'Forgot Your Password?',
               style: TextStyle(color: Color(0xff53E88B)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            ButtonCommon(
+            const ButtonCommon(
               text: 'Login',
               width: 141,
+              height: 57,
             ),
           ],
         ),

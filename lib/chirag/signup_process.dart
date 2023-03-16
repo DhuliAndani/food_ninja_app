@@ -24,8 +24,8 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 const Back_Button(
                   text: 'Fill in your bio to get \nstarted',
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25),
                   child: Text(
                     'This data will be displayed in your account \nprofile for security',
                     style: TextStyle(color: Colors.white),
@@ -37,7 +37,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                     height: 61,
                     width: 347,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
@@ -46,7 +46,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'First Name',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                          hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -61,7 +61,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                     height: 61,
                     width: 347,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
@@ -70,7 +70,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Last Name',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                          hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -85,7 +85,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                     height: 61,
                     width: 347,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
@@ -94,7 +94,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Mobile Number',
-                          hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                          hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -103,10 +103,15 @@ class _Signup_ProcessState extends State<Signup_Process> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 170,
                 ),
-                Center(child: ButtonCommon()),
+                const Center(
+                    child: ButtonCommon(
+                  height: 57,
+                  width: 157,
+                  text: 'Next',
+                )),
               ],
             ),
           ],

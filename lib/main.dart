@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'dhuli/profile_screen.dart';
+import 'chirag/upload_photo.dart';
 
 //import 'dhuli/splash_screen.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ProfileScreen(),
+      home: const Upload_Photo(),
     );
   }
 }
