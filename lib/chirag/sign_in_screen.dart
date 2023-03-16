@@ -12,6 +12,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   bool radioData = true;
   bool _obscureText = true;
+  bool checkBoxData = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,14 +141,13 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Row(
               children: [
-                Radio<bool>(
-                  activeColor: Color(0xff53E88B),
-                  groupValue: radioData,
-                  value: true,
-                  toggleable: true,
-                  onChanged: (newValue) {
-                    debugPrint("value  --> $newValue");
-                    radioData = newValue!;
+                Checkbox(
+                  value: checkBoxData,
+                  shape: const CircleBorder(),
+                  checkColor: Colors.white,
+                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  onChanged: (data) {
+                    checkBoxData = data!;
                     setState(() {});
                   },
                 ),
@@ -157,13 +157,13 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Row(
               children: [
-                Radio<bool>(
-                  activeColor: Color(0xff53E88B),
-                  groupValue: radioData,
-                  value: true,
-                  onChanged: (newValue) {
-                    debugPrint("value  --> $newValue");
-                    radioData = newValue!;
+                Checkbox(
+                  value: checkBoxData,
+                  shape: const CircleBorder(),
+                  checkColor: Colors.white,
+                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  onChanged: (data) {
+                    checkBoxData = data!;
                     setState(() {});
                   },
                 ),
