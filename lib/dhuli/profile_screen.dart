@@ -44,7 +44,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Expanded(
                     child: SingleChildScrollView(
                       child: Column(
@@ -102,9 +102,10 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
+                          ///
                           const SizedBox(height: 20),
                           Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 15),
                             decoration: const BoxDecoration(
                               color: Color(0xFF252525),
@@ -118,7 +119,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                                 Image.asset(
                                   "assets/images/Voucher_Icon.png",
                                 ),
-                                SizedBox(width: 10),
+                                const SizedBox(width: 10),
                                 const Text(
                                   " You Have 3 Voucher",
                                   //textAlign: TextAlign.center,
@@ -142,24 +143,24 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          PraticeCommon(
+                          const SizedBox(height: 10),
+                          const PraticeCommon(
                             image: "assets/images/P_Menu Photo.png",
                             text: "Spacy fresh crab",
                             countText: "Waroenk kita",
                             ThirdText: "Buy Again",
                             SecondText: "\$ 35",
                           ),
-                          SizedBox(height: 15),
-                          PraticeCommon(
+                          const SizedBox(height: 15),
+                          const PraticeCommon(
                             image: "assets/images/Photo_Menu.png",
                             text: "Spacy fresh crab",
                             countText: "Waroenk kita",
                             ThirdText: "Buy Again",
                             SecondText: "\$ 35",
                           ),
-                          SizedBox(height: 15),
-                          PraticeCommon(
+                          const SizedBox(height: 15),
+                          const PraticeCommon(
                             image: "assets/images/ice_cream.png",
                             text: "Spacy fresh crab",
                             countText: "Waroenk kita",
@@ -177,43 +178,43 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
           // SizedBox(height: 10),
         ],
       ),
-      // bottomNavigationBar: Padding(
-      //   padding: const EdgeInsets.all(8.0),
-      //   child: Container(
-      //     height: 70,
-      //     decoration: BoxDecoration(
-      //       color: const Color(0xFF252525),
-      //       borderRadius: BorderRadius.circular(10),
-      //     ),
-      //     child: Row(
-      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //       children: [
-      //         const Image(
-      //           image: AssetImage("assets/images/Icon Home Active.png"),
-      //         ),
-      //         const Image(
-      //           image: AssetImage("assets/images/Icon Profile.png"),
-      //         ),
-      //         const Image(
-      //           image: AssetImage("assets/images/Icon Cart_1.png"),
-      //         ),
-      //         Stack(
-      //           children: const [
-      //             Image(
-      //               image: AssetImage("assets/images/Chat.png"),
-      //             ),
-      //             Padding(
-      //               padding: EdgeInsets.only(left: 15),
-      //               child: Image(
-      //                 image: AssetImage("assets/images/Ellipse 164_2.png"),
-      //               ),
-      //             ),
-      //           ],
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 70,
+          decoration: BoxDecoration(
+            color: const Color(0xFF252525),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const Image(
+                image: AssetImage("assets/images/Icon_Home.png"),
+              ),
+              const Image(
+                image: AssetImage("assets/images/Icon_Profil_Active.png"),
+              ),
+              const Image(
+                image: AssetImage("assets/images/Icon Cart_1.png"),
+              ),
+              Stack(
+                children: const [
+                  Image(
+                    image: AssetImage("assets/images/Icon_Chat _Wit.png"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Image(
+                      image: AssetImage("assets/images/Ellipse 164_2.png"),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
