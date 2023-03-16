@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:food_ninja_app/dhruvit/your_orders_screen.dart';
 
 class EditLocationScreen extends StatefulWidget {
   const EditLocationScreen({super.key});
@@ -14,11 +13,12 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-              image: AssetImage("assets/images/Pattern.png"),
-              scale: 1,
-              alignment: Alignment.topRight),),
+        color: Colors.black,
+        image: DecorationImage(
+            image: AssetImage("assets/images/Pattern.png"),
+            scale: 1,
+            alignment: Alignment.topRight),
+      ),
       child: Scaffold(
         backgroundColor: const Color(0xFF0D0D0D),
         body: Column(
@@ -148,15 +148,25 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 120),
-                      child: Text(
-                        "Set Location",
-                        style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color(0xFF53E88B),
-                          fontWeight: FontWeight.w400,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const YourOrdersScreen(),
+                          ),
+                        );
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.only(right: 120),
+                        child: Text(
+                          "Set Location",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 14,
+                            color: Color(0xFF53E88B),
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                       ),
                     ),

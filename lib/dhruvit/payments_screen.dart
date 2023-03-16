@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/button_common.dart';
+import 'edit_location_screen.dart';
 
 class PaymentsScreen extends StatefulWidget {
   const PaymentsScreen({super.key});
@@ -290,47 +291,33 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 15, left: 15, top: 130),
-                    child: Container(
+                    padding:
+                        const EdgeInsets.only(right: 15, left: 15, top: 130),
+                    child: SizedBox(
                       height: 57,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white),
-                      // child: ElevatedButton(
-                      //   style: ElevatedButton.styleFrom(
-                      //     backgroundColor: Colors.white,
-                      //   ),
-                      //   child: const Center(
-                      //     child: Text(
-                      //       "Place My Order",
-                      //       style: TextStyle(
-                      //         fontFamily: "BentonSans",
-                      //         fontSize: 14,
-                      //         color: Color(0xFF53E88B),
-                      //         fontWeight: FontWeight.w400,
-                      //       ),
-                      //     ),
-                      //   ),
-                      //   onPressed: () {
-                      //     Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => const OrderDetailsScreen(),
-                      //       ),
-                      //     );
-                      //   },
-                      // ),
-                      child: const ButtonCommon(
-                        height: 57,
-                        width: 300,
-                        text: "Place My Order",
-                        Style: TextStyle(
-                          fontFamily: "BentonSans",
-                          fontSize: 14,
-                          color: Color(0xFF53E88B),
-                          fontWeight: FontWeight.w400,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
                         ),
-                        color: Colors.white,
+                        child: const Center(
+                          child: Text(
+                            "Place My Order",
+                            style: TextStyle(
+                              fontFamily: "BentonSans",
+                              fontSize: 14,
+                              color: Color(0xFF53E88B),
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const EditLocationScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/chirag/sign_in_screen.dart';
 
