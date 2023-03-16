@@ -171,7 +171,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: TextStyle(color: Colors.white)),
               ],
             ),
-            ButtinCommon(
+            ButtonCommon(
               width: 175,
               text: 'Create Account',
             ),

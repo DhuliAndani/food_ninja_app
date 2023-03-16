@@ -87,7 +87,7 @@ class _Set_LocationState extends State<Set_Location> {
                 SizedBox(
                   height: 250,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],

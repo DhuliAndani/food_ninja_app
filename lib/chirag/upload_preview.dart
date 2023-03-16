@@ -43,7 +43,7 @@ class _Upload_PreviewState extends State<Upload_Preview> {
                 SizedBox(
                   height: 110,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],

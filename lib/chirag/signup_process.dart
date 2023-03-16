@@ -106,7 +106,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 SizedBox(
                   height: 170,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],

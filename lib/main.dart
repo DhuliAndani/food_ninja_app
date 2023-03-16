@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/sign_in_screen.dart';
 import 'dhuli/profile_screen.dart';
 
 //import 'dhuli/splash_screen.dart';

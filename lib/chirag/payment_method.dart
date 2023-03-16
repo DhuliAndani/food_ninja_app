@@ -86,7 +86,7 @@ class _Payment_MethodState extends State<Payment_Method> {
                 SizedBox(
                   height: 160,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],

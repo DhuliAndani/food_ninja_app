@@ -72,7 +72,7 @@ class _Upload_PhotoState extends State<Upload_Photo> {
                 SizedBox(
                   height: 110,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],
