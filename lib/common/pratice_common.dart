@@ -19,7 +19,7 @@ class PraticeCommon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: const Color(0xFF2C2C2E),
         borderRadius: BorderRadius.circular(15),
@@ -63,9 +63,9 @@ class PraticeCommon extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
             decoration: BoxDecoration(
               color: const Color(0xFF53E88B),
               borderRadius: BorderRadius.circular(17.5),
