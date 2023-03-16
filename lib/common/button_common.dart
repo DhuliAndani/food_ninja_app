@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../pinal/explore_menu_screen.dart';
 
-class ButtinCommon extends StatelessWidget {
+class ButtonCommon extends StatelessWidget {
   final String? text;
   final double? height;
   final double? width;
 
-  const ButtinCommon({Key? key, this.text, this.height, this.width})
+  const ButtonCommon({Key? key, this.text, this.height, this.width})
       : super(key: key);
 
   @override
