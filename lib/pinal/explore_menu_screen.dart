@@ -16,56 +16,54 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: ListView(
-        scrollDirection: Axis.vertical,
+      body: Column(
         children: [
-          CommonContainer(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 25),
-                child: Text(
-                  "Popular Menu",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontFamily: "Merri weather-Bold",
+          const CommonContainer(),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(left: 25),
+                  child: Text(
+                    "Popular Menu",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontFamily: "Merri weather-Bold",
+                    ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
-                child: ExploreMenuCommonContainer(
-                  image: "assets/images/Menu Photo.png",
-                  text: "Herbal Pancake",
-                  countText: "Warung Herbal",
-                  SecondText: "\$7",
+                Padding(
+                  padding: EdgeInsets.only(left: 25, right: 25, top: 25),
+                  child: ExploreMenuCommonContainer(
+                    image: "assets/images/Menu Photo.png",
+                    text: "Herbal Pancake",
+                    countText: "Warung Herbal",
+                    SecondText: "\$7",
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
-                child: ExploreMenuCommonContainer(
-                  image: "assets/images/Photo.png",
-                  text: "Fruit Salad",
-                  countText: "Wijie Resto",
-                  SecondText: "      \$5",
+                Padding(
+                  padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                  child: ExploreMenuCommonContainer(
+                    image: "assets/images/Photo.png",
+                    text: "Fruit Salad",
+                    countText: "Wijie Resto",
+                    SecondText: "      \$5",
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 25, right: 25, top: 15),
-                child: ExploreMenuCommonContainer(
-                  image: "assets/images/Photo Menu.png",
-                  text: "Green Noddle",
-                  countText: "Noodle Home",
-                  SecondText: "   \$15",
+                Padding(
+                  padding: EdgeInsets.only(left: 25, right: 25, top: 15),
+                  child: ExploreMenuCommonContainer(
+                    image: "assets/images/Photo Menu.png",
+                    text: "Green Noddle",
+                    countText: "Noodle Home",
+                    SecondText: "   \$15",
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

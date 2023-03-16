@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/pinal/Filter_screen.dart';
+import 'package:food_ninja_app/pinal/explore_restaurant_screen.dart';
 import 'package:food_ninja_app/pinal/notification_screen.dart';
 
 class HomeCommon extends StatelessWidget {
@@ -67,30 +68,39 @@ class HomeCommon extends StatelessWidget {
           padding: const EdgeInsets.only(left: 25, top: 163),
           child: Row(
             children: [
-              Container(
-                height: 40,
-                width: 260,
-                decoration: BoxDecoration(
-                  color: color!,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Image(
-                      image: AssetImage(thirdimage!),
-                    ),
-                    Text(
-                      SecondText!,
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 13,
-                        fontFamily: "Roboto-Regular",
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ExploreRestaurantScreen(),
+                      ));
+                },
+                child: Container(
+                  height: 40,
+                  width: 260,
+                  decoration: BoxDecoration(
+                    color: color!,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 10,
                       ),
-                    ),
-                  ],
+                      Image(
+                        image: AssetImage(thirdimage!),
+                      ),
+                      Text(
+                        SecondText!,
+                        style: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 13,
+                          fontFamily: "Roboto-Regular",
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
