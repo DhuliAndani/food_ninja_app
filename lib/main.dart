@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/Filter_screen.dart';
+import 'pinal/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: FilterScreen(),
+      home: HomeScreen(),
     );
   }
 }

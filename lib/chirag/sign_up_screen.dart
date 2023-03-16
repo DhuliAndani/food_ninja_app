@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../common/button_common.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -111,6 +110,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               'Or Continue With',
               style: TextStyle(color: Colors.white),
             ),
+            //
             Row(
               children: [
                 Padding(
@@ -177,7 +177,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             SizedBox(
               height: 30,
             ),
-            ButtinCommon(),
+            ButtonCommon(
+              text: 'Login',
+              width: 141,
+            ),
           ],
         ),
       ),

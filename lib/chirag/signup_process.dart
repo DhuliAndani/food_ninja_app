@@ -22,7 +22,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Back_Button(
-                  text: 'Fill in your bio to get started',
+                  text: 'Fill in your bio to get \nstarted',
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25),
@@ -106,7 +106,7 @@ class _Signup_ProcessState extends State<Signup_Process> {
                 SizedBox(
                   height: 170,
                 ),
-                Center(child: ButtinCommon()),
+                Center(child: ButtonCommon()),
               ],
             ),
           ],

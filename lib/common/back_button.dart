@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Back_Button extends StatelessWidget {
   final String? text;
-  const Back_Button({Key? key, this.text}) : super(key: key);
+  final String? textTwo;
+  const Back_Button({Key? key, this.text, this.textTwo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,23 @@ class Back_Button extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.only(left: 25, top: 110),
           child: Text(
-            'text!',
+            text!,
             style: TextStyle(
               fontSize: 25,
               fontFamily: "Merriweather-Bold",
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 25, top: 150),
+          child: Text(
+            textTwo ?? '',
+            style: TextStyle(color: Colors.white),
           ),
         ),
       ],

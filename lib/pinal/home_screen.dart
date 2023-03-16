@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
-import 'package:food_ninja_app/common/home_common.dart';
 import 'package:food_ninja_app/common/home_food.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,32 +13,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.black,
-        image: DecorationImage(
-          image: AssetImage("assets/images/Pattern.png"),
-          scale: 1,
-          alignment: Alignment.topRight,
-        ),
-        //
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Column(
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Column(
+        children: [
+          CommonContainer(),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
               children: [
-                const HomeCommon(
-                  Secondimage: "assets/images/Icon Notifiaction_3.png",
-                  text: "Find Your\nFavorite Food",
-                  thirdimage: "assets/images/Icon Search.png",
-                  SecondText: "    What do you want to order?",
-                  forthimage: "assets/images/Filter.png",
-                  color: Color(0xFF2C2C2E),
-                  SecondColor: Color(0xFF2C2C2E),
-                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 25, top: 20, right: 25),
                   child: Image(
@@ -153,41 +136,41 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-          ],
+          ),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        decoration: BoxDecoration(
+          color: const Color(0xFF252525),
+          borderRadius: BorderRadius.circular(10),
         ),
-        bottomNavigationBar: Container(
-          height: 70,
-          decoration: BoxDecoration(
-            color: const Color(0xFF252525),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const Image(
-                image: AssetImage("assets/images/Icon Home Active.png"),
-              ),
-              const Image(
-                image: AssetImage("assets/images/Icon Profile.png"),
-              ),
-              const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
-              ),
-              Stack(
-                children: const [
-                  Image(
-                    image: AssetImage("assets/images/Chat.png"),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Image(
+              image: AssetImage("assets/images/Icon Home Active.png"),
+            ),
+            const Image(
+              image: AssetImage("assets/images/Icon Profile.png"),
+            ),
+            const Image(
+              image: AssetImage("assets/images/Icon Cart_1.png"),
+            ),
+            Stack(
+              children: const [
+                Image(
+                  image: AssetImage("assets/images/Chat.png"),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: Image(
+                    image: AssetImage("assets/images/Ellipse 164_2.png"),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Image(
-                      image: AssetImage("assets/images/Ellipse 164_2.png"),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

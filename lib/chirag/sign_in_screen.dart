@@ -12,6 +12,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   bool radioData = true;
   bool _obscureText = true;
+  bool checkBoxData = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,16 +70,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.person, color: Color(0xff53E88B)),
-                    hintText: 'Anamwp . . |',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.person, color: Color(0xff53E88B)),
+                  hintText: 'Anamwp . . |',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
@@ -94,16 +92,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.email, color: Color(0xff53E88B)),
-                    hintText: 'Email',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email, color: Color(0xff53E88B)),
+                  hintText: 'Email',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
@@ -119,29 +114,26 @@ class _SignInScreenState extends State<SignInScreen> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                child: TextField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.lock, color: Color(0xff53E88B)),
-                    hintText: 'Password',
-                    hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    suffixIcon: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _obscureText = !_obscureText;
-                        });
-                      },
-                      child: Icon(_obscureText
-                          ? Icons.visibility
-                          : Icons.visibility_off),
-                    ),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock, color: Color(0xff53E88B)),
+                  hintText: 'Password',
+                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  obscureText: _obscureText,
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                    child: Icon(
+                        _obscureText ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.white),
+                  ),
                 ),
+                obscureText: _obscureText,
               ),
             ),
             SizedBox(
@@ -149,13 +141,13 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Row(
               children: [
-                Radio<bool>(
-                  activeColor: Color(0xff53E88B),
-                  groupValue: radioData,
-                  value: true,
-                  onChanged: (newValue) {
-                    debugPrint("value  --> $newValue");
-                    radioData = newValue!;
+                Checkbox(
+                  value: checkBoxData,
+                  shape: const CircleBorder(),
+                  checkColor: Colors.white,
+                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  onChanged: (data) {
+                    checkBoxData = data!;
                     setState(() {});
                   },
                 ),
@@ -165,13 +157,13 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Row(
               children: [
-                Radio<bool>(
-                  activeColor: Color(0xff53E88B),
-                  groupValue: radioData,
-                  value: true,
-                  onChanged: (newValue) {
-                    debugPrint("value  --> $newValue");
-                    radioData = newValue!;
+                Checkbox(
+                  value: checkBoxData,
+                  shape: const CircleBorder(),
+                  checkColor: Colors.white,
+                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  onChanged: (data) {
+                    checkBoxData = data!;
                     setState(() {});
                   },
                 ),
@@ -179,7 +171,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: TextStyle(color: Colors.white)),
               ],
             ),
-            ButtinCommon(),
+            ButtonCommon(
+              width: 175,
+              text: 'Create Account',
+            ),
             SizedBox(
               height: 10,
             ),

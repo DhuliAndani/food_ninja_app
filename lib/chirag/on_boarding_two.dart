@@ -39,7 +39,7 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
           const SizedBox(
             height: 60,
           ),
-          const ButtinCommon(),
+          const ButtonCommon(),
         ],
       )),
     );
