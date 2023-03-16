@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
 
-import 'dhruvit/payments_screen.dart';
+
+import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/sign_in_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       
       title: 'Flutter Demo',
-      home: PaymentsScreen(),
+
+      theme: ThemeData(
+      ),
+      home: const SignInScreen(),
+
     );
   }
 }
