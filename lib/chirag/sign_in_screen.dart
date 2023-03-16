@@ -128,7 +128,8 @@ class _SignInScreenState extends State<SignInScreen> {
                       });
                     },
                     child: Icon(
-                        _obscureText ? Icons.visibility_off : Icons.visibility),
+                        _obscureText ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.white),
                   ),
                 ),
                 obscureText: _obscureText,
@@ -170,7 +171,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: TextStyle(color: Colors.white)),
               ],
             ),
-            ButtinCommon(),
+            ButtinCommon(
+              width: 175,
+              text: 'Create Account',
+            ),
             SizedBox(
               height: 10,
             ),

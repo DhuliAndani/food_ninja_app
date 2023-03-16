@@ -20,15 +20,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
           ),
           Center(
-            child: Image(
-              image: AssetImage(
-                "assets/images/Logo.png",
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 30),
+              child: Image(
+                image: AssetImage(
+                  "assets/images/Logo.png",
+                ),
+                height: 140,
               ),
-              height: 140,
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 460, left: 90),
+            padding: EdgeInsets.only(top: 440, left: 90),
             child: Text(
               'FoodNinja',
               style: TextStyle(
@@ -38,7 +41,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 510, left: 110),
+            padding: EdgeInsets.only(top: 490, left: 110),
             child: Text(
               'Deliever Favorite Food',
               style: TextStyle(color: Colors.white),

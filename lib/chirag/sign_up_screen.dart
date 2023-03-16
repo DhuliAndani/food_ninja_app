@@ -177,7 +177,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             SizedBox(
               height: 30,
             ),
-            ButtinCommon(),
+            ButtinCommon(
+              text: 'Login',
+              width: 141,
+            ),
           ],
         ),
       ),

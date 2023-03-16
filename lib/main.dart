@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/signup_success_notification.dart';
+import 'chirag/sign_in_screen.dart';
 
 //import 'dhuli/splash_screen.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Signup_Success_Notification(),
+      home: const SignInScreen(),
     );
   }
 }

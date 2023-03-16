@@ -18,7 +18,7 @@ class _OnBoardingThreeState extends State<OnBoardingThree> {
           child: Column(
         children: [
           SizedBox(
-            height: 50,
+            height: 70,
           ),
           Image.asset('assets/images/twoIllustration.png'),
           SizedBox(
