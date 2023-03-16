@@ -32,13 +32,13 @@ class _Payment_MethodState extends State<Payment_Method> {
                     height: 73,
                     width: 335,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
                       alignment: Alignment.center,
-                      child: Image(
+                      child: const Image(
                         height: 23,
                         image: AssetImage("assets/images/paypal.png"),
                       ),
@@ -51,13 +51,13 @@ class _Payment_MethodState extends State<Payment_Method> {
                     height: 73,
                     width: 335,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
                       alignment: Alignment.center,
-                      child: Image(
+                      child: const Image(
                         height: 23,
                         image: AssetImage("assets/images/Group.png"),
                       ),
@@ -70,23 +70,28 @@ class _Payment_MethodState extends State<Payment_Method> {
                     height: 73,
                     width: 335,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
                       alignment: Alignment.center,
-                      child: Image(
+                      child: const Image(
                         height: 32,
                         image: AssetImage("assets/images/layer.png"),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 160,
                 ),
-                Center(child: ButtonCommon()),
+                const Center(
+                    child: ButtonCommon(
+                  height: 57,
+                  width: 157,
+                  text: 'Next',
+                )),
               ],
             ),
           ],

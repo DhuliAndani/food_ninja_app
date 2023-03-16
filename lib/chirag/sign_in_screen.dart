@@ -55,70 +55,71 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ],
             ),
-            Text(
+            const Text(
               'Sign Up For Free ',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               height: 57,
               width: 325,
               decoration: BoxDecoration(
-                color: Color(0xff605d5d),
+                color: const Color(0xff605d5d),
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.person, color: Color(0xff53E88B)),
+                  prefixIcon:
+                      const Icon(Icons.person, color: Color(0xff53E88B)),
                   hintText: 'Anamwp . . |',
-                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 57,
               width: 325,
               decoration: BoxDecoration(
-                color: Color(0xff605d5d),
+                color: const Color(0xff605d5d),
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.email, color: Color(0xff53E88B)),
+                  prefixIcon: const Icon(Icons.email, color: Color(0xff53E88B)),
                   hintText: 'Email',
-                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 57,
               width: 325,
               decoration: BoxDecoration(
-                color: Color(0xff605d5d),
+                color: const Color(0xff605d5d),
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(),
               ),
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock, color: Color(0xff53E88B)),
+                  prefixIcon: const Icon(Icons.lock, color: Color(0xff53E88B)),
                   hintText: 'Password',
-                  hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                  hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -136,7 +137,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 obscureText: _obscureText,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -145,13 +146,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   value: checkBoxData,
                   shape: const CircleBorder(),
                   checkColor: Colors.white,
-                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  fillColor: MaterialStateProperty.all(const Color(0xff53E88B)),
                   onChanged: (data) {
                     checkBoxData = data!;
                     setState(() {});
                   },
                 ),
-                Text('Keep Me Signed In',
+                const Text('Keep Me Signed In',
                     style: TextStyle(color: Colors.white)),
               ],
             ),
@@ -161,24 +162,25 @@ class _SignInScreenState extends State<SignInScreen> {
                   value: checkBoxData,
                   shape: const CircleBorder(),
                   checkColor: Colors.white,
-                  fillColor: MaterialStateProperty.all(Color(0xff53E88B)),
+                  fillColor: MaterialStateProperty.all(const Color(0xff53E88B)),
                   onChanged: (data) {
                     checkBoxData = data!;
                     setState(() {});
                   },
                 ),
-                Text('Email Me About Special Pricing',
+                const Text('Email Me About Special Pricing',
                     style: TextStyle(color: Colors.white)),
               ],
             ),
-            ButtonCommon(
+            const ButtonCommon(
+              height: 57,
               width: 175,
               text: 'Create Account',
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'already have an account?',
               style: TextStyle(color: Color(0xff53E88B)),
             )
