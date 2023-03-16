@@ -24,8 +24,8 @@ class _Upload_PhotoState extends State<Upload_Photo> {
                 const Back_Button(
                   text: 'Upload Your Photo \nProfile',
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25),
                   child: Text(
                     'This data will be displayed in your account \nprofile for security',
                     style: TextStyle(color: Colors.white),
@@ -37,13 +37,13 @@ class _Upload_PhotoState extends State<Upload_Photo> {
                     height: 129,
                     width: 325,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
                       alignment: Alignment.center,
-                      child: Image(
+                      child: const Image(
                         height: 84,
                         image: AssetImage("assets/images/Gallery Icon.png"),
                       ),
@@ -56,23 +56,28 @@ class _Upload_PhotoState extends State<Upload_Photo> {
                     height: 129,
                     width: 325,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Container(
                       alignment: Alignment.center,
-                      child: Image(
+                      child: const Image(
                         height: 84,
                         image: AssetImage("assets/images/Camera Icon.png"),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 110,
                 ),
-                Center(child: ButtonCommon()),
+                const Center(
+                    child: ButtonCommon(
+                  height: 57,
+                  width: 157,
+                  text: 'Next',
+                )),
               ],
             ),
           ],
