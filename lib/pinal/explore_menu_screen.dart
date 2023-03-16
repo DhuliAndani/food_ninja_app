@@ -32,7 +32,6 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 HomeCommon(
-                  //  image: "assets/images/Pattern.png",
                   Secondimage: "assets/images/Icon Notifiaction_3.png",
                   text: "Find Your\nFavorite Food",
                   thirdimage: "assets/images/Icon Search.png",

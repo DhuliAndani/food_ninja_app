@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/voucher_promo_screen.dart';
+import 'pinal/Filter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: VoucherPromoScreen(),
+      home: FilterScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/home_screen.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class VoucherPromoScreen extends StatefulWidget {
   const VoucherPromoScreen({Key? key}) : super(key: key);
@@ -189,35 +189,40 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 290, right: 25),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
-                        ),
-                      );
-                    },
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(TextStyle(
-                        color: Color(0xFFFEFEFF),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "Merriweather-Bold",
-                      )),
-                      shape:
-                          MaterialStateProperty.all(ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      )),
-                      overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      backgroundColor:
-                          MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      fixedSize: MaterialStateProperty.all(
-                        Size(325, 57),
-                      ),
-                    ),
-                    child: Text("Check out"),
+                  child: ButtonCommon(
+                    text: "Check out",
+                    width: 325,
+                    height: 57,
                   ),
+                  //ElevatedButton(
+                  //   onPressed: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => HomeScreen(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   style: ButtonStyle(
+                  //     textStyle: MaterialStateProperty.all(TextStyle(
+                  //       color: Color(0xFFFEFEFF),
+                  //       fontSize: 14,
+                  //       fontWeight: FontWeight.bold,
+                  //       fontFamily: "Merriweather-Bold",
+                  //     )),
+                  //     shape:
+                  //         MaterialStateProperty.all(ContinuousRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(40),
+                  //     )),
+                  //     overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  //     backgroundColor:
+                  //         MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  //     fixedSize: MaterialStateProperty.all(
+                  //       Size(325, 57),
+                  //     ),
+                  //   ),
+                  //   child: Text("Check out"),
+                  // ),
                 ),
               ],
             ),
