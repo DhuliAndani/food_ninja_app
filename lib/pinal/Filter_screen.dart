@@ -254,6 +254,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         ),
                       );
                     },
+                    //
                     style: ButtonStyle(
                       textStyle: MaterialStateProperty.all(const TextStyle(
                         color: Color(0xFFFEFEFF),
