@@ -170,7 +170,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
             ),
           ),
           Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15,top: 60),
+      padding: const EdgeInsets.only(left: 15, right: 15,top: 170),
       child: Stack(
         children: [
           Container(
