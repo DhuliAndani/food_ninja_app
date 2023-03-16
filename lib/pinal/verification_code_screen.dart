@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PasswordScreen extends StatefulWidget {
-  const PasswordScreen({Key? key}) : super(key: key);
+class VerificationCodeScreen extends StatefulWidget {
+  const VerificationCodeScreen({Key? key}) : super(key: key);
 
   @override
-  State<PasswordScreen> createState() => _PasswordScreenState();
+  State<VerificationCodeScreen> createState() => _VerificationCodeScreenState();
 }
 
-class _PasswordScreenState extends State<PasswordScreen> {
-  bool _obscureText = true;
-  TextEditingController emailController = TextEditingController();
+class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -50,7 +48,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     const Padding(
                       padding: EdgeInsets.only(left: 25, top: 110),
                       child: Text(
-                        "Reset your password",
+                        "Enter 4-digit",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -58,10 +56,10 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         ),
                       ),
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(left: 25, top: 140),
                       child: Text(
-                        "here",
+                        "Verification code",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -72,9 +70,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   ],
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(left: 25, top: 10),
+                  padding: EdgeInsets.only(left: 25, top: 25),
                   child: Text(
-                    "Select which contact details should we",
+                    "Code send to +6282045**** . This code will",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 12,
@@ -86,7 +84,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 2),
                   child: const Text(
-                    "use to reset your password",
+                    "expired in 01:30",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 12,
@@ -98,87 +96,76 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
                   child: Container(
+                    height: 103,
+                    width: double.infinity,
                     decoration: BoxDecoration(
+                      color: Color(0x1AFFFFFF),
                       borderRadius: BorderRadius.circular(15),
-                      color: Color(0x33FFFFFF),
                     ),
-                    alignment: Alignment.centerLeft,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Password',
-                        hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _obscureText = !_obscureText;
-                            });
-                          },
-                          child: Icon(
-                            _obscureText
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                            color: Color(0XFF53E88B),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "1",
+                            style: TextStyle(
+                              fontSize: 33,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
+                          Text(
+                            "9",
+                            style: TextStyle(
+                              fontSize: 33,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "2",
+                            style: TextStyle(
+                              fontSize: 33,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "3",
+                            style: TextStyle(
+                              fontSize: 33,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      obscureText: _obscureText,
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25, right: 25, top: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0x33FFFFFF),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Confirm Password',
-                        hintStyle: TextStyle(color: Color(0xffF4F4F4)),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              _obscureText = !_obscureText;
-                            });
-                          },
-                          child: Icon(
-                            _obscureText
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                            color: Color(0x36FFFFFF),
-                          ),
-                        ),
-                      ),
-                      obscureText: _obscureText,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 100, top: 300),
+                  padding: const EdgeInsets.only(left: 95, top: 360),
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(TextStyle(
-                        color: Color(0xFFFEFEFF),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "Merriweather-Bold",
-                      )),
-                      shape:
-                          MaterialStateProperty.all(ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      )),
+                      textStyle: MaterialStateProperty.all(
+                        const TextStyle(
+                          color: Color(0xFFFEFEFF),
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Merriweather-Bold",
+                        ),
+                      ),
+                      shape: MaterialStateProperty.all(
+                        ContinuousRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
                       backgroundColor:
-                          MaterialStatePropertyAll(Color(0xFF53E88B)),
+                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
                       fixedSize: MaterialStateProperty.all(
-                        Size(157, 57),
+                        Size(159, 57),
                       ),
                     ),
                     child: Text("Next"),

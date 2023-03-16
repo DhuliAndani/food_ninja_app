@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/explore_menu_common_container.dart';
+import 'package:food_ninja_app/common/home_common.dart';
 
-import 'Common/explore_menu_common_container.dart';
-import 'Common/home_common.dart';
 import 'message_screen.dart';
 
 class ExploreMenuScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 HomeCommon(
                   //  image: "assets/images/Pattern.png",
                   Secondimage: "assets/images/Icon Notifiaction_3.png",
@@ -96,13 +96,13 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Home Active.png"),
               ),
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Cart_2.png"),
               ),
               GestureDetector(
@@ -115,7 +115,7 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
                   );
                 },
                 child: Stack(
-                  children: [
+                  children: const [
                     Image(
                       image: AssetImage("assets/images/Chat.png"),
                     ),

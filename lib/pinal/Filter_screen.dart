@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/filter_common_container.dart';
 import 'package:food_ninja_app/pinal/explore_menu_screen.dart';
 import 'package:food_ninja_app/pinal/explore_restaurant_with_filter_screen.dart';
-
-import 'Common/filter_common_container.dart';
 
 class FilterScreen extends StatefulWidget {
   const FilterScreen({Key? key}) : super(key: key);
@@ -115,7 +114,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 20),
                   child: Row(
-                    children: [
+                    children: const [
                       FilterCommonContainer(
                         height: 44,
                         width: 108,
@@ -133,7 +132,7 @@ class _FilterScreenState extends State<FilterScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 30, top: 20),
+                  padding: const EdgeInsets.only(left: 30, top: 20),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -144,7 +143,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         ),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "Location",
                       style: TextStyle(
                         fontSize: 18,
@@ -183,7 +182,7 @@ class _FilterScreenState extends State<FilterScreen> {
                     ],
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 30, top: 20),
                   child: Text(
                     "Food",
@@ -255,7 +254,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       );
                     },
                     style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(TextStyle(
+                      textStyle: MaterialStateProperty.all(const TextStyle(
                         color: Color(0xFFFEFEFF),
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -265,14 +264,15 @@ class _FilterScreenState extends State<FilterScreen> {
                           MaterialStateProperty.all(ContinuousRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       )),
-                      overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
+                      overlayColor:
+                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
                       backgroundColor:
-                          MaterialStatePropertyAll(Color(0xFF53E88B)),
+                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
                       fixedSize: MaterialStateProperty.all(
-                        Size(325, 57),
+                        const Size(325, 57),
                       ),
                     ),
-                    child: Text("search"),
+                    child: const Text("search"),
                   ),
                 ),
               ],

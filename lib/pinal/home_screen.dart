@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/Common/home_food.dart';
-
-import 'Common/explore_menu_common_container.dart';
-import 'Common/home_common.dart';
+import 'package:food_ninja_app/common/explore_menu_common_container.dart';
+import 'package:food_ninja_app/common/home_common.dart';
+import 'package:food_ninja_app/common/home_food.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -49,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 10,
                 ),
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 25,
                     ),
@@ -116,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 10,
                 ),
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 27,
                     ),
@@ -164,17 +163,17 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Home Active.png"),
               ),
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Profile.png"),
               ),
-              Image(
+              const Image(
                 image: AssetImage("assets/images/Icon Cart_1.png"),
               ),
               Stack(
-                children: [
+                children: const [
                   Image(
                     image: AssetImage("assets/images/Chat.png"),
                   ),
