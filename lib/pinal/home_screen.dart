@@ -177,7 +177,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   Image(
                     image: AssetImage("assets/images/Chat.png"),
                   ),
-                  //
                   Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Image(
