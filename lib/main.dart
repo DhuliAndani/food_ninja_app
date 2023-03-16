@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'chirag/sign_in_screen.dart';
+import 'dhuli/profile_screen.dart';
 
 //import 'dhuli/splash_screen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignInScreen(),
+      home: const ProfileScreen(),
     );
   }
 }

@@ -13,33 +13,33 @@ class _OnBoardingThreeState extends State<OnBoardingThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0D0D0D),
+      backgroundColor: const Color(0xFF0D0D0D),
       body: SafeArea(
           child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Image.asset('assets/images/twoIllustration.png'),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          Text(
+          const Text(
             'Food Ninja is Where Your \n \t\t\t Comfort Food Lives',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'Enjoy a fast and smooth food delivery at \n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t your doorstep',
             style: TextStyle(fontSize: 12, color: Color(0xffFFFFFF)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
-          ButtinCommon(),
+          const ButtonCommon(),
         ],
       )),
     );
