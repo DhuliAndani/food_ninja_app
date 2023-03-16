@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/button_common.dart';
 import 'order_details_screen.dart';
 
 class PaymentsScreen extends StatefulWidget {
@@ -111,7 +112,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: Container(
               height: 103,
               decoration: BoxDecoration(
@@ -170,153 +171,166 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
             ),
           ),
           Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15,top: 170),
-      child: Stack(
-        children: [
-          Container(
-            height: 200,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: const Color(0xFF53E88B),
-            ),
-            child: Image.asset("assets/images/Payment_Pattern.png"),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  "sub-Total",
-                  style: TextStyle(
-                    fontFamily: "BentonSans",
-                    fontSize: 14,
-                    color: Color(0xFFFEFEFF),
-                    fontWeight: FontWeight.w400,
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 170),
+            child: Stack(
+              children: [
+                Container(
+                  height: 200,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: const Color(0xFF53E88B),
+                  ),
+                  child: Image.asset("assets/images/Payment_Pattern.png"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 30),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "sub-Total",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Color(0xFFFEFEFF),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        child: Text(
+                          "Delivery Charge",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 14,
+                            color: Color(0xFFFEFEFF),
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Discount",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Color(0xFFFEFEFF),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 20),
+                        child: Text(
+                          "Total",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 18,
+                            color: Color(0xFFFEFEFF),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  child: Text(
-                    "Delivery Charge",
-                    style: TextStyle(
-                      fontFamily: "BentonSans",
-                      fontSize: 14,
-                      color: Color(0xFFFEFEFF),
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-                Text(
-                  "Discount",
-                  style: TextStyle(
-                    fontFamily: "BentonSans",
-                    fontSize: 14,
-                    color: Color(0xFFFEFEFF),
-                    fontWeight: FontWeight.w400,
+                  padding: const EdgeInsets.only(top: 20, left: 250),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: const [
+                      Text(
+                        "120 \$",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Color(0xFFFEFEFF),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        child: Text(
+                          "10 \$",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 14,
+                            color: Color(0xFFFEFEFF),
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "20 \$",
+                        style: TextStyle(
+                          fontFamily: "BentonSans",
+                          fontSize: 14,
+                          color: Color(0xFFFEFEFF),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 20),
+                        child: Text(
+                          "150 \$",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 18,
+                            color: Color(0xFFFEFEFF),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  child: Text(
-                    "Total",
-                    style: TextStyle(
-                      fontFamily: "BentonSans",
-                      fontSize: 18,
-                      color: Color(0xFFFEFEFF),
-                      fontWeight: FontWeight.w600,
+                  padding: const EdgeInsets.only(right: 15, left: 15, top: 130),
+                  child: Container(
+                    height: 57,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white),
+                    // child: ElevatedButton(
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Colors.white,
+                    //   ),
+                    //   child: const Center(
+                    //     child: Text(
+                    //       "Place My Order",
+                    //       style: TextStyle(
+                    //         fontFamily: "BentonSans",
+                    //         fontSize: 14,
+                    //         color: Color(0xFF53E88B),
+                    //         fontWeight: FontWeight.w400,
+                    //       ),
+                    //     ),
+                    //   ),
+                    //   onPressed: () {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //         builder: (context) => const OrderDetailsScreen(),
+                    //       ),
+                    //     );
+                    //   },
+                    // ),
+                    child: const ButtonCommon(
+                      height: 57,
+                      width: 300,
+                      text: "Place My Order",
+                      Style: TextStyle(
+                        fontFamily: "BentonSans",
+                        fontSize: 14,
+                        color: Color(0xFF53E88B),
+                        fontWeight: FontWeight.w400,
+                      ),
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 250),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: const [
-                Text(
-                  "120 \$",
-                  style: TextStyle(
-                    fontFamily: "BentonSans",
-                    fontSize: 14,
-                    color: Color(0xFFFEFEFF),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  child: Text(
-                    "10 \$",
-                    style: TextStyle(
-                      fontFamily: "BentonSans",
-                      fontSize: 14,
-                      color: Color(0xFFFEFEFF),
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-                Text(
-                  "20 \$",
-                  style: TextStyle(
-                    fontFamily: "BentonSans",
-                    fontSize: 14,
-                    color: Color(0xFFFEFEFF),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  child: Text(
-                    "150 \$",
-                    style: TextStyle(
-                      fontFamily: "BentonSans",
-                      fontSize: 18,
-                      color: Color(0xFFFEFEFF),
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15, left: 15, top: 130),
-            child: Container(
-              height: 57,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15), color: Colors.white),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                ),
-                child: const Center(
-                  child: Text(
-                    "Place My Order",
-                    style: TextStyle(
-                      fontFamily: "BentonSans",
-                      fontSize: 14,
-                      color: Color(0xFF53E88B),
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const OrderDetailsScreen(),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-        ],
-      ),
-    )
+          )
         ],
       ),
     );
