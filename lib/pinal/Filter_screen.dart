@@ -244,7 +244,8 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 125, right: 25),
-                  child: ElevatedButton(
+                  child: 
+                  ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
