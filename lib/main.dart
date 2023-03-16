@@ -1,8 +1,7 @@
+
+
 import 'package:flutter/material.dart';
-
-import 'chirag/sign_in_screen.dart';
-
-//import 'dhuli/splash_screen.dart';
+import 'package:food_ninja_app/chirag/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const SignInScreen(),
+
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 import 'package:food_ninja_app/common/filter_common_container.dart';
-import 'package:food_ninja_app/pinal/explore_menu_screen.dart';
 import 'package:food_ninja_app/pinal/explore_restaurant_with_filter_screen.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -244,38 +244,42 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 125, right: 25),
-                  child: 
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ExploreMenuScreen(),
-                        ),
-                      );
-                    },
-                    //
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(const TextStyle(
-                        color: Color(0xFFFEFEFF),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "Merriweather-Bold",
-                      )),
-                      shape:
-                          MaterialStateProperty.all(ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      )),
-                      overlayColor:
-                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      fixedSize: MaterialStateProperty.all(
-                        const Size(325, 57),
-                      ),
-                    ),
-                    child: const Text("search"),
+                  child: ButtonCommon(
+                    text: "Search",
+                    width: 325,
+                    height: 57,
                   ),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => const ExploreMenuScreen(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   //
+                  //   style: ButtonStyle(
+                  //     textStyle: MaterialStateProperty.all(const TextStyle(
+                  //       color: Color(0xFFFEFEFF),
+                  //       fontSize: 14,
+                  //       fontWeight: FontWeight.bold,
+                  //       fontFamily: "Merriweather-Bold",
+                  //     )),
+                  //     shape:
+                  //         MaterialStateProperty.all(ContinuousRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(30),
+                  //     )),
+                  //     overlayColor:
+                  //         const MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  //     backgroundColor:
+                  //         const MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  //     fixedSize: MaterialStateProperty.all(
+                  //       const Size(325, 57),
+                  //     ),
+                  //   ),
+                  //   child: const Text("search"),
+                  // ),
                 ),
               ],
             ),

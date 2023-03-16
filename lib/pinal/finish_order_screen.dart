@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 import 'package:food_ninja_app/common/finish_order_common.dart';
 import 'package:food_ninja_app/common/finish_order_common_container.dart';
 import 'package:food_ninja_app/pinal/rate_food_screen.dart';
@@ -111,28 +112,10 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                   padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                   child: Row(
                     children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          textStyle: MaterialStateProperty.all(const TextStyle(
-                            color: Color(0xFFFEFEFF),
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Merriweather-Bold",
-                          )),
-                          shape: MaterialStateProperty.all(
-                              ContinuousRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          )),
-                          overlayColor:
-                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                          backgroundColor:
-                              const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                          fixedSize: MaterialStateProperty.all(
-                            const Size(228, 57),
-                          ),
-                        ),
-                        child: const Text("Submit"),
+                      ButtonCommon(
+                        text: "Submit",
+                        width: 228,
+                        height: 57,
                       ),
                       const SizedBox(
                         width: 10,

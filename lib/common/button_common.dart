@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../pinal/explore_menu_screen.dart';
-
 class ButtonCommon extends StatelessWidget {
   final String? text;
   final double? height;
   final double? width;
+  final VoidCallback? onPress;
 
-  const ButtonCommon({Key? key, this.text, this.height, this.width})
+  const ButtonCommon(
+      {Key? key, this.text, this.height, this.width, this.onPress})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const ExploreMenuScreen(),
-          ),
-        );
-      },
+      onPressed: onPress,
       style: ButtonStyle(
         textStyle: MaterialStateProperty.all(const TextStyle(
           color: Color(0xFFFEFEFF),
