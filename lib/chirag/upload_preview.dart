@@ -20,12 +20,12 @@ class _Upload_PreviewState extends State<Upload_Preview> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Back_Button(
+              children: const [
+                Back_Button(
                   text: 'Upload Your Photo \nProfile',
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25),
+                  padding: EdgeInsets.only(left: 25),
                   child: Text(
                     'This data will be displayed in your account \nprofile for security',
                     style: TextStyle(color: Colors.white),
@@ -43,7 +43,12 @@ class _Upload_PreviewState extends State<Upload_Preview> {
                 SizedBox(
                   height: 110,
                 ),
-                Center(child: ButtonCommon()),
+                Center(
+                    child: ButtonCommon(
+                  height: 57,
+                  width: 157,
+                  text: 'Next',
+                )),
               ],
             ),
           ],
