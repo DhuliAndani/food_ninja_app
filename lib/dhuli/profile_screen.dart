@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../pinal/Common/pratice_common.dart';
+import '../common/pratice_common.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
