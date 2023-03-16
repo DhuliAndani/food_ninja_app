@@ -1,4 +1,7 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/sign_in_screen.dart';
 
 import 'pinal/home_screen.dart';
 
@@ -11,12 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
+      
       title: 'Flutter Demo',
-      home: HomeScreen(),
+      home: const HomeScreen(),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
       ),
     );
   }

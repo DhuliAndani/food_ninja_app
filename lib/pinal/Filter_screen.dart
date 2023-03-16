@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/filter_common_container.dart';
+import 'package:food_ninja_app/pinal/explore_menu_screen.dart';
+import 'package:food_ninja_app/pinal/explore_menu_with_filter_screen.dart';
 import 'package:food_ninja_app/pinal/explore_restaurant_with_filter_screen.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -190,18 +192,29 @@ class _FilterScreenState extends State<FilterScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 25, top: 15),
                 child: Row(
-                  children: const [
+                  children: [
                     FilterCommonContainer(
                       height: 44,
                       width: 70,
                       text: "Cake",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: FilterCommonContainer(
-                        height: 44,
-                        width: 71,
-                        text: "Soup",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const ExploreMenuWithFilterScreen(),
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: FilterCommonContainer(
+                          height: 44,
+                          width: 71,
+                          text: "Soup",
+                        ),
                       ),
                     ),
                     Padding(
@@ -241,38 +254,20 @@ class _FilterScreenState extends State<FilterScreen> {
                   text: "Search",
                   width: 325,
                   height: 57,
+                  color: const Color(0xFF53E88B),
+                  Style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ExploreMenuScreen(),
+                      ),
+                    );
+                  },
                 ),
-                // ElevatedButton(
-                //   onPressed: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => const ExploreMenuScreen(),
-                //       ),
-                //     );
-                //   },
-                //   //
-                //   style: ButtonStyle(
-                //     textStyle: MaterialStateProperty.all(const TextStyle(
-                //       color: Color(0xFFFEFEFF),
-                //       fontSize: 14,
-                //       fontWeight: FontWeight.bold,
-                //       fontFamily: "Merriweather-Bold",
-                //     )),
-                //     shape:
-                //         MaterialStateProperty.all(ContinuousRectangleBorder(
-                //       borderRadius: BorderRadius.circular(30),
-                //     )),
-                //     overlayColor:
-                //         const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                //     backgroundColor:
-                //         const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                //     fixedSize: MaterialStateProperty.all(
-                //       const Size(325, 57),
-                //     ),
-                //   ),
-                //   child: const Text("search"),
-                // ),
               ),
             ],
           ),

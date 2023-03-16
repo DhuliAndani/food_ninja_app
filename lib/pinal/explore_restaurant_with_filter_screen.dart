@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
-import 'package:food_ninja_app/pinal/explore_menu_with_filter_screen.dart';
 
 class ExploreRestaurantWithFilterScreen extends StatefulWidget {
   const ExploreRestaurantWithFilterScreen({Key? key}) : super(key: key);
@@ -73,38 +72,27 @@ class _ExploreRestaurantWithFilterScreenState
                         borderRadius: BorderRadius.circular(15),
                         color: Color(0xFF2C2C2E),
                       ),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const ExploreMenuWithFilterScreen(),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Text(
-                              "Soup ",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontFamily: "Merriweather-Bold",
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Image(
-                              image: AssetImage("assets/images/Icon Close.png"),
-                            ),
-                          ],
-                        ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "Soup ",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontFamily: "Merriweather-Bold",
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Image(
+                            image: AssetImage("assets/images/Icon Close.png"),
+                          ),
+                        ],
                       ),
                     ),
                   ),

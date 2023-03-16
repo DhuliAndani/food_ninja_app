@@ -109,10 +109,16 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                   padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                   child: Row(
                     children: [
-                      ButtonCommon(
+                      const ButtonCommon(
                         text: "Submit",
                         width: 228,
                         height: 57,
+                        color: Color(0xFF53E88B),
+                        Style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
                       ),
                       const SizedBox(
                         width: 10,

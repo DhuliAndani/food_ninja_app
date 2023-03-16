@@ -32,17 +32,17 @@ class _Set_LocationState extends State<Set_Location> {
                     height: 147,
                     width: 342,
                     decoration: BoxDecoration(
-                      color: Color(0xff605d5d),
+                      color: const Color(0xff605d5d),
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(),
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 10,
                             ),
@@ -59,7 +59,7 @@ class _Set_LocationState extends State<Set_Location> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Padding(
@@ -68,11 +68,11 @@ class _Set_LocationState extends State<Set_Location> {
                             height: 57,
                             width: 322,
                             decoration: BoxDecoration(
-                              color: Color(0xff938e8e),
+                              color: const Color(0xff938e8e),
                               borderRadius: BorderRadius.circular(15),
                               border: Border.all(),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Set \nLocation',
                                 style: TextStyle(color: Colors.white),
@@ -84,10 +84,15 @@ class _Set_LocationState extends State<Set_Location> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 250,
                 ),
-                Center(child: ButtonCommon()),
+                const Center(
+                    child: ButtonCommon(
+                  height: 57,
+                  width: 157,
+                  text: 'Next',
+                )),
               ],
             ),
           ],

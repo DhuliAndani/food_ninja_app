@@ -14,10 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //
       backgroundColor: Colors.transparent,
       body: Column(
         children: [
-          CommonContainer(),
+          const CommonContainer(),
           Expanded(
             child: ListView(
               scrollDirection: Axis.vertical,

@@ -110,10 +110,16 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                   padding: const EdgeInsets.only(left: 20, top: 730, right: 20),
                   child: Row(
                     children: [
-                      ButtonCommon(
+                      const ButtonCommon(
                         text: "Submit",
                         width: 228,
                         height: 57,
+                        color: Color(0xFF53E88B),
+                        Style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
@@ -126,23 +132,12 @@ class _RateFoodScreenState extends State<RateFoodScreen> {
                                   builder: (context) =>
                                       const RateRestaurantScreen()));
                         },
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const RateRestaurantScreen(),
-                              ),
-                            );
-                          },
-                          child: const FinishOrderCommon(
-                            height: 57,
-                            width: 82,
-                            color: Color(0xFF252525),
-                            text: "Skip",
-                            SecondColor: Color(0xFF53E88B),
-                          ),
+                        child: const FinishOrderCommon(
+                          height: 57,
+                          width: 82,
+                          color: Color(0xFF252525),
+                          text: "Skip",
+                          SecondColor: Color(0xFF53E88B),
                         ),
                       ),
                     ],

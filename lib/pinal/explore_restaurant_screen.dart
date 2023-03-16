@@ -17,7 +17,7 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          CommonContainer(),
+          const CommonContainer(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
