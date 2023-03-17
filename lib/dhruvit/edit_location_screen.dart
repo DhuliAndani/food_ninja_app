@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/dhruvit/payments_screen.dart';
 import 'package:food_ninja_app/dhruvit/your_orders_screen.dart';
 
 class EditLocationScreen extends StatefulWidget {
@@ -27,18 +28,36 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
               height: 170,
               width: double.infinity,
               child: Stack(
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 50, left: 20),
-                    child: SizedBox(
+                    padding: const EdgeInsets.only(top: 50, left: 20),
+                    child: Container(
                       height: 45,
                       width: 45,
-                      child: Image(
-                        image: AssetImage("assets/images/back_Arrow.png"),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color.fromARGB(35, 249, 169, 77),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 2, left: 8),
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const PaymentsScreen(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Color(0xFFDA6317),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(top: 120, left: 20),
                     child: Text(
                       "Shipping",
@@ -98,7 +117,7 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
                         ),
                         SizedBox(width: 15),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
