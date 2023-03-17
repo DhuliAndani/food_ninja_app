@@ -15,11 +15,12 @@ class _YourOrdersScreenState extends State<YourOrdersScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-              image: AssetImage("assets/images/Pattern.png"),
-              scale: 1,
-              alignment: Alignment.topRight),),
+        color: Colors.black,
+        image: DecorationImage(
+            image: AssetImage("assets/images/Pattern.png"),
+            scale: 1,
+            alignment: Alignment.topRight),
+      ),
       child: Scaffold(
         backgroundColor: Colors.black,
         body: ListView(
@@ -75,8 +76,8 @@ class _YourOrdersScreenState extends State<YourOrdersScreen> {
                                   width: 10,
                                 ),
                                 Image(
-                                  image:
-                                      AssetImage("assets/images/Icon Search.png"),
+                                  image: AssetImage(
+                                      "assets/images/Icon Search.png"),
                                 ),
                                 Text(
                                   "    What do you want to order?",
@@ -155,29 +156,29 @@ class _YourOrdersScreenState extends State<YourOrdersScreen> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF53E88B),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Place My Order",
-                      style: TextStyle(
-                        fontFamily: "BentonSans",
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF53E88B),
                       ),
+                      child: const Center(
+                        child: Text(
+                          "Place My Order",
+                          style: TextStyle(
+                            fontFamily: "BentonSans",
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OrderDetailsScreen(),
+                          ),
+                        );
+                      },
                     ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const OrderDetailsScreen(),
-                      ),
-                    );
-                  },
-                ),
                   ),
                 ),
               ],
