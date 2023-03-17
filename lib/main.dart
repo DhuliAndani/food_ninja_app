@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       title: "flutter demo",
-      // home: const SignInScreen(),
+      
       home: SignupSuccessNotificationScreen(),
     );
   }
