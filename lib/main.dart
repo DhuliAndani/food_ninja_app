@@ -1,8 +1,5 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/chirag/sign_in_screen.dart';
-
+import 'package:food_ninja_app/dhuli/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,15 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
-      title: 'Flutter Demo',
 
-      theme: ThemeData(
-      ),
-      home: const SignInScreen(),
-
+      title: "flutter demo",
+      theme: ThemeData(),
+      // home: const SignInScreen(),
+      home: const ProfileScreen(),
     );
   }
 }

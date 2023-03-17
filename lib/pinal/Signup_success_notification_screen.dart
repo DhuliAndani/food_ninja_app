@@ -77,10 +77,10 @@ class _SignupSuccessNotificationScreenState
                   backgroundColor:
                       const MaterialStatePropertyAll(Color(0xFF53E88B)),
                   fixedSize: MaterialStateProperty.all(
-                    Size(159, 57),
+                    const Size(159, 57),
                   ),
                 ),
-                child: Text("Try Order"),
+                child: const Text("Try Order"),
               ),
             ),
             //
