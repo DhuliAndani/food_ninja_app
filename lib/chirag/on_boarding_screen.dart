@@ -35,9 +35,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             child: Text(
               'FoodNinja',
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 40,
-                  color: Color(0xff53E88B)),
+                fontWeight: FontWeight.bold,
+                fontSize: 40,
+                color: Color(0xff53E88B),
+              ),
             ),
           ),
           Padding(

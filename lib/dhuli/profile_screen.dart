@@ -61,7 +61,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                             ),
                             child: const Text(
                               "Member Gold",
-                              //textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Color(0xFFFEAD1D),
                               ),
@@ -102,6 +101,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
+
                           ///
                           const SizedBox(height: 20),
                           Container(
@@ -122,7 +122,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                                 const SizedBox(width: 10),
                                 const Text(
                                   " You Have 3 Voucher",
-                                  //textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -175,7 +174,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
-          // SizedBox(height: 10),
         ],
       ),
       bottomNavigationBar: Padding(
@@ -190,6 +188,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Image(
+                
                 image: AssetImage("assets/images/Icon_Home.png"),
               ),
               const Image(
