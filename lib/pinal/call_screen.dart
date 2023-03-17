@@ -26,7 +26,7 @@ class _CallScreenState extends State<CallScreen> {
           children: [
             Stack(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 const Padding(
@@ -65,10 +65,10 @@ class _CallScreenState extends State<CallScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage("assets/images/Mute Icon.png"),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       GestureDetector(
@@ -80,7 +80,7 @@ class _CallScreenState extends State<CallScreen> {
                             ),
                           );
                         },
-                        child: Image(
+                        child: const Image(
                           image: AssetImage("assets/images/Close Icon_1.png"),
                         ),
                       ),
@@ -91,14 +91,6 @@ class _CallScreenState extends State<CallScreen> {
             ),
           ],
         ),
-        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        // floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {},
-        //   child: Image(
-        //     image: AssetImage("assets/images/"),
-        //   ),
-        // ),
       ),
     );
   }

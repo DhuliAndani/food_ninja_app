@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
-import 'package:food_ninja_app/common/home_common.dart';
 
 class ExploreMenuWithFilterScreen extends StatefulWidget {
   const ExploreMenuWithFilterScreen({Key? key}) : super(key: key);
@@ -14,49 +14,28 @@ class _ExploreMenuWithFilterScreenState
     extends State<ExploreMenuWithFilterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.black,
-        image: DecorationImage(
-          image: AssetImage("assets/images/Pattern.png"),
-          scale: 1,
-          alignment: Alignment.topRight,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Column(
+        children: [
+          const CommonContainer(),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: const HomeCommon(
-                    //  image: "assets/images/Pattern.png",
-                    Secondimage: "assets/images/Icon Notifiaction_3.png",
-                    text: "Find Your\nFavorite Food",
-                    thirdimage: "assets/images/Icon Search.png",
-                    SecondText: "    What do you want to order?",
-                    forthimage: "assets/images/Filter.png",
-                    color: Color(0xFF2C2C2E),
-                    SecondColor: Color(0xFF2C2C2E),
-                  ),
-                ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 15),
+                  padding: const EdgeInsets.only(
+                    left: 25,
+                    top: 15,
+                  ),
                   child: Container(
                     height: 44,
                     width: 92,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: Color(0xFF2C2C2E),
+                      color: const Color(0xFF2C2C2E),
                     ),
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: const [
                         SizedBox(
                           width: 20,
@@ -123,8 +102,8 @@ class _ExploreMenuWithFilterScreenState
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

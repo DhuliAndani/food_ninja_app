@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/common/home_common.dart';
+import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
 
 class ExploreRestaurantScreen extends StatefulWidget {
@@ -12,35 +12,15 @@ class ExploreRestaurantScreen extends StatefulWidget {
 class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.black,
-        image: DecorationImage(
-          image: AssetImage("assets/images/Pattern.png"),
-          scale: 1,
-          alignment: Alignment.topRight,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Column(
+        children: [
+          const CommonContainer(),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
               children: [
-                const HomeCommon(
-                  Secondimage: "assets/images/Icon Notifiaction_3.png",
-                  text: "Find Your\nFavorite Food",
-                  thirdimage: "assets/images/Icon Search.png",
-                  SecondText: "    What do you want to order?",
-                  forthimage: "assets/images/Filter.png",
-                  color: Color(0xFF2C2C2E),
-                  SecondColor: Color(0xFF2C2C2E),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 25),
                   child: Text(
@@ -127,8 +107,8 @@ class _ExploreRestaurantState extends State<ExploreRestaurantScreen> {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

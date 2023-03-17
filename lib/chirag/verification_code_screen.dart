@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
   const VerificationCodeScreen({Key? key}) : super(key: key);
@@ -144,31 +145,17 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 95, top: 360),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(
-                        const TextStyle(
-                          color: Color(0xFFFEFEFF),
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Merriweather-Bold",
-                        ),
-                      ),
-                      shape: MaterialStateProperty.all(
-                        ContinuousRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      fixedSize: MaterialStateProperty.all(
-                        Size(159, 57),
-                      ),
-                    ),
-                    child: Text("Next"),
+                const Padding(
+                  padding: EdgeInsets.only(left: 95, top: 360),
+                  child: ButtonCommon(
+                    text: "Next",
+                    width: 157,
+                    height: 57,
+                    color: Color(0xFF53E88B),
+                    Style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
