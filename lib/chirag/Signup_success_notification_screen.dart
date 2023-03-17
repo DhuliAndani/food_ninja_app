@@ -69,8 +69,20 @@ class _SignupSuccessNotificationScreenState
                 color: Color(0xFF53E88B),
                 Style: TextStyle(
                     fontSize: 14,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Merriweather-Bold",
+                  )),
+                  shape: MaterialStateProperty.all(ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                  )),
+                  //overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Color(0xFF53E88B)),
+                  fixedSize: MaterialStateProperty.all(
+                    const Size(159, 57),
+                  ),
+                ),
+                child: const Text("Try Order"),
               ),
             ),
             //

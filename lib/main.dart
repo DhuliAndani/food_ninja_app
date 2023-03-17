@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/home_screen.dart';
+import 'chirag/Signup_success_notification_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      
-      title: 'Flutter Demo',
-      home: const HomeScreen(),
-      theme: ThemeData(
-      ),
+
+      title: "flutter demo",
+      // home: const SignInScreen(),
+      home: SignupSuccessNotificationScreen(),
     );
   }
 }

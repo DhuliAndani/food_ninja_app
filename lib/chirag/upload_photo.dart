@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../common/back_button.dart';
 import '../common/button_common.dart';
 
-class Upload_Photo extends StatefulWidget {
-  const Upload_Photo({Key? key}) : super(key: key);
+class UploadPhoto extends StatefulWidget {
+  const UploadPhoto({Key? key}) : super(key: key);
 
   @override
-  State<Upload_Photo> createState() => _Upload_PhotoState();
+  State<UploadPhoto> createState() => _UploadPhotoState();
 }
 
-class _Upload_PhotoState extends State<Upload_Photo> {
+class _UploadPhotoState extends State<UploadPhoto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
