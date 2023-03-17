@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/Signup_success_notification_screen.dart';
+import 'dhuli/profile_screen.dart';
+//import 'pinal/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
