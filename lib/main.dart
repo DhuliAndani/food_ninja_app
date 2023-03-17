@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'dhuli/profile_screen.dart';
+import 'dhruvit/order_details_screen.dart';
+
 //import 'pinal/home_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 
       title: "flutter demo",
       
-      home: SignupSuccessNotificationScreen(),
+      home: OrderDetailsScreen(),
     );
   }
 }

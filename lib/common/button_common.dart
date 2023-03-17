@@ -10,7 +10,7 @@ class ButtonCommon extends StatelessWidget {
 
 
   const ButtonCommon(
-      {Key? key, this.text, this.height, this.width, this.onPress, this.color, this.Style})
+      {Key? key, this.text, this.height, this.width, this.onPress, this.color, this.Style, required TextStyle style})
       : super(key: key);
 
   @override

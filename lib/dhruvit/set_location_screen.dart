@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/dhruvit/payments_screen.dart';
+
+import '../common/button_common.dart';
+import '../pinal/explore_menu_screen.dart';
 
 class SetLocationScreen extends StatefulWidget {
   const SetLocationScreen({super.key});
@@ -123,19 +127,30 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                             borderRadius: BorderRadius.circular(20),
                             color: const Color(0xFF53E88B),
                           ),
-                          child: const Center(
-                            child: Text(
-                              "Check out",
-                              style: TextStyle(
-                                fontFamily: "BentonSans",
-                                fontSize: 14,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400,
-                              ),
+                          child: ButtonCommon(
+                            color: const Color(0xFF53E88B),
+                            onPress: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ExploreMenuScreen(),
+                                ),
+                              );
+                            },
+                            text: "Set Location",
+                            width: 325,
+                            height: 57,
+                            
+                            style: const TextStyle(
+                              fontFamily: "BentonSans",
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

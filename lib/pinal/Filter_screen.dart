@@ -262,7 +262,7 @@ class _FilterScreenState extends State<FilterScreen> {
                     width: 325,
                     height: 57,
                     color: const Color(0xFF53E88B),
-                    Style: const TextStyle(
+                    style: const TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
