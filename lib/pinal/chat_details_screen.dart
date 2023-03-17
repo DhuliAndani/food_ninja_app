@@ -162,19 +162,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                           borderRadius: BorderRadius.circular(15),
                           color: const Color(0x1AFFFFFF),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
-                              "    Just to order",
-                              style: TextStyle(
-                                color: Color(0x4DFFFFFF),
-                                fontSize: 14,
-                                fontFamily: "Nunito-Regular",
-                              ),
+                        child: Center(
+                          child: Text(
+                            "    Just to order",
+                            style: TextStyle(
+                              color: Color(0x4DFFFFFF),
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
@@ -188,19 +184,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                           borderRadius: BorderRadius.circular(15),
                           color: const Color(0xFF53E88B),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
-                              "    Okay, for what level of spiciness?",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontFamily: "Nunito-Regular",
-                              ),
+                        child: Center(
+                          child: Text(
+                            "    Okay, for what level of spiciness?",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
@@ -213,19 +205,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                           borderRadius: BorderRadius.circular(15),
                           color: const Color(0x1AFFFFFF),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
-                              "    Okay, wait a minute 👍",
-                              style: TextStyle(
-                                color: Color(0x4DFFFFFF),
-                                fontSize: 14,
-                                fontFamily: "Nunito-Regular",
-                              ),
+                        child: Center(
+                          child: Text(
+                            "    Okay, wait a minute 👍",
+                            style: TextStyle(
+                              color: Color(0x4DFFFFFF),
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
@@ -239,19 +227,15 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                           borderRadius: BorderRadius.circular(15),
                           color: const Color(0xFF53E88B),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
-                              "    Okay I'm waiting  👍",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontFamily: "Nunito-Regular",
-                              ),
+                        child: Center(
+                          child: Text(
+                            "    Okay I'm waiting  👍",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontFamily: "Nunito-Regular",
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chirag/Signup_success_notification_screen.dart';
+import 'pinal/pratice_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
       title: "flutter demo",
       // home: const SignInScreen(),
-      home: SignupSuccessNotificationScreen(),
+      home: PraticeScreen(),
     );
   }
 }

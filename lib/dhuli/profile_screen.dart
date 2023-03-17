@@ -102,6 +102,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
+
                           ///
                           const SizedBox(height: 20),
                           Container(

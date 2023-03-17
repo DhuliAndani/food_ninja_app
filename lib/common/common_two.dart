@@ -71,18 +71,17 @@ class CommonTwo extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          Container(
-            height: 29,
-            width: 79,
-            decoration: BoxDecoration(
-              color: Color(0xFFD9D9D9),
-              borderRadius: BorderRadius.circular(17.5),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Container(
+              height: 29,
+              width: 69,
+              decoration: BoxDecoration(
+                color: Color(0xFFD9D9D9),
+                borderRadius: BorderRadius.circular(17.5),
+              ),
+              child: Center(
+                child: Text(
                   "Reorder",
                   style: TextStyle(
                       color: Color(0xFF252525),
@@ -90,7 +89,7 @@ class CommonTwo extends StatelessWidget {
                       fontSize: 12,
                       fontWeight: FontWeight.bold),
                 ),
-              ],
+              ),
             ),
           ),
         ],
