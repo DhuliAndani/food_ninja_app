@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dhruvit/order_details_screen.dart';
+import 'package:food_ninja_app/chirag/sign_in_screen.dart';
+
+import 'pinal/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       title: 'Flutter Demo',
-
+      home: const HomeScreen(),
       theme: ThemeData(
       ),
-      home: const OrderDetailsScreen(),
-
     );
   }
 }

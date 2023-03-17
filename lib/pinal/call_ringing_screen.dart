@@ -26,13 +26,13 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
           children: [
             Stack(
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 190, left: 100),
                   child: Image(
                     image: AssetImage("assets/images/Image.png"),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 390, left: 100),
                   child: Text(
                     "Courtney Henry",
@@ -44,7 +44,7 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 435, left: 150),
                   child: Text(
                     "Ringing . . .",
@@ -62,10 +62,10 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage("assets/images/Speaker Icon.png"),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       GestureDetector(
@@ -77,7 +77,7 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                             ),
                           );
                         },
-                        child: Image(
+                        child: const Image(
                           image: AssetImage("assets/images/Close Icon_1.png"),
                         ),
                       ),

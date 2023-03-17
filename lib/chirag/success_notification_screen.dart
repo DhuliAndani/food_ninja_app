@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/pinal/home_screen.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class SuccessNotificationScreen extends StatefulWidget {
   const SuccessNotificationScreen({Key? key}) : super(key: key);
@@ -60,36 +59,19 @@ class _SuccessNotificationScreenState extends State<SuccessNotificationScreen> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 70, top: 260),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    CupertinoPageRoute(builder: (context) => HomeScreen()),
-                  );
-                },
-                style: ButtonStyle(
-                  textStyle: MaterialStateProperty.all(const TextStyle(
-                    color: Color(0xFFFEFEFF),
+            const Padding(
+              padding: EdgeInsets.only(left: 70, top: 260),
+              child: ButtonCommon(
+                text: "Back",
+                width: 157,
+                height: 57,
+                color: Color(0xFF53E88B),
+                Style: TextStyle(
                     fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Merriweather-Bold",
-                  )),
-                  shape: MaterialStateProperty.all(ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  )),
-                  //overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  backgroundColor:
-                      const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  fixedSize: MaterialStateProperty.all(
-                    Size(159, 57),
-                  ),
-                ),
-                child: Text("Back"),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
             ),
-            //
           ],
         ),
       ),

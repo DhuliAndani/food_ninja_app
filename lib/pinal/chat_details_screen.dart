@@ -130,7 +130,7 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                                       ),
                                     );
                                   },
-                                  child: Container(
+                                  child: SizedBox(
                                     height: 40,
                                     width: 40,
                                     child: Container(

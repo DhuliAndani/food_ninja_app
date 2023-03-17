@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/common/home_common.dart';
+import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
-import 'package:food_ninja_app/pinal/explore_menu_with_filter_screen.dart';
 
 class ExploreRestaurantWithFilterScreen extends StatefulWidget {
   const ExploreRestaurantWithFilterScreen({Key? key}) : super(key: key);
@@ -15,37 +14,15 @@ class _ExploreRestaurantWithFilterScreenState
     extends State<ExploreRestaurantWithFilterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.black,
-        image: DecorationImage(
-          image: AssetImage("assets/images/Pattern.png"),
-          scale: 1,
-          alignment: Alignment.topRight,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Column(
+        children: [
+          const CommonContainer(),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: const HomeCommon(
-                    Secondimage: "assets/images/Icon Notifiaction_3.png",
-                    text: "Find Your\nFavorite Food",
-                    thirdimage: "assets/images/Icon Search.png",
-                    SecondText: "    What do you want to order?",
-                    forthimage: "assets/images/Filter.png",
-                    color: Color(0xFF2C2C2E),
-                    SecondColor: Color(0xFF2C2C2E),
-                  ),
-                ),
                 Row(
                   children: [
                     Padding(
@@ -90,39 +67,27 @@ class _ExploreRestaurantWithFilterScreenState
                           borderRadius: BorderRadius.circular(15),
                           color: Color(0xFF2C2C2E),
                         ),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const ExploreMenuWithFilterScreen(),
-                              ),
-                            );
-                          },
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const [
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                "Soup ",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontFamily: "Merriweather-Bold",
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image(
-                                image:
-                                    AssetImage("assets/images/Icon Close.png"),
-                              ),
-                            ],
-                          ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: const [
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text(
+                              "Soup ",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontFamily: "Merriweather-Bold",
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Image(
+                              image: AssetImage("assets/images/Icon Close.png"),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -217,8 +182,8 @@ class _ExploreRestaurantWithFilterScreenState
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

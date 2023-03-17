@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class PasswordScreen extends StatefulWidget {
   const PasswordScreen({Key? key}) : super(key: key);
@@ -83,9 +84,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 2),
-                  child: const Text(
+                const Padding(
+                  padding: EdgeInsets.only(left: 25, top: 2),
+                  child: Text(
                     "use to reset your password",
                     style: TextStyle(
                       color: Colors.white,
@@ -100,13 +101,13 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: Color(0x33FFFFFF),
+                      color: const Color(0x33FFFFFF),
                     ),
                     alignment: Alignment.centerLeft,
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Password',
-                        hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                        hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
@@ -120,7 +121,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                             _obscureText
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: Color(0XFF53E88B),
+                            color: const Color(0XFF53E88B),
                           ),
                         ),
                       ),
@@ -133,12 +134,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: Color(0x33FFFFFF),
+                      color: const Color(0x33FFFFFF),
                     ),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
-                        hintStyle: TextStyle(color: Color(0xffF4F4F4)),
+                        hintStyle: const TextStyle(color: Color(0xffF4F4F4)),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
@@ -152,7 +153,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                             _obscureText
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: Color(0x36FFFFFF),
+                            color: const Color(0x36FFFFFF),
                           ),
                         ),
                       ),
@@ -160,28 +161,17 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 100, top: 300),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(TextStyle(
-                        color: Color(0xFFFEFEFF),
+                const Padding(
+                  padding: EdgeInsets.only(left: 100, top: 300),
+                  child: ButtonCommon(
+                    text: "Next",
+                    width: 157,
+                    height: 57,
+                    color: Color(0xFF53E88B),
+                    Style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "Merriweather-Bold",
-                      )),
-                      shape:
-                          MaterialStateProperty.all(ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      )),
-                      backgroundColor:
-                          MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      fixedSize: MaterialStateProperty.all(
-                        Size(157, 57),
-                      ),
-                    ),
-                    child: Text("Next"),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
