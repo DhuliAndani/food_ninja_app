@@ -24,70 +24,56 @@ class _SignupSuccessNotificationScreenState
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: Column(
-          children: [
-            Stack(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(top: 190, left: 100),
-                  child: Image(
-                    image: AssetImage("assets/images/Success Illustration.png"),
-                  ),
+        body: Column(children: [
+          Stack(
+            children: const [
+              Padding(
+                padding: EdgeInsets.only(top: 190, left: 100),
+                child: Image(
+                  image: AssetImage("assets/images/Success Illustration.png"),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 390, left: 120),
-                  child: Text(
-                    "Congrats!",
-                    style: TextStyle(
-                      color: Color(0xFF53E88B),
-                      fontFamily: "Merriweather-Bold",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 435, left: 75),
-                  child: Text(
-                    "Your Profile Is Ready To Use",
-                    style: TextStyle(
-                      color: Colors.white,
-                      //fontFamily: "Nunito-Regular",
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 60, top: 260),
-              child: ButtonCommon(
-                text: "Next",
-                width: 157,
-                height: 57,
-                color: Color(0xFF53E88B),
-                Style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 390, left: 120),
+                child: Text(
+                  "Congrats!",
+                  style: TextStyle(
+                    color: Color(0xFF53E88B),
                     fontFamily: "Merriweather-Bold",
-                  )),
-                  shape: MaterialStateProperty.all(ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  )),
-                  //overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  backgroundColor:
-                      const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  fixedSize: MaterialStateProperty.all(
-                    const Size(159, 57),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
                   ),
                 ),
-                child: const Text("Try Order"),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 435, left: 75),
+                child: Text(
+                  "Your Profile Is Ready To Use",
+                  style: TextStyle(
+                    color: Colors.white,
+                    //fontFamily: "Nunito-Regular",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 60, top: 260),
+            child: ButtonCommon(
+              text: "Try Order",
+              width: 157,
+              height: 57,
+              color: Color(0xFF53E88B),
+              Style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Merriweather-Bold",
               ),
             ),
-            //
-          ],
-        ),
+          ),
+        ]),
       ),
     );
   }
