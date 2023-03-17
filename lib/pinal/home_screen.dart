@@ -17,8 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.transparent,
       body: Column(
         children: [
-          CommonContainer(),
-          //
+          const CommonContainer(),
           Expanded(
             child: ListView(
               scrollDirection: Axis.vertical,

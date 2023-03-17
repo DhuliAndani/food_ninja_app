@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
-class SignupSuccessNotificationScreen extends StatefulWidget {
-  const SignupSuccessNotificationScreen({Key? key}) : super(key: key);
+class SuccessNotificationScreen extends StatefulWidget {
+  const SuccessNotificationScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignupSuccessNotificationScreen> createState() =>
-      _SignupSuccessNotificationScreenState();
+  State<SuccessNotificationScreen> createState() =>
+      _SuccessNotificationScreenState();
 }
 
-class _SignupSuccessNotificationScreenState
-    extends State<SignupSuccessNotificationScreen> {
+class _SuccessNotificationScreenState extends State<SuccessNotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +48,7 @@ class _SignupSuccessNotificationScreenState
                 Padding(
                   padding: EdgeInsets.only(top: 435, left: 75),
                   child: Text(
-                    "Your Profile Is Ready To Use",
+                    "Password reset succesful",
                     style: TextStyle(
                       color: Colors.white,
                       //fontFamily: "Nunito-Regular",
@@ -59,31 +59,19 @@ class _SignupSuccessNotificationScreenState
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 60, top: 260),
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  textStyle: MaterialStateProperty.all(const TextStyle(
-                    color: Color(0xFFFEFEFF),
+            const Padding(
+              padding: EdgeInsets.only(left: 70, top: 260),
+              child: ButtonCommon(
+                text: "Back",
+                width: 157,
+                height: 57,
+                color: Color(0xFF53E88B),
+                Style: TextStyle(
                     fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Merriweather-Bold",
-                  )),
-                  shape: MaterialStateProperty.all(ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  )),
-                  //overlayColor: MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  backgroundColor:
-                      const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                  fixedSize: MaterialStateProperty.all(
-                    const Size(159, 57),
-                  ),
-                ),
-                child: const Text("Try Order"),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
             ),
-            //
           ],
         ),
       ),

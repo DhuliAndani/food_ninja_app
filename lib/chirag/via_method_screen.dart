@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/common/button_common.dart';
 
 class ViaMethodScreen extends StatefulWidget {
   const ViaMethodScreen({Key? key}) : super(key: key);
@@ -70,9 +71,9 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 3),
-                  child: const Text(
+                const Padding(
+                  padding: EdgeInsets.only(left: 25, top: 3),
+                  child: Text(
                     "use to reset your password",
                     style: TextStyle(
                       color: Colors.white,
@@ -88,31 +89,31 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     height: 103,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0x1AFFFFFF),
+                      color: const Color(0x1AFFFFFF),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Image.asset("assets/images/Message.png"),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
-                            Text(
+                            const Text(
                               "Via sms:",
                               style: TextStyle(
                                 color: Color(0x1AFFFFFF),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -125,7 +126,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -136,7 +137,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -147,7 +148,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -158,7 +159,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
                                 Container(
@@ -169,7 +170,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -180,7 +181,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -191,7 +192,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -202,10 +203,10 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
-                                Text("4235",
+                                const Text("4235",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
@@ -225,35 +226,35 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     height: 81,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0x1AFFFFFF),
+                      color: const Color(0x1AFFFFFF),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.email,
                           color: Color(0xff53E88B),
                           size: 35,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
-                            Text(
+                            const Text(
                               "Via email:",
                               style: TextStyle(
                                 color: Color(0x1AFFFFFF),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -266,7 +267,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -277,7 +278,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -288,7 +289,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 4,
                                 ),
                                 Container(
@@ -299,10 +300,10 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
-                                Text("@gmail.com",
+                                const Text("@gmail.com",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
@@ -316,31 +317,17 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 95, top: 270),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(
-                        const TextStyle(
-                          color: Color(0xFFFEFEFF),
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Merriweather-Bold",
-                        ),
-                      ),
-                      shape: MaterialStateProperty.all(
-                        ContinuousRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                      fixedSize: MaterialStateProperty.all(
-                        Size(159, 57),
-                      ),
-                    ),
-                    child: Text("Next"),
+                const Padding(
+                  padding: EdgeInsets.only(left: 95, top: 270),
+                  child: ButtonCommon(
+                    text: "Next",
+                    width: 157,
+                    height: 57,
+                    color: Color(0xFF53E88B),
+                    Style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
