@@ -30,12 +30,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               width: double.infinity,
               child: Stack(
                 children: const [
-                  // Padding(
-                  //   padding: EdgeInsets.only(left: 50),
-                  //   child: Image(
-                  //     image: AssetImage("assets/images/Pattern.png"),
-                  //   ),
-                  // ),
                   Padding(
                     padding: EdgeInsets.only(top: 50, left: 20),
                     child: SizedBox(
@@ -167,7 +161,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                           style: TextStyle(
                             fontFamily: "BentonSans",
                             fontSize: 14,
-                            color: Color(0xFFFEFEFF),
+                            color: Color(0xFFFEFFFF),
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -178,6 +172,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                             style: TextStyle(
                               fontFamily: "BentonSans",
                               fontSize: 18,
+
                               color: Color(0xFFFEFEFF),
                               fontWeight: FontWeight.w600,
                             ),
