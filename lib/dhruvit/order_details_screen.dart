@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
 
+import '../common/button_common.dart';
 import '../common/order_details_common.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
             alignment: Alignment.topRight),
       ),
       child: Scaffold(
-        backgroundColor: const Color(0xFF0D0D0D),
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
             SizedBox(
@@ -212,6 +213,32 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       ),
                     ),
                   ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(right: 15, left: 15, top: 130),
+                  //   child: ButtonCommon(
+                  //       width: 325,
+                  //             height: 57,
+                  //             color: Colors.white,
+                  //             onPress: () {
+                  //               Navigator.push(
+                  //                 context,
+                  //                 MaterialPageRoute(
+                  //                   builder: (context) =>
+                  //                       const PaymentsScreen(),
+                  //                 ),
+                  //               );
+                  //             },
+
+                  //             text: "vhfjh",
+                            
+                  //            style: const TextStyle(
+                  //             fontFamily: "BentonSans",
+                  //             fontSize: 14,
+                  //             color: Colors.yellow,
+                  //             fontWeight: FontWeight.w400,
+                  //           ),
+                  //           ),
+                  // ),
                 ],
               ),
             )

@@ -16,19 +16,16 @@ class FilterCommonContainer extends StatelessWidget {
         color: const Color(0xFF2C2C2E),
         borderRadius: BorderRadius.circular(15),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text!,
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Roboto-Regular",
-            ),
+      child: Center(
+        child: Text(
+          text!,
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Roboto-Regular",
           ),
-        ],
+        ),
       ),
     );
   }

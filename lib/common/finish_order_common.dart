@@ -24,19 +24,16 @@ class FinishOrderCommon extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         color: color!,
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text!,
-            style: TextStyle(
-              color: SecondColor!,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Merriweather-Bold",
-            ),
-          )
-        ],
+      child: Center(
+        child: Text(
+          text!,
+          style: TextStyle(
+            color: SecondColor!,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Merriweather-Bold",
+          ),
+        ),
       ),
     );
   }

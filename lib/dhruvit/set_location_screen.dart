@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
+import 'package:food_ninja_app/dhruvit/track_order_screen.dart';
 
 import '../common/button_common.dart';
 import '../pinal/explore_menu_screen.dart';
@@ -134,14 +135,13 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const ExploreMenuScreen(),
+                                      const TrackOrderScreen(),
                                 ),
                               );
                             },
                             text: "Set Location",
                             width: 325,
                             height: 57,
-                            
                             style: const TextStyle(
                               fontFamily: "BentonSans",
                               fontSize: 14,
