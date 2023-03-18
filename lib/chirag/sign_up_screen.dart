@@ -181,6 +181,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               text: 'Login',
               width: 141,
               height: 57,
+              color: Color(0xff53E88B),
+              Style: TextStyle(color: Colors.white),
             ),
           ],
         ),

@@ -43,6 +43,8 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
             height: 57,
             width: 157,
             text: 'Next',
+            color: Color(0xff53E88B),
+            Style: TextStyle(color: Colors.white),
           ),
         ],
       )),
