@@ -48,6 +48,8 @@ class _Upload_PreviewState extends State<Upload_Preview> {
                   height: 57,
                   width: 157,
                   text: 'Next',
+                  color: Color(0xff53E88B),
+                  Style: TextStyle(color: Colors.white),
                 )),
               ],
             ),

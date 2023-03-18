@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../common/back_button.dart';
 import '../common/button_common.dart';
 
-class Signup_Process extends StatefulWidget {
-  const Signup_Process({Key? key}) : super(key: key);
+class SignupProcess extends StatefulWidget {
+  const SignupProcess({Key? key}) : super(key: key);
 
   @override
-  State<Signup_Process> createState() => _Signup_ProcessState();
+  State<SignupProcess> createState() => _SignupProcessState();
 }
 
-class _Signup_ProcessState extends State<Signup_Process> {
+class _SignupProcessState extends State<SignupProcess> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,6 +111,8 @@ class _Signup_ProcessState extends State<Signup_Process> {
                   height: 57,
                   width: 157,
                   text: 'Next',
+                  color: Color(0xff53E88B),
+                  Style: TextStyle(color: Colors.white),
                 )),
               ],
             ),

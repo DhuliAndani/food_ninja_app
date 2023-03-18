@@ -10,7 +10,6 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  bool radioData = true;
   bool _obscureText = true;
   bool checkBoxData = true;
   @override
@@ -137,9 +136,6 @@ class _SignInScreenState extends State<SignInScreen> {
                 obscureText: _obscureText,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
             Row(
               children: [
                 Checkbox(
@@ -176,6 +172,8 @@ class _SignInScreenState extends State<SignInScreen> {
               height: 57,
               width: 175,
               text: 'Create Account',
+              color: Color(0xff53E88B),
+              Style: TextStyle(color: Colors.white),
             ),
             const SizedBox(
               height: 10,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/chirag/sign_in_screen.dart';
+
+import 'chirag/signup_process.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
 
       title: "flutter demo",
       // home: const SignInScreen(),
-      home: const SignInScreen(),
+      home: SignupProcess(),
     );
   }
 }

@@ -77,6 +77,8 @@ class _UploadPhotoState extends State<UploadPhoto> {
                   height: 57,
                   width: 157,
                   text: 'Next',
+                  color: Color(0xff53E88B),
+                  Style: TextStyle(color: Colors.white),
                 )),
               ],
             ),
