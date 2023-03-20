@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'pinal/pratice_screen.dart';
+import 'chirag/on_boarding_two.dart';
+//import 'dhuli/profile_screen.dart';
+//import 'pinal/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      title: "flutter demo",
-      // home: const SignInScreen(),
-      home: PraticeScreen(),
+      title: 'Flutter Demo',
+      home: OnBoardingTwo(),
     );
   }
 }

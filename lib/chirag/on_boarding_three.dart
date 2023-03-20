@@ -43,6 +43,8 @@ class _OnBoardingThreeState extends State<OnBoardingThree> {
             height: 57,
             width: 157,
             text: 'Next',
+            color: Color(0xff53E88B),
+            Style: TextStyle(color: Colors.white),
           ),
         ],
       )),

@@ -91,6 +91,8 @@ class _Payment_MethodState extends State<Payment_Method> {
                   height: 57,
                   width: 157,
                   text: 'Next',
+                  color: Color(0xff53E88B),
+                  Style: TextStyle(color: Colors.white),
                 )),
               ],
             ),
