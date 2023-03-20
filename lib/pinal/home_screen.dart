@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
+import 'package:food_ninja_app/dhuli/profile_screen.dart';
+import 'package:food_ninja_app/pinal/message_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -153,24 +155,52 @@ class _HomeScreenState extends State<HomeScreen> {
             const Image(
               image: AssetImage("assets/images/Icon Home Active.png"),
             ),
-            const Image(
-              image: AssetImage("assets/images/Icon Profile.png"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfileScreen(),
+                    ));
+              },
+              child: const Image(
+                image: AssetImage("assets/images/Icon Profile.png"),
+              ),
             ),
-            const Image(
-              image: AssetImage("assets/images/Icon Cart_1.png"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Scaffold(),
+                    ));
+              },
+              child: const Image(
+                image: AssetImage("assets/images/Icon Cart_1.png"),
+              ),
             ),
-            Stack(
-              children: const [
-                Image(
-                  image: AssetImage("assets/images/Chat.png"),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15),
-                  child: Image(
-                    image: AssetImage("assets/images/Ellipse 164_2.png"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MessageScreen(),
                   ),
-                ),
-              ],
+                );
+              },
+              child: Stack(
+                children: const [
+                  Image(
+                    image: AssetImage("assets/images/Chat.png"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Image(
+                      image: AssetImage("assets/images/Ellipse 164_2.png"),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
