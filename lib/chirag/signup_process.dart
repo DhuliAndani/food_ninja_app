@@ -112,7 +112,7 @@ class _SignupProcessState extends State<SignupProcess> {
                   width: 157,
                   text: 'Next',
                   color: Color(0xff53E88B),
-                  Style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white),
                 )),
               ],
             ),

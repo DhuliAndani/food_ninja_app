@@ -324,7 +324,7 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     width: 157,
                     height: 57,
                     color: Color(0xFF53E88B),
-                    Style: TextStyle(
+                    style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/dhruvit/payments_screen.dart';
+import 'package:food_ninja_app/dhruvit/track_order_screen.dart';
 
 import '../common/button_common.dart';
 import '../common/order_details_common.dart';
@@ -173,7 +173,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                             style: TextStyle(
                               fontFamily: "BentonSans",
                               fontSize: 18,
-
                               color: Color(0xFFFEFEFF),
                               fontWeight: FontWeight.w600,
                             ),
@@ -185,60 +184,27 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                   Padding(
                     padding:
                         const EdgeInsets.only(right: 15, left: 15, top: 130),
-                    child: SizedBox(
-                      height: 57,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Place My Order",
-                            style: TextStyle(
-                              fontFamily: "BentonSans",
-                              fontSize: 14,
-                              color: Color(0xFF53E88B),
-                              fontWeight: FontWeight.w400,
-                            ),
+                    child: ButtonCommon(
+                      color: Colors.white,
+                      onPress: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const TrackOrderScreen(),
                           ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const PaymentsScreen(),
-                            ),
-                          );
-                        },
+                        );
+                      },
+                      text: "Set Location",
+                      width: 325,
+                      height: 57,
+                      style: const TextStyle(
+                        fontFamily: "BentonSans",
+                        fontSize: 14,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(right: 15, left: 15, top: 130),
-                  //   child: ButtonCommon(
-                  //       width: 325,
-                  //             height: 57,
-                  //             color: Colors.white,
-                  //             onPress: () {
-                  //               Navigator.push(
-                  //                 context,
-                  //                 MaterialPageRoute(
-                  //                   builder: (context) =>
-                  //                       const PaymentsScreen(),
-                  //                 ),
-                  //               );
-                  //             },
-
-                  //             text: "vhfjh",
-                            
-                  //            style: const TextStyle(
-                  //             fontFamily: "BentonSans",
-                  //             fontSize: 14,
-                  //             color: Colors.yellow,
-                  //             fontWeight: FontWeight.w400,
-                  //           ),
-                  //           ),
-                  // ),
                 ],
               ),
             )

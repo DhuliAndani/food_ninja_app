@@ -68,7 +68,7 @@ class _SignupSuccessNotificationScreenState
               width: 157,
               height: 57,
               color: const Color(0xFF53E88B),
-              Style: const TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Merriweather-Bold",

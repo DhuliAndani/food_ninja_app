@@ -6,37 +6,45 @@ class ButtonCommon extends StatelessWidget {
   final double? width;
   final VoidCallback? onPress;
   final Color? color;
-  final TextStyle? Style;
+  final TextStyle? style;
 
-
-  const ButtonCommon(
-      {Key? key, this.text, this.height, this.width, this.onPress, this.color, this.Style, required TextStyle style})
-      : super(key: key);
+  const ButtonCommon({
+    Key? key,
+    this.text,
+    this.height,
+    this.width,
+    this.onPress,
+    this.color,
+    this.style,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPress,
       style: ButtonStyle(
-        textStyle: MaterialStateProperty.all(const TextStyle(
-          color: Color(0xFFFEFEFF),
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Merriweather-Bold",
-        )),
-        shape: MaterialStateProperty.all(ContinuousRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        )),
-        overlayColor: const MaterialStatePropertyAll(Color(0xFF53E88B)),
-        backgroundColor:  MaterialStatePropertyAll(color),
-        
+  
+        shape: MaterialStateProperty.all(
+          ContinuousRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+        overlayColor:
+            const MaterialStatePropertyAll(Color.fromARGB(71, 83, 232, 140)),
+        backgroundColor: MaterialStatePropertyAll(color),
         fixedSize: MaterialStateProperty.all(
           Size(width!, height!),
         ),
       ),
+    
       child: Text(
         text!,
-        style: Style,
+        style:   style??  const TextStyle(
+            color: Color(0xFFFFFFFF),
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Merriweather-Bold",
+          ),
       ),
     );
   }

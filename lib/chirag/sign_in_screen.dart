@@ -173,7 +173,7 @@ class _SignInScreenState extends State<SignInScreen> {
               width: 175,
               text: 'Create Account',
               color: Color(0xff53E88B),
-              Style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white),
             ),
             const SizedBox(
               height: 10,
