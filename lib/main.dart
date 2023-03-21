@@ -19,6 +19,3 @@ class MyApp extends StatelessWidget {
       title: "flutter demo",
       
       home: OrderDetailsScreen(),
-    );
-  }
-}
