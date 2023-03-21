@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/dhruvit/track_order_screen.dart';
+import 'package:food_ninja_app/dhruvit/payments_screen.dart';
 
 import '../common/button_common.dart';
 import '../common/order_details_common.dart';
@@ -30,18 +30,29 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               height: 170,
               width: double.infinity,
               child: Stack(
-                children: const [
+                children:  [
                   Padding(
-                    padding: EdgeInsets.only(top: 50, left: 20),
-                    child: SizedBox(
+                    padding: const EdgeInsets.only(top: 50, left: 20),
+                    child: Container(
                       height: 45,
                       width: 45,
-                      child: Image(
-                        image: AssetImage("assets/images/back_Arrow.png"),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color.fromARGB(35, 249, 169, 77),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 2, left: 8),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Color(0xFFDA6317),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(top: 120, left: 20),
                     child: Text(
                       "Order details",
@@ -190,7 +201,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const TrackOrderScreen(),
+                            builder: (context) => const PaymentsScreen(),
                           ),
                         );
                       },
@@ -200,7 +211,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       style: const TextStyle(
                         fontFamily: "BentonSans",
                         fontSize: 14,
-                        color: Colors.black,
+                        color: Color(0xFF53E88B),
                         fontWeight: FontWeight.w400,
                       ),
                     ),
