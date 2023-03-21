@@ -207,7 +207,7 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                           ));
                     },
                     color: const Color(0xFF53E88B),
-                    Style: const TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),

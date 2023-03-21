@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
 
+import '../common/button_common.dart';
 import '../common/order_details_common.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
@@ -22,25 +23,36 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
             alignment: Alignment.topRight),
       ),
       child: Scaffold(
-        backgroundColor: const Color(0xFF0D0D0D),
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
             SizedBox(
               height: 170,
               width: double.infinity,
               child: Stack(
-                children: const [
+                children:  [
                   Padding(
-                    padding: EdgeInsets.only(top: 50, left: 20),
-                    child: SizedBox(
+                    padding: const EdgeInsets.only(top: 50, left: 20),
+                    child: Container(
                       height: 45,
                       width: 45,
-                      child: Image(
-                        image: AssetImage("assets/images/back_Arrow.png"),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color.fromARGB(35, 249, 169, 77),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 2, left: 8),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Color(0xFFDA6317),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(top: 120, left: 20),
                     child: Text(
                       "Order details",
@@ -172,7 +184,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                             style: TextStyle(
                               fontFamily: "BentonSans",
                               fontSize: 18,
-
                               color: Color(0xFFFEFEFF),
                               fontWeight: FontWeight.w600,
                             ),
@@ -184,31 +195,24 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                   Padding(
                     padding:
                         const EdgeInsets.only(right: 15, left: 15, top: 130),
-                    child: SizedBox(
-                      height: 57,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Place My Order",
-                            style: TextStyle(
-                              fontFamily: "BentonSans",
-                              fontSize: 14,
-                              color: Color(0xFF53E88B),
-                              fontWeight: FontWeight.w400,
-                            ),
+                    child: ButtonCommon(
+                      color: Colors.white,
+                      onPress: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PaymentsScreen(),
                           ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const PaymentsScreen(),
-                            ),
-                          );
-                        },
+                        );
+                      },
+                      text: "Set Location",
+                      width: 325,
+                      height: 57,
+                      style: const TextStyle(
+                        fontFamily: "BentonSans",
+                        fontSize: 14,
+                        color: Color(0xFF53E88B),
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
