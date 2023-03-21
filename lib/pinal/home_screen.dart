@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
+import 'package:food_ninja_app/dhruvit/detail_product_screen.dart';
 import 'package:food_ninja_app/dhuli/profile_screen.dart';
 import 'package:food_ninja_app/pinal/message_screen.dart';
 
@@ -13,10 +14,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int index = 0;
+  List<Widget> screens = [
+    HomeScreen(),
+    ProfileScreen(),
+    Container(color: Colors.pink),
+    MessageScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           const CommonContainer(),
@@ -102,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 10,
                 ),
                 Row(
-                  children: const [
+                  children: [
                     SizedBox(
                       width: 27,
                     ),
@@ -118,12 +126,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       width: 130,
                     ),
-                    Text(
-                      "View More",
-                      style: TextStyle(
-                        color: Color(0xFFFF8E4C),
-                        fontSize: 12,
-                        fontFamily: "Roboto-Regular",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailProductScreen(),
+                            ));
+                      },
+                      child: Text(
+                        "View More",
+                        style: TextStyle(
+                          color: Color(0xFFFF8E4C),
+                          fontSize: 12,
+                          fontFamily: "Roboto-Regular",
+                        ),
                       ),
                     ),
                   ],
@@ -137,73 +154,81 @@ class _HomeScreenState extends State<HomeScreen> {
                     SecondText: "\$15",
                   ),
                 ),
-                //
               ],
             ),
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 70,
-        decoration: BoxDecoration(
-          color: const Color(0xFF252525),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Image(
-              image: AssetImage("assets/images/Icon Home Active.png"),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        type: BottomNavigationBarType.shifting,
+        items: [
+          const BottomNavigationBarItem(
+              icon: Image(
+                image: AssetImage("assets/images/Icon Home Active.png"),
+              ),
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ProfileScreen(),
-                    ));
-              },
-              child: const Image(
-                image: AssetImage("assets/images/Icon Profile.png"),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Scaffold(),
-                    ));
-              },
-              child: const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MessageScreen(),
-                  ),
-                );
-              },
-              child: Stack(
-                children: const [
-                  Image(
-                    image: AssetImage("assets/images/Chat.png"),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Image(
-                      image: AssetImage("assets/images/Ellipse 164_2.png"),
+                      builder: (context) => ProfileScreen(),
                     ),
-                  ),
-                ],
+                  );
+                },
+                child: Image(
+                  image: AssetImage("assets/images/Icon Profile.png"),
+                ),
               ),
-            ),
-          ],
-        ),
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Container(color: Colors.pink),
+                    ),
+                  );
+                },
+                child: Image(
+                  image: AssetImage("assets/images/Icon Cart_1.png"),
+                ),
+              ),
+              //
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MessageScreen(),
+                    ),
+                  );
+                },
+                child: Stack(
+                  children: const [
+                    Image(
+                      image: AssetImage("assets/images/Chat.png"),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Image(
+                        image: AssetImage("assets/images/Ellipse 164_2.png"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              label: "Home",
+              backgroundColor: Colors.black),
+        ],
       ),
     );
   }
