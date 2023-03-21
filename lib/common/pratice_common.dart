@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../dhruvit/your_orders_screen.dart';
+import 'button_common.dart';
+
 class PraticeCommon extends StatelessWidget {
   final String? text;
   final String? image;
@@ -64,15 +67,47 @@ class PraticeCommon extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-            decoration: BoxDecoration(
-              color: const Color(0xFF53E88B),
-              borderRadius: BorderRadius.circular(17.5),
+          // const ButtonCommon(
+          //   height: 22,
+          //   width: 90,
+          //   color: Color(0xFF53E88B),
+          //   text: 'Buy Again',
+          //   Style: TextStyle(
+          //     color: Colors.white,
+          //     fontFamily: "Merriweather-Bold",
+          //     fontSize: 12,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const YourOrdersScreen(),
+                ),
+              );
+            },
+            style: ButtonStyle(
+              textStyle: MaterialStateProperty.all(const TextStyle(
+                color: Color(0xFFFEFEFF),
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Merriweather-Bold",
+              )),
+              shape: MaterialStateProperty.all(ContinuousRectangleBorder(
+                borderRadius: BorderRadius.circular(35),
+              )),
+              overlayColor: const MaterialStatePropertyAll(Color(0xFF53E88B)),
+              backgroundColor:
+                  const MaterialStatePropertyAll(Color(0xFF53E88B)),
+              fixedSize: MaterialStateProperty.all(
+                const Size(90, 20),
+              ),
             ),
-            child: Text(
-              ThirdText!,
-              style: const TextStyle(
+            child: const Text(
+              'Buy Again',
+              style: TextStyle(
                   color: Colors.white,
                   fontFamily: "Merriweather-Bold",
                   fontSize: 12,
@@ -82,5 +117,20 @@ class PraticeCommon extends StatelessWidget {
         ],
       ),
     );
+    // Container(
+    //   padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+    //   decoration: BoxDecoration(
+    //     color: const Color(0xFF53E88B),
+    //     borderRadius: BorderRadius.circular(17.5),
+    //   ),
+    //   child: Text(
+    //     ThirdText!,
+    //     style: const TextStyle(
+    //         color: Colors.white,
+    //         fontFamily: "Merriweather-Bold",
+    //         fontSize: 12,
+    //         fontWeight: FontWeight.bold),
+    //   ),
+    // ),
   }
 }
