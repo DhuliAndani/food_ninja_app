@@ -16,6 +16,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        
         color: Colors.black,
         image: DecorationImage(
             image: AssetImage("assets/images/Pattern.png"),
