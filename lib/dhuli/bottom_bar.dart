@@ -41,23 +41,29 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
               icon: ImageIcon(
                 size: 25,
-                AssetImage("assets/images/Icon_Profil_Active.png"),
+                AssetImage(
+                  "assets/images/Icon_Profil_Active.png",
+                ),
               ),
               label: 'camera',
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
               icon: ImageIcon(
                 size: 30,
-                AssetImage("assets/image/chirag/Tnoti.png"),
+                AssetImage(
+                  "assets/images/Icon Cart_2.png",
+                ),
               ),
               label: 'search',
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_pin,
-                size: 35,
+              icon: ImageIcon(
+                size: 30,
+                AssetImage(
+                  "assets/images/Icon_Chat _Wit.png",
+                ),
               ),
-              label: 'home',
+              label: 'search',
               backgroundColor: Colors.blue),
         ],
         onTap: (index) {

@@ -193,18 +193,12 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                 image: AssetImage("assets/images/Icon_Profil_Active.png"),
               ),
               const Image(
-                image: AssetImage("assets/images/Icon Cart_1.png"),
+                image: AssetImage("assets/images/Icon Cart_2.png"),
               ),
               Stack(
                 children: const [
                   Image(
                     image: AssetImage("assets/images/Icon_Chat _Wit.png"),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Image(
-                      image: AssetImage("assets/images/Ellipse 164_2.png"),
-                    ),
                   ),
                 ],
               ),
