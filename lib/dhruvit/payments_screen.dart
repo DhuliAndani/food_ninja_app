@@ -48,11 +48,8 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pop(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => const OrderDetailsScreen(),
-                              ),
                             );
                           },
                           icon: const Icon(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
-
 import '../common/button_common.dart';
 import '../common/order_details_common.dart';
 
@@ -16,7 +15,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        
+
         color: Colors.black,
         image: DecorationImage(
             image: AssetImage("assets/images/Pattern.png"),
