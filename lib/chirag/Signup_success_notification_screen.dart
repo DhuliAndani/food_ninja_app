@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
+import '../pinal/home_screen.dart';
+
 class SignupSuccessNotificationScreen extends StatefulWidget {
   const SignupSuccessNotificationScreen({Key? key}) : super(key: key);
 
@@ -59,18 +61,26 @@ class _SignupSuccessNotificationScreenState
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 60, top: 260),
+          Padding(
+            padding: const EdgeInsets.only(left: 60, top: 260),
             child: ButtonCommon(
               text: "Try Order",
               width: 157,
               height: 57,
-              color: Color(0xFF53E88B),
-              Style: TextStyle(
+              color: const Color(0xFF53E88B),
+              Style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Merriweather-Bold",
               ),
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
             ),
           ),
         ]),

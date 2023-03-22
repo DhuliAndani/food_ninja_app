@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/button_common.dart';
+import 'on_boarding_three.dart';
 
 class OnBoardingTwo extends StatefulWidget {
   const OnBoardingTwo({Key? key}) : super(key: key);
@@ -39,12 +40,20 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
           const SizedBox(
             height: 60,
           ),
-          const ButtonCommon(
+          ButtonCommon(
             height: 57,
             width: 157,
             text: 'Next',
-            color: Color(0xff53E88B),
-            Style: TextStyle(color: Colors.white),
+            color: const Color(0xff53E88B),
+            Style: const TextStyle(color: Colors.white),
+            onPress: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const OnBoardingThree(),
+                ),
+              );
+            },
           ),
         ],
       )),

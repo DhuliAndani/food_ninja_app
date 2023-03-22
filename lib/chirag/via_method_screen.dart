@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/verification_code_screen.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
 class ViaMethodScreen extends StatefulWidget {
@@ -317,17 +318,25 @@ class _ViaMethodScreenState extends State<ViaMethodScreen> {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 95, top: 270),
+                Padding(
+                  padding: const EdgeInsets.only(left: 95, top: 270),
                   child: ButtonCommon(
                     text: "Next",
                     width: 157,
                     height: 57,
-                    color: Color(0xFF53E88B),
-                    Style: TextStyle(
+                    color: const Color(0xFF53E88B),
+                    Style: const TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const VerificationCodeScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/via_method_screen.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -170,10 +171,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            const Text(
-              'Forgot Your Password?',
-              style: TextStyle(color: Color(0xff53E88B)),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ViaMethodScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Forgot Your Password?',
+                style: TextStyle(color: Color(0xff53E88B)),
+              ),
             ),
+
             const SizedBox(
               height: 30,
             ),

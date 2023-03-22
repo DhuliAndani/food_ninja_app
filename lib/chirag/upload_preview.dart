@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/set_location.dart';
 
 import '../common/back_button.dart';
 import '../common/button_common.dart';
 
-class Upload_Preview extends StatefulWidget {
-  const Upload_Preview({Key? key}) : super(key: key);
+class UploadPreview extends StatefulWidget {
+  const UploadPreview({Key? key}) : super(key: key);
 
   @override
-  State<Upload_Preview> createState() => _Upload_PreviewState();
+  State<UploadPreview> createState() => _UploadPreviewState();
 }
 
-class _Upload_PreviewState extends State<Upload_Preview> {
+class _UploadPreviewState extends State<UploadPreview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,37 +21,46 @@ class _Upload_PreviewState extends State<Upload_Preview> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Back_Button(
+              children: [
+                const Back_Button(
                   text: 'Upload Your Photo \nProfile',
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 25),
                   child: Text(
                     'This data will be displayed in your account \nprofile for security',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
-                Center(
+                const Center(
                   child: Image(
                     height: 238,
                     image: AssetImage("assets/images/Photo1.png"),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 110,
                 ),
                 Center(
-                    child: ButtonCommon(
-                  height: 57,
-                  width: 157,
-                  text: 'Next',
-                  color: Color(0xff53E88B),
-                  Style: TextStyle(color: Colors.white),
-                )),
+                  child: ButtonCommon(
+                    height: 57,
+                    width: 157,
+                    text: 'Next',
+                    color: const Color(0xff53E88B),
+                    Style: const TextStyle(color: Colors.white),
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SetLocation(),
+                        ),
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           ],
