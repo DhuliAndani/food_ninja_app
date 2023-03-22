@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/upload_preview.dart';
 
 import '../common/back_button.dart';
 import '../common/button_common.dart';
@@ -72,13 +73,21 @@ class _UploadPhotoState extends State<UploadPhoto> {
                 const SizedBox(
                   height: 110,
                 ),
-                const Center(
+                Center(
                     child: ButtonCommon(
                   height: 57,
                   width: 157,
                   text: 'Next',
-                  color: Color(0xff53E88B),
-                  style: TextStyle(color: Colors.white),
+                  color: const Color(0xff53E88B),
+                  style: const TextStyle(color: Colors.white),
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UploadPreview(),
+                      ),
+                    );
+                  },
                 )),
               ],
             ),

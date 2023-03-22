@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
-
 import '../common/button_common.dart';
 import '../common/order_details_common.dart';
 
@@ -16,7 +15,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        
         color: Colors.black,
         image: DecorationImage(
             image: AssetImage("assets/images/Pattern.png"),
@@ -31,7 +29,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               height: 170,
               width: double.infinity,
               child: Stack(
-                children:  [
+                children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 50, left: 20),
                     child: Container(
@@ -44,7 +42,11 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(
+                              context,
+                            );
+                          },
                           icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Color(0xFFDA6317),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/sign_up_screen.dart';
+import 'package:food_ninja_app/chirag/signup_process.dart';
 
 import '../common/button_common.dart';
 
@@ -168,20 +170,37 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: TextStyle(color: Colors.white)),
               ],
             ),
-            const ButtonCommon(
+            ButtonCommon(
               height: 57,
               width: 175,
               text: 'Create Account',
-              color: Color(0xff53E88B),
-              style: TextStyle(color: Colors.white),
+              color: const Color(0xff53E88B),
+              style: const TextStyle(color: Colors.white),
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignupProcess(),
+                  ),
+                );
+              },
             ),
             const SizedBox(
               height: 10,
             ),
-            const Text(
-              'already have an account?',
-              style: TextStyle(color: Color(0xff53E88B)),
-            )
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'already have an account?',
+                  style: TextStyle(color: Color(0xff53E88B)),
+                )),
           ],
         ),
       ),
