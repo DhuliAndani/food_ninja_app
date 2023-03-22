@@ -3,6 +3,10 @@ import 'package:food_ninja_app/dhuli/profile_screen.dart';
 import 'package:food_ninja_app/pinal/home_screen.dart';
 import 'package:food_ninja_app/pinal/message_screen.dart';
 
+import '../dhuli/profile_screen.dart';
+import 'home_screen.dart';
+import 'message_screen.dart';
+
 class Bottombar extends StatefulWidget {
   const Bottombar({Key? key}) : super(key: key);
 
@@ -20,20 +24,34 @@ class _BottombarState extends State<Bottombar> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: screenList[currentIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          showSelectedLabels: false,
-          type: BottomNavigationBarType.shifting,
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
-          items: [
-            const BottomNavigationBarItem(
-                icon: Image(
-                  image: AssetImage("assets/images/Icon Home Active.png"),
+    return BottomNavigationBar(
+      showSelectedLabels: false,
+      type: BottomNavigationBarType.shifting,
+      items: [
+        const BottomNavigationBarItem(
+            icon: Image(
+              image: AssetImage("assets/images/Icon Home Active.png"),
+            ),
+            label: "Home",
+            backgroundColor: Colors.black),
+        const BottomNavigationBarItem(
+            icon: Image(
+              image: AssetImage("assets/images/Icon Profile.png"),
+            ),
+            label: "Home",
+            backgroundColor: Colors.black),
+        const BottomNavigationBarItem(
+            icon: Image(
+              image: AssetImage("assets/images/Icon Cart_1.png"),
+            ),
+            label: "Home",
+            backgroundColor: Colors.black),
+        BottomNavigationBarItem(
+          
+            icon: Stack(
+              children: const [
+                Image(
+                  image: AssetImage("assets/images/Chat.png"),
                 ),
                 label: "Home",
                 backgroundColor: Colors.black),
