@@ -44,7 +44,7 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 1),
                   Expanded(
                     child: SingleChildScrollView(
                       child: Column(
@@ -79,7 +79,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
                                       color: Colors.white,
                                       fontFamily: "BentonSans",
                                       fontSize: 25,
-                                      // fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   SizedBox(height: 3),
@@ -188,7 +187,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Image(
-                
                 image: AssetImage("assets/images/Icon_Home.png"),
               ),
               const Image(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'chirag/on_boarding_two.dart';
+import 'dhuli/profile_screen.dart';
 //import 'dhuli/profile_screen.dart';
 //import 'pinal/home_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: OnBoardingTwo(),
+      home: ProfileScreen(),
     );
   }
 }
