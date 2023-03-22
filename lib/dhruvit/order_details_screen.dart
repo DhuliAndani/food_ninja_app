@@ -43,7 +43,11 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(
+                              context,
+                            );
+                          },
                           icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Color(0xFFDA6317),
