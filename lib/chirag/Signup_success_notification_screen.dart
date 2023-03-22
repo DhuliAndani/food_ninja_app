@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
+import '../pinal/home_screen.dart';
+
 class SignupSuccessNotificationScreen extends StatefulWidget {
   const SignupSuccessNotificationScreen({Key? key}) : super(key: key);
 
@@ -71,6 +73,14 @@ class _SignupSuccessNotificationScreenState
                 fontWeight: FontWeight.bold,
                 fontFamily: "Merriweather-Bold",
               ),
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
             ),
           ),
         ]),
