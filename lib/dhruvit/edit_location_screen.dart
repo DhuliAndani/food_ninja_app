@@ -42,7 +42,7 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
-                         onPressed: () {
+                          onPressed: () {
                             Navigator.pop(
                               context,
                             );

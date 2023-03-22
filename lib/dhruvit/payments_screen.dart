@@ -15,11 +15,12 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-              image: AssetImage("assets/images/Pattern.png"),
-              scale: 1,
-              alignment: Alignment.topRight),),
+        color: Colors.black,
+        image: DecorationImage(
+            image: AssetImage("assets/images/Pattern.png"),
+            scale: 1,
+            alignment: Alignment.topRight),
+      ),
       child: Scaffold(
         backgroundColor: const Color(0xFF0D0D0D),
         body: Column(

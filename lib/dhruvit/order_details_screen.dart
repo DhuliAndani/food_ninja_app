@@ -15,7 +15,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-
         color: Colors.black,
         image: DecorationImage(
             image: AssetImage("assets/images/Pattern.png"),
@@ -30,7 +29,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               height: 170,
               width: double.infinity,
               child: Stack(
-                children:  [
+                children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 50, left: 20),
                     child: Container(
