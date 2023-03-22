@@ -62,7 +62,7 @@ class _SuccessNotificationScreenState extends State<SuccessNotificationScreen> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 70, top: 260),
+              padding: const EdgeInsets.only(left: 70, top: 210),
               child: ButtonCommon(
                 text: "Back",
                 width: 157,

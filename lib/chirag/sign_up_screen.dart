@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja_app/chirag/via_method_screen.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
+import '../pinal/home_screen.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -115,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: Container(
                     height: 57,
                     width: 152,
@@ -143,30 +145,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 57,
-                  width: 152,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff605d5d),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      Image.asset(
-                        'assets/images/google-icon 1 (1).png',
-                        height: 25,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text(
-                        'Google',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Container(
+                    height: 57,
+                    width: 152,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff605d5d),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        Image.asset(
+                          'assets/images/google-icon 1 (1).png',
+                          height: 25,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text(
+                          'Google',
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -185,16 +190,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: TextStyle(color: Color(0xff53E88B)),
               ),
             ),
-
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
-            const ButtonCommon(
+            ButtonCommon(
               text: 'Login',
               width: 141,
               height: 57,
-              color: Color(0xff53E88B),
-              style: TextStyle(color: Colors.white),
+              color: const Color(0xff53E88B),
+              style: const TextStyle(color: Colors.white),
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),
