@@ -15,11 +15,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
-  List<Widget> screens = [
-    HomeScreen(),
-    ProfileScreen(),
+  List<Widget> screenList = [
+    const HomeScreen(),
+    const ProfileScreen(),
     Container(color: Colors.pink),
-    MessageScreen(),
+    const MessageScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -111,10 +111,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 27,
                     ),
-                    Text(
+                    const Text(
                       "Popular Menu",
                       style: TextStyle(
                         fontSize: 18,
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: "Merriweather-Bold",
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 130,
                     ),
                     GestureDetector(
@@ -131,10 +131,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => DetailProductScreen(),
+                              builder: (context) => const DetailProductScreen(),
                             ));
                       },
-                      child: Text(
+                      child: const Text(
                         "View More",
                         style: TextStyle(
                           color: Color(0xFFFF8E4C),
@@ -175,11 +175,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ProfileScreen(),
+                      builder: (context) => const ProfileScreen(),
                     ),
                   );
                 },
-                child: Image(
+                child: const Image(
                   image: AssetImage("assets/images/Icon Profile.png"),
                 ),
               ),
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
-                child: Image(
+                child: const Image(
                   image: AssetImage("assets/images/Icon Cart_1.png"),
                 ),
               ),
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MessageScreen(),
+                      builder: (context) => const MessageScreen(),
                     ),
                   );
                 },
