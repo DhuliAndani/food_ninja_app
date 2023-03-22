@@ -3,6 +3,10 @@ import 'package:food_ninja_app/dhuli/profile_screen.dart';
 import 'package:food_ninja_app/pinal/home_screen.dart';
 import 'package:food_ninja_app/pinal/message_screen.dart';
 
+import '../dhuli/profile_screen.dart';
+import 'home_screen.dart';
+import 'message_screen.dart';
+
 class Bottombar extends StatefulWidget {
   const Bottombar({Key? key}) : super(key: key);
 
@@ -30,14 +34,14 @@ class _BottombarState extends State<Bottombar> {
             ),
             label: "Home",
             backgroundColor: Colors.black),
-        BottomNavigationBarItem(
-            icon: const Image(
+        const BottomNavigationBarItem(
+            icon: Image(
               image: AssetImage("assets/images/Icon Profile.png"),
             ),
             label: "Home",
             backgroundColor: Colors.black),
-        BottomNavigationBarItem(
-            icon: const Image(
+        const BottomNavigationBarItem(
+            icon: Image(
               image: AssetImage("assets/images/Icon Cart_1.png"),
             ),
             label: "Home",
