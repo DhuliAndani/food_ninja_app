@@ -3,8 +3,6 @@ import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
 import 'package:food_ninja_app/dhruvit/detail_product_screen.dart';
-import 'package:food_ninja_app/dhuli/profile_screen.dart';
-import 'package:food_ninja_app/pinal/message_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,13 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int index = 0;
-  List<Widget> screenList = [
-    const HomeScreen(),
-    const ProfileScreen(),
-    Container(color: Colors.pink),
-    const MessageScreen(),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,77 +147,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            //
           ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        type: BottomNavigationBarType.shifting,
-        items: [
-          const BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage("assets/images/Icon Home Active.png"),
-              ),
-              label: "Home",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ProfileScreen(),
-                    ),
-                  );
-                },
-                child: const Image(
-                  image: AssetImage("assets/images/Icon Profile.png"),
-                ),
-              ),
-              label: "Home",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Container(color: Colors.pink),
-                    ),
-                  );
-                },
-                child: const Image(
-                  image: AssetImage("assets/images/Icon Cart_1.png"),
-                ),
-              ),
-              label: "Home",
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MessageScreen(),
-                    ),
-                  );
-                },
-                child: Stack(
-                  children: const [
-                    Image(
-                      image: AssetImage("assets/images/Chat.png"),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 16),
-                      child: Image(
-                        image: AssetImage("assets/images/Ellipse 164_2.png"),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              label: "Home",
-              backgroundColor: Colors.black),
         ],
       ),
     );

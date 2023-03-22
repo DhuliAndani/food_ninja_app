@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/pinal/home_screen.dart';
 
-import 'chirag/on_boarding_screen.dart';
+import 'chirag/signup_process.dart';
 //import 'dhuli/profile_screen.dart';
 //import 'pinal/home_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: OnBoardingScreen(),
+      home: SignupProcess(),
     );
   }
 }
