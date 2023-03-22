@@ -14,6 +14,26 @@ class Back_Button extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(left: 25, top: 40),
+          child: SizedBox(
+            height: 50,
+            width: 50,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xffDA6317),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15))),
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Color(0xffF9A84D),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 25, top: 40),
           child: Container(
             height: 50,
             width: 50,

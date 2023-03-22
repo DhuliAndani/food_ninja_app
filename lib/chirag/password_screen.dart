@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/success_notification_screen.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
 class PasswordScreen extends StatefulWidget {
@@ -161,17 +162,26 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 100, top: 300),
+                Padding(
+                  padding: const EdgeInsets.only(left: 100, top: 300),
                   child: ButtonCommon(
                     text: "Next",
                     width: 157,
                     height: 57,
-                    color: Color(0xFF53E88B),
-                    Style: TextStyle(
+                    color: const Color(0xFF53E88B),
+                    style: const TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const SuccessNotificationScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

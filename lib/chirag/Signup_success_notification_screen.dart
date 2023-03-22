@@ -59,14 +59,14 @@ class _SignupSuccessNotificationScreenState
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 60, top: 260),
+          Padding(
+            padding: const EdgeInsets.only(left: 60, top: 260),
             child: ButtonCommon(
               text: "Try Order",
               width: 157,
               height: 57,
               color: Color(0xFF53E88B),
-              Style: TextStyle(
+              style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Merriweather-Bold",

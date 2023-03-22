@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../common/button_common.dart';
 import 'edit_location_screen.dart';
 import 'order_details_screen.dart';
 
@@ -14,11 +15,12 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-              image: AssetImage("assets/images/Pattern.png"),
-              scale: 1,
-              alignment: Alignment.topRight),),
+        color: Colors.black,
+        image: DecorationImage(
+            image: AssetImage("assets/images/Pattern.png"),
+            scale: 1,
+            alignment: Alignment.topRight),
+      ),
       child: Scaffold(
         backgroundColor: const Color(0xFF0D0D0D),
         body: Column(
@@ -47,11 +49,8 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pop(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => const OrderDetailsScreen(),
-                              ),
                             );
                           },
                           icon: const Icon(
@@ -310,31 +309,24 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                   Padding(
                     padding:
                         const EdgeInsets.only(right: 15, left: 15, top: 130),
-                    child: SizedBox(
-                      height: 57,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Place My Order",
-                            style: TextStyle(
-                              fontFamily: "BentonSans",
-                              fontSize: 14,
-                              color: Color(0xFF53E88B),
-                              fontWeight: FontWeight.w400,
-                            ),
+                    child: ButtonCommon(
+                      color: Colors.white,
+                      onPress: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EditLocationScreen(),
                           ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const EditLocationScreen(),
-                            ),
-                          );
-                        },
+                        );
+                      },
+                      text: "Set Location",
+                      width: 325,
+                      height: 57,
+                      style: const TextStyle(
+                        fontFamily: "BentonSans",
+                        fontSize: 14,
+                        color: Color(0xFF53E88B),
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),

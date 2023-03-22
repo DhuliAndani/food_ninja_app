@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/upload_photo.dart';
 
 import '../common/back_button.dart';
 import '../common/button_common.dart';
 
-class Payment_Method extends StatefulWidget {
-  const Payment_Method({Key? key}) : super(key: key);
+class PaymentMethod extends StatefulWidget {
+  const PaymentMethod({Key? key}) : super(key: key);
 
   @override
-  State<Payment_Method> createState() => _Payment_MethodState();
+  State<PaymentMethod> createState() => _PaymentMethodState();
 }
 
-class _Payment_MethodState extends State<Payment_Method> {
+class _PaymentMethodState extends State<PaymentMethod> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,13 +87,21 @@ class _Payment_MethodState extends State<Payment_Method> {
                 const SizedBox(
                   height: 160,
                 ),
-                const Center(
+                Center(
                     child: ButtonCommon(
                   height: 57,
                   width: 157,
                   text: 'Next',
-                  color: Color(0xff53E88B),
-                  Style: TextStyle(color: Colors.white),
+                  color: const Color(0xff53E88B),
+                  style: const TextStyle(color: Colors.white),
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UploadPhoto(),
+                      ),
+                    );
+                  },
                 )),
               ],
             ),

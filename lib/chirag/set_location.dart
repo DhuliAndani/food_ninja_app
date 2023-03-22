@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../common/back_button.dart';
 import '../common/button_common.dart';
+import 'Signup_success_notification_screen.dart';
 
-class Set_Location extends StatefulWidget {
-  const Set_Location({Key? key}) : super(key: key);
+class SetLocation extends StatefulWidget {
+  const SetLocation({Key? key}) : super(key: key);
 
   @override
-  State<Set_Location> createState() => _Set_LocationState();
+  State<SetLocation> createState() => _SetLocationState();
 }
 
-class _Set_LocationState extends State<Set_Location> {
+class _SetLocationState extends State<SetLocation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,13 +88,22 @@ class _Set_LocationState extends State<Set_Location> {
                 const SizedBox(
                   height: 250,
                 ),
-                const Center(
+                Center(
                     child: ButtonCommon(
                   height: 57,
                   width: 157,
                   text: 'Next',
-                  color: Color(0xff53E88B),
-                  Style: TextStyle(color: Colors.white),
+                  color: const Color(0xff53E88B),
+                  style: const TextStyle(color: Colors.white),
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const SignupSuccessNotificationScreen(),
+                      ),
+                    );
+                  },
                 )),
               ],
             ),

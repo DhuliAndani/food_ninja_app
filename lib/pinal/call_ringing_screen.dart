@@ -62,12 +62,6 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Image(
-                        image: AssetImage("assets/images/Speaker Icon.png"),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -78,8 +72,14 @@ class _CallRingingScreenState extends State<CallRingingScreen> {
                           );
                         },
                         child: const Image(
-                          image: AssetImage("assets/images/Close Icon_1.png"),
+                          image: AssetImage("assets/images/Speaker Icon.png"),
                         ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Image(
+                        image: AssetImage("assets/images/Close Icon_1.png"),
                       ),
                     ],
                   ),

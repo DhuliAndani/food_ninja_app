@@ -32,15 +32,20 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color(0x99252525),
-                          borderRadius: BorderRadius.circular(15),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/Vector_arrow.png",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0x99252525),
+                            borderRadius: BorderRadius.circular(15),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/images/Vector_arrow.png",
+                              ),
                             ),
                           ),
                         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/dhruvit/payments_screen.dart';
+import 'package:food_ninja_app/dhruvit/set_location_screen.dart';
 import 'package:food_ninja_app/dhruvit/your_orders_screen.dart';
 
 class EditLocationScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
             alignment: Alignment.topRight),
       ),
       child: Scaffold(
-        backgroundColor: const Color(0xFF0D0D0D),
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
             SizedBox(
@@ -42,11 +43,8 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
                         padding: const EdgeInsets.only(top: 2, left: 8),
                         child: IconButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pop(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => const PaymentsScreen(),
-                              ),
                             );
                           },
                           icon: const Icon(
@@ -172,7 +170,7 @@ class _EditLocationScreenState extends State<EditLocationScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const YourOrdersScreen(),
+                            builder: (context) => const SetLocationScreen(),
                           ),
                         );
                       },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
+import '../pinal/home_screen.dart';
+
 class SuccessNotificationScreen extends StatefulWidget {
   const SuccessNotificationScreen({Key? key}) : super(key: key);
 
@@ -59,17 +61,25 @@ class _SuccessNotificationScreenState extends State<SuccessNotificationScreen> {
                 ),
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 70, top: 260),
+            Padding(
+              padding: const EdgeInsets.only(left: 70, top: 260),
               child: ButtonCommon(
                 text: "Back",
                 width: 157,
                 height: 57,
-                color: Color(0xFF53E88B),
-                Style: TextStyle(
+                color: const Color(0xFF53E88B),
+                style: const TextStyle(
                     fontSize: 14,
                     color: Colors.white,
                     fontWeight: FontWeight.bold),
+                onPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
               ),
             ),
           ],

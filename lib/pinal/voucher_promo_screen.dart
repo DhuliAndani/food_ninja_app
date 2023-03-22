@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/button_common.dart';
-import 'package:food_ninja_app/pinal/home_screen.dart';
+import 'package:food_ninja_app/dhruvit/detail_menu_screen.dart';
 
 class VoucherPromoScreen extends StatefulWidget {
   const VoucherPromoScreen({Key? key}) : super(key: key);
@@ -33,15 +33,20 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 25, top: 40),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color(0x1AF9A84D),
-                          borderRadius: BorderRadius.circular(15),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/images/Vector_arrow.png",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: const Color(0x1AF9A84D),
+                            borderRadius: BorderRadius.circular(15),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/images/Vector_arrow.png",
+                              ),
                             ),
                           ),
                         ),
@@ -198,11 +203,11 @@ class _VoucherPromoScreenState extends State<VoucherPromoScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) => const DetailMenuScreen(),
                           ));
                     },
                     color: const Color(0xFF53E88B),
-                    Style: const TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),

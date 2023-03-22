@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/chirag/password_screen.dart';
 import 'package:food_ninja_app/common/button_common.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
@@ -57,7 +58,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(left: 25, top: 140),
                       child: Text(
                         "Verification code",
@@ -82,9 +83,9 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 2),
-                  child: const Text(
+                const Padding(
+                  padding: EdgeInsets.only(left: 25, top: 2),
+                  child: Text(
                     "expired in 01:30",
                     style: TextStyle(
                       color: Colors.white,
@@ -100,14 +101,14 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                     height: 103,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0x1AFFFFFF),
+                      color: const Color(0x1AFFFFFF),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 15, right: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text(
                             "1",
                             style: TextStyle(
@@ -145,17 +146,25 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 95, top: 360),
+                Padding(
+                  padding: const EdgeInsets.only(left: 95, top: 360),
                   child: ButtonCommon(
                     text: "Next",
                     width: 157,
                     height: 57,
-                    color: Color(0xFF53E88B),
-                    Style: TextStyle(
+                    color: const Color(0xFF53E88B),
+                    style: const TextStyle(
                         fontSize: 14,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PasswordScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
