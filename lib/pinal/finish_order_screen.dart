@@ -117,8 +117,8 @@ class _FinishOrderScreenState extends State<FinishOrderScreen> {
                         width: 228,
                         height: 57,
                         color: Color(0xFF53E88B),
-                        Style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                        style: TextStyle(
+                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 14,
                         ),

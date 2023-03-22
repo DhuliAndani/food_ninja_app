@@ -79,7 +79,7 @@ class _UploadPhotoState extends State<UploadPhoto> {
                   width: 157,
                   text: 'Next',
                   color: const Color(0xff53E88B),
-                  Style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   onPress: () {
                     Navigator.push(
                       context,

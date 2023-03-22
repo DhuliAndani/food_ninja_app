@@ -114,7 +114,7 @@ class _RateRestaurantScreenState extends State<RateRestaurantScreen> {
                         width: 228,
                         height: 57,
                         color: Color(0xFF53E88B),
-                        Style: TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 14,
