@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja_app/chirag/on_boarding_two.dart';
 
 import 'chirag/on_boarding_two.dart';
 //import 'dhuli/profile_screen.dart';

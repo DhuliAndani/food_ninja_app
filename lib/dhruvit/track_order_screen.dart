@@ -139,57 +139,60 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 155),
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const CallRingingScreen(),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CallRingingScreen(),
+                                ),
+                              );
+                            },
+                            style: ButtonStyle(
+                              textStyle:
+                                  MaterialStateProperty.all(const TextStyle(
+                                color: Color(0xFFFEFEFF),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Merriweather-Bold",
+                              )),
+                              shape: MaterialStateProperty.all(
+                                  ContinuousRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              )),
+                              overlayColor: const MaterialStatePropertyAll(
+                                  Color(0xFF53E88B)),
+                              backgroundColor: const MaterialStatePropertyAll(
+                                  Color((0xFF53E88B))),
+                              fixedSize: MaterialStateProperty.all(
+                                const Size(240, 68),
                               ),
-                            );
-                          },
-                          style: ButtonStyle(
-                            textStyle: MaterialStateProperty.all(const TextStyle(
-                              color: Color(0xFFFEFEFF),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "Merriweather-Bold",
-                            )),
-                            shape: MaterialStateProperty.all(
-                                ContinuousRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            )),
-                            overlayColor:
-                                const MaterialStatePropertyAll(Color(0xFF53E88B)),
-                            backgroundColor: const MaterialStatePropertyAll(Color((0xFF53E88B))),
-                            fixedSize: MaterialStateProperty.all(
-                              const Size(240, 68),
                             ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 70),
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                      "assets/images/Call_logo.png",
-                                      height: 18,
-                                      width: 18,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 70),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    "assets/images/Call_logo.png",
+                                    height: 18,
+                                    width: 18,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Text(
+                                    "Call",
+                                    style: TextStyle(
+                                      fontFamily: "BentonSans",
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
                                     ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      "Call",
-                                      style: TextStyle(
-                                        fontFamily: "BentonSans",
-                                        fontSize: 14,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                              ],
-                            ),
-                          )
-                        ),
+                                  ),
+                                ],
+                              ),
+                            )),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 257, top: 155),
