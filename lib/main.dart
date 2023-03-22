@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dhruvit/order_details_screen.dart';
+import 'package:food_ninja_app/chirag/on_boarding_two.dart';
 
+import 'dhruvit/order_details_screen.dart';
+//import 'dhuli/profile_screen.dart';
 //import 'pinal/home_screen.dart';
 
 void main() {

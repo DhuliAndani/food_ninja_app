@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
-
-import 'message_screen.dart';
+import 'package:food_ninja_app/dhuli/profile_screen.dart';
+import 'package:food_ninja_app/pinal/chat_details_screen.dart';
+import 'package:food_ninja_app/pinal/home_screen.dart';
 
 class ExploreMenuScreen extends StatefulWidget {
   const ExploreMenuScreen({Key? key}) : super(key: key);
@@ -67,49 +68,71 @@ class _ExploreMenuScreenState extends State<ExploreMenuScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 70,
-        decoration: BoxDecoration(
-          color: const Color(0xFF252525),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Image(
-              image: AssetImage("assets/images/Icon Home Active.png"),
-            ),
-            const Image(
-              image: AssetImage("assets/images/Icon Profile.png"),
-            ),
-            const Image(
-              image: AssetImage("assets/images/Icon Cart_2.png"),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MessageScreen(),
-                  ),
-                );
-              },
-              child: Stack(
-                children: const [
-                  Image(
-                    image: AssetImage("assets/images/Chat.png"),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Image(
-                      image: AssetImage("assets/images/Ellipse 164_1.png"),
-                    ),
-                  ),
-                ],
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        type: BottomNavigationBarType.shifting,
+        items: [
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ));
+                },
+                child: Image(
+                  image: AssetImage("assets/images/Icon Home Active.png"),
+                ),
               ),
-            ),
-          ],
-        ),
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfileScreen(),
+                      ));
+                },
+                child: Image(
+                  image: AssetImage("assets/images/Icon Profile.png"),
+                ),
+              ),
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Container(color: Colors.pink),
+                      ));
+                },
+                child: Image(
+                  image: AssetImage("assets/images/Icon Cart_1.png"),
+                ),
+              ),
+              label: "Home",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChatDetailsScreen(),
+                      ));
+                },
+                child: const Image(
+                  image: AssetImage("assets/images/Icon Chat Active_1.png"),
+                ),
+              ),
+              label: "Home",
+              backgroundColor: Colors.black),
+        ],
       ),
     );
   }
