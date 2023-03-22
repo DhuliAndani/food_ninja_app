@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja_app/dhuli/profile_screen.dart';
+import 'package:food_ninja_app/pinal/home_screen.dart';
+import 'package:food_ninja_app/pinal/message_screen.dart';
 
 class Bottombar extends StatefulWidget {
   const Bottombar({Key? key}) : super(key: key);
@@ -8,7 +11,7 @@ class Bottombar extends StatefulWidget {
 }
 
 class _BottombarState extends State<Bottombar> {
-  int index = 0;
+  int currentIndex = 0;
   List<Widget> screenList = [
     const HomeScreen(),
     const ProfileScreen(),
