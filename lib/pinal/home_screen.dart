@@ -199,6 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   image: AssetImage("assets/images/Icon Cart_1.png"),
                 ),
               ),
+              //
               label: "Home",
               backgroundColor: Colors.black),
           BottomNavigationBarItem(
