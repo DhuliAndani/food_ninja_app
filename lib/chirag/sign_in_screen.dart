@@ -185,9 +185,6 @@ class _SignInScreenState extends State<SignInScreen> {
                 );
               },
             ),
-            const SizedBox(
-              height: 10,
-            ),
             TextButton(
                 onPressed: () {
                   Navigator.push(
