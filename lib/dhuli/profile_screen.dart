@@ -175,37 +175,6 @@ class _ProfileScreenScreenState extends State<ProfileScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          height: 70,
-          decoration: BoxDecoration(
-            color: const Color(0xFF252525),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const Image(
-                image: AssetImage("assets/images/Icon_Home.png"),
-              ),
-              const Image(
-                image: AssetImage("assets/images/Icon_Profil_Active.png"),
-              ),
-              const Image(
-                image: AssetImage("assets/images/Icon Cart_2.png"),
-              ),
-              Stack(
-                children: const [
-                  Image(
-                    image: AssetImage("assets/images/Icon_Chat _Wit.png"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
