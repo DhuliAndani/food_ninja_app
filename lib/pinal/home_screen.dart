@@ -3,8 +3,6 @@ import 'package:food_ninja_app/common/common_container.dart';
 import 'package:food_ninja_app/common/explore_menu_common_container.dart';
 import 'package:food_ninja_app/common/home_food.dart';
 import 'package:food_ninja_app/dhruvit/detail_product_screen.dart';
-import 'package:food_ninja_app/dhuli/profile_screen.dart';
-import 'package:food_ninja_app/pinal/message_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,13 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int index = 0;
-  List<Widget> screenList = [
-    const HomeScreen(),
-    const ProfileScreen(),
-    Container(color: Colors.pink),
-    const MessageScreen(),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,6 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            //
           ),
         ],
       ),

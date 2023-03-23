@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja_app/common/message_common_container.dart';
-import 'package:food_ninja_app/dhuli/profile_screen.dart';
 import 'package:food_ninja_app/pinal/chat_details_screen.dart';
-import 'package:food_ninja_app/pinal/home_screen.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);
